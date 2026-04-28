@@ -24,7 +24,6 @@ body {
   padding: 32px 36px;
   margin-bottom: 24px;
   box-shadow: 0 4px 16px rgba(140, 21, 21, 0.15);
-  position: relative;
 }
 .hero h1 { margin: 0 0 8px; font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
 .hero .sub { opacity: 0.9; font-size: 15px; }
@@ -40,9 +39,7 @@ body {
   cursor: pointer; transition: all 0.15s; font-family: inherit;
 }
 .btn:hover { background: rgba(255,255,255,0.25); }
-.btn-light {
-  background: white; color: #8C1515; border-color: white;
-}
+.btn-light { background: white; color: #8C1515; border-color: white; }
 .btn-light:hover { background: #fef2f2; }
 
 /* Share banner */
@@ -122,14 +119,13 @@ body {
 .card:hover { border-color: #d1d5db; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
 .card .top {
   display: flex; justify-content: space-between; align-items: flex-start;
-  gap: 12px; margin-bottom: 8px;
-  padding-right: 32px;  /* reserve space for star marker so the pill never overlaps */
+  gap: 12px; margin-bottom: 8px; padding-right: 32px;
 }
 .card .title { font-weight: 600; font-size: 15px; color: #111827; }
 .card .code { font-size: 12px; color: #6b7280; font-family: 'SF Mono', Menlo, monospace; }
 .card .faculty { font-size: 13px; color: #4b5563; margin-bottom: 8px; }
 .card .why { font-size: 13px; color: #374151; line-height: 1.5; }
-.card .meta { display: flex; gap: 10px; margin-top: 10px; font-size: 11px; color: #6b7280; flex-wrap: wrap; }
+.card .meta { display: flex; gap: 8px; margin-top: 10px; font-size: 11px; color: #6b7280; flex-wrap: wrap; }
 .card .meta span { background: #f3f4f6; padding: 2px 8px; border-radius: 6px; }
 .card .pill { font-size: 11px; padding: 3px 10px; border-radius: 999px; font-weight: 500; white-space: nowrap; }
 .card a.link { display: inline-block; margin-top: 10px; font-size: 12px; color: #8C1515; text-decoration: none; font-weight: 500; }
@@ -140,7 +136,47 @@ body {
 .card.fac .why-meet { font-size: 13px; color: #374151; line-height: 1.5; font-style: italic; }
 .card.club .why-club { font-size: 13px; color: #374151; line-height: 1.5; }
 
-/* Marker (3-state: empty / starred / planned) */
+/* Apply badge — color coded by application route */
+.apply-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 6px;
+  margin-top: 8px; margin-bottom: 4px;
+}
+.apply-badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; }
+.apply-mandatory { background: #fee2e2; color: #991b1b; }
+.apply-mandatory::before { background: #dc2626; }
+.apply-lottery { background: #fed7aa; color: #7c2d12; }
+.apply-lottery::before { background: #ea580c; }
+.apply-application { background: #fef3c7; color: #78350f; }
+.apply-application::before { background: #d97706; }
+.apply-team { background: #ede9fe; color: #5b21b6; }
+.apply-team::before { background: #7c3aed; }
+.apply-open { background: #dcfce7; color: #14532d; }
+.apply-open::before { background: #16a34a; }
+.apply-other { background: #f3f4f6; color: #374151; }
+.apply-other::before { background: #6b7280; }
+
+/* Details expand */
+.details-toggle {
+  display: inline-block; font-size: 12px; color: #8C1515; cursor: pointer;
+  margin-top: 8px; user-select: none; font-weight: 500;
+}
+.details-toggle:hover { text-decoration: underline; }
+.details-content {
+  margin-top: 10px; padding: 12px 14px; background: #fafaf9;
+  border: 1px solid #e5e7eb; border-radius: 8px; font-size: 13px;
+  color: #374151; line-height: 1.55;
+}
+.details-content > div { margin-bottom: 8px; }
+.details-content > div:last-child { margin-bottom: 0; }
+.details-content strong { color: #111827; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; display: block; margin-bottom: 2px; }
+.details-content .tip {
+  margin-top: 10px; padding: 10px 12px; background: #fffbeb;
+  border-left: 3px solid #f59e0b; border-radius: 4px; font-style: italic;
+}
+.details-content .tip strong { color: #78350f; font-style: normal; }
+
+/* Marker (3-state) */
 .marker {
   position: absolute; top: 14px; right: 14px; cursor: pointer;
   font-size: 20px; user-select: none; transition: all 0.15s;
@@ -153,15 +189,6 @@ body {
 .marker[data-state="planned"]::before { content: "✓"; }
 .marker[data-state="starred"]::before { content: "★"; }
 .marker:not([data-state])::before, .marker[data-state=""]::before { content: "☆"; }
-
-/* Hint shown on first hover only */
-.marker[title]:hover::after {
-  content: attr(title);
-  position: absolute; right: 36px; top: 4px; white-space: nowrap;
-  background: #1f2937; color: white; font-size: 11px;
-  padding: 4px 8px; border-radius: 6px;
-  pointer-events: none;
-}
 
 /* Roadmap */
 .roadmap { display: flex; flex-direction: column; gap: 12px; }
@@ -191,35 +218,49 @@ body {
 .res a { font-size: 12px; color: #8C1515; text-decoration: none; font-weight: 500; }
 .res a:hover { text-decoration: underline; }
 
-/* My Plan */
-.plan-summary {
+/* Registration tab */
+.reg-intro {
   background: white; border: 1px solid #e5e7eb; border-radius: 12px;
-  padding: 20px 24px; margin-bottom: 16px;
+  padding: 20px 24px; margin-bottom: 16px; font-size: 15px; color: #374151;
 }
+.reg-section {
+  background: white; border: 1px solid #e5e7eb; border-radius: 12px;
+  padding: 18px 22px; margin-bottom: 14px;
+}
+.reg-section h3 { margin: 0 0 8px; font-size: 16px; color: #8C1515; font-weight: 600; }
+.reg-section .body { font-size: 14px; color: #374151; line-height: 1.6; margin-bottom: 8px; }
+.reg-section ul { margin: 8px 0 0; padding-left: 20px; }
+.reg-section li { font-size: 13px; color: #374151; margin-bottom: 6px; line-height: 1.5; }
+.reg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-top: 12px; }
+.reg-glossary-item {
+  background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px 14px;
+}
+.reg-glossary-item .term { font-weight: 600; color: #1f2937; font-size: 13px; }
+.reg-glossary-item .def { color: #4b5563; font-size: 12px; line-height: 1.5; margin-top: 2px; }
+.reg-deadlines { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.reg-deadline {
+  background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 12px 14px;
+}
+.reg-deadline .qtr-name { font-weight: 700; color: #7c2d12; font-size: 14px; }
+.reg-deadline .date { font-family: 'SF Mono', Menlo, monospace; font-size: 13px; color: #9a3412; margin: 2px 0; }
+.reg-deadline .note { font-size: 12px; color: #78350f; }
+
+/* My Plan */
+.plan-summary { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px 24px; margin-bottom: 16px; }
 .plan-counts { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
 .plan-count { display: flex; flex-direction: column; }
 .plan-count .num { font-size: 22px; font-weight: 700; color: #1f2937; }
 .plan-count .lbl { font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; }
-.plan-section h3 {
-  margin: 24px 0 8px; font-size: 14px; color: #6b7280;
-  text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;
-}
+.plan-section h3 { margin: 24px 0 8px; font-size: 14px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
 .plan-section h3:first-child { margin-top: 0; }
 .plan-section h3 .icon { color: #f59e0b; margin-right: 6px; font-size: 16px; }
 .plan-section h3.planned .icon { color: #16a34a; }
 .plan-list { display: flex; flex-direction: column; gap: 8px; }
-.plan-item {
-  background: white; border: 1px solid #e5e7eb; border-radius: 8px;
-  padding: 10px 14px; display: flex; align-items: center; gap: 12px;
-  font-size: 13px;
-}
+.plan-item { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px 14px; display: flex; align-items: center; gap: 12px; font-size: 13px; }
 .plan-item .plan-pill { font-size: 10px; padding: 2px 8px; border-radius: 999px; }
 .plan-item .plan-title { flex: 1; color: #1f2937; font-weight: 500; }
 .plan-item .plan-type { font-size: 11px; color: #6b7280; }
-.plan-empty {
-  background: white; border: 1px dashed #d1d5db; border-radius: 12px;
-  padding: 32px 20px; text-align: center; color: #9ca3af; font-size: 14px;
-}
+.plan-empty { background: white; border: 1px dashed #d1d5db; border-radius: 12px; padding: 32px 20px; text-align: center; color: #9ca3af; font-size: 14px; }
 .plan-empty strong { color: #1f2937; }
 
 /* Visibility */
@@ -239,16 +280,9 @@ body {
 
 /* Loading & error */
 #status { text-align: center; padding: 60px 20px; font-size: 15px; color: #6b7280; }
-.error-box {
-  background: #fef2f2; border: 1px solid #fca5a5; border-radius: 12px;
-  padding: 20px 24px; margin: 20px 0; color: #7f1d1d;
-}
+.error-box { background: #fef2f2; border: 1px solid #fca5a5; border-radius: 12px; padding: 20px 24px; margin: 20px 0; color: #7f1d1d; }
 .error-box h3 { margin: 0 0 8px; color: #991b1b; }
-.error-box code {
-  display: block; background: #fee; padding: 12px; border-radius: 6px;
-  font-family: 'SF Mono', Menlo, monospace; font-size: 12px;
-  margin-top: 10px; white-space: pre-wrap; word-break: break-word;
-}
+.error-box code { display: block; background: #fee; padding: 12px; border-radius: 6px; font-family: 'SF Mono', Menlo, monospace; font-size: 12px; margin-top: 10px; white-space: pre-wrap; word-break: break-word; }
 </style>
 </head>
 <body>
@@ -271,7 +305,6 @@ body {
         <div class="stat"><span class="num" id="stat-courses">—</span><span class="lbl">Courses</span></div>
         <div class="stat"><span class="num" id="stat-faculty">—</span><span class="lbl">Faculty</span></div>
         <div class="stat"><span class="num" id="stat-clubs">—</span><span class="lbl">Clubs</span></div>
-        <div class="stat"><span class="num" id="stat-quarters">—</span><span class="lbl">Quarters planned</span></div>
         <div class="stat"><span class="num" id="stat-myplan">—</span><span class="lbl">In my plan</span></div>
       </div>
       <div class="hero-actions">
@@ -281,7 +314,7 @@ body {
     </div>
 
     <div class="about">
-      <strong>How to mark items:</strong> Click the circle on any card to cycle through three states — <span style="color:#f59e0b">★ Interested</span> → <span style="color:#16a34a">✓ Planned in my schedule</span> → empty. Your selections save to this device's browser. Click "Share my plan" to get a link you can send to anyone — they'll see exactly what you've marked. <strong>Edit <a href="https://github.com/romanemperor1/stanford-prep/edit/main/data.json" target="_blank" style="color:#8C1515">data.json on GitHub</a></strong> to add courses, clubs, or faculty — site auto-updates in ~30 seconds.
+      <strong>How to mark items:</strong> Click the circle on any card to cycle through three states — <span style="color:#f59e0b">★ Interested</span> → <span style="color:#16a34a">✓ Planned in my schedule</span> → empty. Your selections save to this device's browser. Click "Share my plan" to get a link you can send anyone — they'll see exactly what you've marked. <strong>Edit <a href="https://github.com/romanemperor1/stanford-prep/edit/main/data.json" target="_blank" style="color:#8C1515">data.json on GitHub</a></strong> to add courses, clubs, faculty, or events — site auto-updates in ~30 seconds.
     </div>
 
     <div class="tabs">
@@ -289,6 +322,7 @@ body {
       <button class="tab" data-tab="faculty">Faculty</button>
       <button class="tab" data-tab="clubs">Clubs</button>
       <button class="tab" data-tab="roadmap">2-Year Roadmap</button>
+      <button class="tab" data-tab="registration">How Registration Works</button>
       <button class="tab" data-tab="my-plan">My Plan <span class="badge" id="badge-myplan" style="display:none">0</span></button>
       <button class="tab" data-tab="advisor">Advisor Questions</button>
       <button class="tab" data-tab="resources">Resources</button>
@@ -313,6 +347,10 @@ body {
       <div class="section-h"><h2>Suggested 2-Year Roadmap</h2><span class="count">Draft — revisit each quarter</span></div>
       <div class="roadmap" id="roadmap-list"></div>
     </div>
+    <div class="tab-panel" id="panel-registration">
+      <div class="section-h"><h2>How Registration Works</h2><span class="count">The bidding system, in plain English</span></div>
+      <div id="registration-content"></div>
+    </div>
     <div class="tab-panel" id="panel-my-plan">
       <div class="section-h"><h2>My Plan</h2><span class="count" id="count-myplan">0 items</span></div>
       <div id="my-plan-content"></div>
@@ -333,12 +371,13 @@ body {
 <script>
 let DATA = null;
 let activeFilter = { courses: 'All', faculty: 'All', clubs: 'All' };
+let detailsOpen = new Set();
 
-// === State: selections (Map of itemKey -> "starred" | "planned") ===
+// === State ===
 const STORAGE_KEY = 'stanford-prep-selections-v2';
 let selections = new Map();
-let viewingShared = false;       // true if URL has #plan= and we're displaying it
-let myOwnSelections = null;       // backup of localStorage when viewing shared
+let viewingShared = false;
+let myOwnSelections = null;
 
 function loadFromStorage() {
   try {
@@ -369,7 +408,20 @@ function showToast(msg) {
   showToast._h = setTimeout(() => t.classList.remove('show'), 2000);
 }
 
-// === Cycle marker state: empty -> starred -> planned -> empty ===
+// === Apply badge categorization ===
+function applyBadge(applyStr) {
+  if (!applyStr) return null;
+  const s = applyStr.toLowerCase();
+  let cls = 'apply-other', label = applyStr;
+  if (s.includes('mandatory') || s.includes('auto-enroll')) cls = 'apply-mandatory';
+  else if (s.includes('lottery')) cls = 'apply-lottery';
+  else if (s.includes('team application')) cls = 'apply-team';
+  else if (s.includes('application') || s.includes('pre-qualif')) cls = 'apply-application';
+  else if (s.includes('open enrollment') || s.includes('open ')) cls = 'apply-open';
+  return `<span class="apply-badge ${cls}">Apply: ${escapeHtml(label)}</span>`;
+}
+
+// === Cycle marker ===
 function cycleMarker(key) {
   const cur = selections.get(key) || '';
   const next = cur === '' ? 'starred' : cur === 'starred' ? 'planned' : '';
@@ -382,7 +434,6 @@ function cycleMarker(key) {
 function encodePlan(map, name) {
   const obj = { v: 1, n: name || '', s: Object.fromEntries(map), t: Date.now() };
   const json = JSON.stringify(obj);
-  // URL-safe base64
   return btoa(unescape(encodeURIComponent(json)))
     .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
@@ -394,56 +445,34 @@ function decodePlan(str) {
     return { name: obj.n || '', selections: new Map(Object.entries(obj.s || {})), timestamp: obj.t };
   } catch (e) { return null; }
 }
-
 function buildShareLink(name) {
   const encoded = encodePlan(selections, name);
-  const url = `${location.origin}${location.pathname}#plan=${encoded}`;
-  return url;
+  return `${location.origin}${location.pathname}#plan=${encoded}`;
 }
-
 async function copyShareLink() {
-  if (selections.size === 0) {
-    showToast('Mark some items first — your plan is empty.');
-    return;
-  }
-  const name = prompt("Add your name to the shared link? (optional, helps the recipient know whose plan it is)", "Alexis") || '';
+  if (selections.size === 0) { showToast('Mark some items first — your plan is empty.'); return; }
+  const name = prompt("Add your name to the shared link? (optional)", "Alexis") || '';
   const url = buildShareLink(name);
-  try {
-    await navigator.clipboard.writeText(url);
-    showToast('Share link copied to clipboard!');
-  } catch {
-    prompt('Copy this link:', url);
-  }
+  try { await navigator.clipboard.writeText(url); showToast('Share link copied to clipboard!'); }
+  catch { prompt('Copy this link:', url); }
 }
-
 function checkSharedURL() {
   const m = location.hash.match(/^#plan=(.+)$/);
   if (!m) return;
   const decoded = decodePlan(m[1]);
-  if (!decoded) {
-    showToast("Couldn't read shared plan link.");
-    return;
-  }
+  if (!decoded) { showToast("Couldn't read shared plan link."); return; }
   myOwnSelections = new Map(selections);
   selections = decoded.selections;
   viewingShared = true;
-  const banner = document.getElementById('share-banner');
-  banner.style.display = 'flex';
+  document.getElementById('share-banner').style.display = 'flex';
   const who = decoded.name ? escapeHtml(decoded.name) + "'s" : 'a shared';
   document.getElementById('share-banner-msg').innerHTML =
     `👋 You're viewing <strong>${who} plan</strong> (${decoded.selections.size} items). Your own selections are safely stored — click below to either save this as yours, or return to your own.`;
 }
-
 function dismissShared(saveAsMine) {
-  if (saveAsMine) {
-    saveToStorage(selections);
-    showToast('Saved as your plan.');
-  } else {
-    selections = myOwnSelections || loadFromStorage();
-    showToast('Back to your own plan.');
-  }
-  viewingShared = false;
-  myOwnSelections = null;
+  if (saveAsMine) { saveToStorage(selections); showToast('Saved as your plan.'); }
+  else { selections = myOwnSelections || loadFromStorage(); showToast('Back to your own plan.'); }
+  viewingShared = false; myOwnSelections = null;
   document.getElementById('share-banner').style.display = 'none';
   history.replaceState(null, '', location.pathname);
   rerenderEverything();
@@ -456,22 +485,20 @@ async function loadData() {
     if (!r.ok) throw new Error('HTTP ' + r.status + ' loading data.json');
     DATA = await r.json();
     DATA.clubs = DATA.clubs || [];
+    DATA.registration = DATA.registration || null;
     document.getElementById('status').style.display = 'none';
     document.getElementById('app').style.display = 'block';
     selections = loadFromStorage();
     checkSharedURL();
     boot();
-  } catch (e) {
-    showError(e);
-  }
+  } catch (e) { showError(e); }
 }
-
 function showError(e) {
   document.body.innerHTML = `
     <div class="wrap">
       <div class="error-box">
         <h3>Couldn't load data.json</h3>
-        <p>The site loaded but the data file has an issue. Most common cause: a JSON syntax error after a recent edit (missing comma, unmatched quote, trailing comma).</p>
+        <p>The site loaded but the data file has an issue. Most common cause: a JSON syntax error after a recent edit.</p>
         <p><strong>How to fix:</strong></p>
         <ol>
           <li>Copy the contents of <code>data.json</code> from your repo</li>
@@ -509,7 +536,6 @@ function markerHTML(key) {
               : 'Click: Interested. Click again: Planned in my schedule.';
   return `<span class="marker" data-key="${escapeAttr(key)}" data-state="${state}" title="${escapeAttr(title)}"></span>`;
 }
-
 function attachMarkers(container) {
   container.querySelectorAll('.marker').forEach(el => {
     el.onclick = (e) => {
@@ -525,8 +551,29 @@ function attachMarkers(container) {
     };
   });
 }
+function attachDetailsToggles(container) {
+  container.querySelectorAll('.details-toggle').forEach(el => {
+    el.onclick = (e) => {
+      e.stopPropagation();
+      const k = el.dataset.key;
+      if (detailsOpen.has(k)) detailsOpen.delete(k); else detailsOpen.add(k);
+      const card = el.closest('.card');
+      const content = card.querySelector('.details-content');
+      if (detailsOpen.has(k)) { content.style.display = 'block'; el.textContent = '− Hide details'; }
+      else { content.style.display = 'none'; el.textContent = '+ Show details'; }
+    };
+  });
+}
 
 // === Render: courses ===
+function detailsBlock(c) {
+  const parts = [];
+  if (c.description) parts.push(`<div><strong>What it covers</strong>${escapeHtml(c.description)}</div>`);
+  if (c.format) parts.push(`<div><strong>Format</strong>${escapeHtml(c.format)}</div>`);
+  if (c.prereqs && c.prereqs !== 'None' && c.prereqs !== 'N/A') parts.push(`<div><strong>Prereqs</strong>${escapeHtml(c.prereqs)}</div>`);
+  if (c.tip) parts.push(`<div class="tip"><strong>Insider tip · </strong>${escapeHtml(c.tip)}</div>`);
+  return parts.length ? parts.join('') : '';
+}
 function renderCourses() {
   const grid = document.getElementById('courses-grid');
   const filter = activeFilter.courses;
@@ -535,6 +582,8 @@ function renderCourses() {
   if (list.length === 0) { grid.innerHTML = '<div class="empty">No courses for that filter yet.</div>'; return; }
   grid.innerHTML = list.map(c => {
     const key = 'c:' + c.title;
+    const hasDetails = c.description || c.format || c.tip;
+    const isOpen = detailsOpen.has(key);
     return `
     <div class="card">
       ${markerHTML(key)}
@@ -546,18 +595,24 @@ function renderCourses() {
         <span class="pill ${clsFor(c.interest)}">${escapeHtml(c.interest)}</span>
       </div>
       <div class="faculty">${escapeHtml(c.faculty)}</div>
+      ${c.apply ? applyBadge(c.apply) : ''}
       <div class="why">${escapeHtml(c.why)}</div>
       <div class="meta">
         <span>${escapeHtml(c.when)}</span>
         ${c.units && c.units !== '0' ? `<span>${escapeHtml(c.units)} units</span>` : ''}
       </div>
+      ${hasDetails ? `
+        <span class="details-toggle" data-key="${escapeAttr(key)}">${isOpen ? '− Hide details' : '+ Show details'}</span>
+        <div class="details-content" style="display:${isOpen ? 'block' : 'none'}">${detailsBlock(c)}</div>
+      ` : ''}
       ${c.url ? `<a class="link" href="${escapeAttr(c.url)}" target="_blank" rel="noopener">Source ↗</a>` : ''}
     </div>`;
   }).join('');
   attachMarkers(grid);
+  attachDetailsToggles(grid);
 }
 
-// === Render: faculty ===
+// === Render: faculty / clubs ===
 function renderFaculty() {
   const grid = document.getElementById('faculty-grid');
   const filter = activeFilter.faculty;
@@ -583,8 +638,6 @@ function renderFaculty() {
   }).join('');
   attachMarkers(grid);
 }
-
-// === Render: clubs ===
 function renderClubs() {
   const grid = document.getElementById('clubs-grid');
   const filter = activeFilter.clubs;
@@ -597,9 +650,7 @@ function renderClubs() {
     <div class="card club">
       ${markerHTML(key)}
       <div class="top">
-        <div>
-          <div class="title">${escapeHtml(k.name)}</div>
-        </div>
+        <div><div class="title">${escapeHtml(k.name)}</div></div>
         <span class="pill ${clsFor(k.interest)}">${escapeHtml(k.interest)}</span>
       </div>
       <div class="why-club">${escapeHtml(k.why)}</div>
@@ -639,7 +690,49 @@ function renderResources() {
     </div>`).join('');
 }
 
-// === Render: My Plan ===
+// === Render: registration ===
+function renderRegistration() {
+  const c = document.getElementById('registration-content');
+  if (!DATA.registration) {
+    c.innerHTML = '<div class="empty">No registration data in data.json yet.</div>';
+    return;
+  }
+  const r = DATA.registration;
+  let html = '';
+  if (r.intro) html += `<div class="reg-intro">${escapeHtml(r.intro)}</div>`;
+  (r.sections || []).forEach(s => {
+    html += `<div class="reg-section"><h3>${escapeHtml(s.title)}</h3>`;
+    if (s.body) html += `<div class="body">${escapeHtml(s.body)}</div>`;
+    if (s.items && s.items.length) {
+      html += '<ul>' + s.items.map(i => `<li>${escapeHtml(i)}</li>`).join('') + '</ul>';
+    }
+    html += '</div>';
+  });
+  if (r.deadlines && r.deadlines.length) {
+    html += `<div class="reg-section"><h3>Quarterly add/drop deadlines</h3><div class="reg-deadlines">`;
+    r.deadlines.forEach(d => {
+      html += `<div class="reg-deadline"><div class="qtr-name">${escapeHtml(d.quarter)}</div><div class="date">${escapeHtml(d.addDropApprox)}</div><div class="note">${escapeHtml(d.note)}</div></div>`;
+    });
+    html += '</div></div>';
+  }
+  if (r.glossary && r.glossary.length) {
+    html += `<div class="reg-section"><h3>Glossary</h3><div class="reg-grid">`;
+    r.glossary.forEach(g => {
+      html += `<div class="reg-glossary-item"><div class="term">${escapeHtml(g.term)}</div><div class="def">${escapeHtml(g.def)}</div></div>`;
+    });
+    html += '</div></div>';
+  }
+  if (r.sources && r.sources.length) {
+    html += `<div class="reg-section"><h3>Sources</h3><ul style="list-style:none;padding-left:0">`;
+    r.sources.forEach(s => {
+      html += `<li style="margin-bottom:4px"><a href="${escapeAttr(s.url)}" target="_blank" rel="noopener" style="color:#8C1515;text-decoration:none">→ ${escapeHtml(s.label)}</a></li>`;
+    });
+    html += '</ul></div>';
+  }
+  c.innerHTML = html;
+}
+
+// === My Plan ===
 function lookupItem(key) {
   const [type, ...rest] = key.split(':');
   const id = rest.join(':');
@@ -712,34 +805,21 @@ function copyPlanAsText() {
   const starred = [...selections].filter(([_, v]) => v === 'starred');
   if (planned.length) {
     lines.push('PLANNED IN MY SCHEDULE');
-    planned.forEach(([k]) => {
-      const it = lookupItem(k);
-      lines.push(`  ✓ [${typeLabel(k)}] ${it ? (it.title || it.name) : k}`);
-    });
+    planned.forEach(([k]) => { const it = lookupItem(k); lines.push(`  ✓ [${typeLabel(k)}] ${it ? (it.title || it.name) : k}`); });
     lines.push('');
   }
   if (starred.length) {
     lines.push('INTERESTED');
-    starred.forEach(([k]) => {
-      const it = lookupItem(k);
-      lines.push(`  ★ [${typeLabel(k)}] ${it ? (it.title || it.name) : k}`);
-    });
+    starred.forEach(([k]) => { const it = lookupItem(k); lines.push(`  ★ [${typeLabel(k)}] ${it ? (it.title || it.name) : k}`); });
   }
   const txt = lines.join('\n');
-  navigator.clipboard.writeText(txt).then(
-    () => showToast('Plan copied as text!'),
-    () => prompt('Copy this:', txt)
-  );
+  navigator.clipboard.writeText(txt).then(() => showToast('Plan copied as text!'), () => prompt('Copy this:', txt));
 }
 function confirmClearPlan() {
   if (!confirm('Clear all marked items? This cannot be undone.')) return;
-  selections.clear();
-  saveToStorage(selections);
-  rerenderEverything();
-  showToast('Plan cleared.');
+  selections.clear(); saveToStorage(selections); rerenderEverything(); showToast('Plan cleared.');
 }
 
-// === Update plan count UI ===
 function updateHeroPlanCount() {
   const n = selections.size;
   document.getElementById('stat-myplan').textContent = n;
@@ -757,6 +837,7 @@ function rerenderEverything() {
   renderFaculty();
   renderClubs();
   renderRoadmap();
+  renderRegistration();
   renderAdvisor();
   renderResources();
   renderMyPlan();
@@ -772,7 +853,6 @@ function boot() {
   document.getElementById('stat-courses').textContent = DATA.courses.length;
   document.getElementById('stat-faculty').textContent = DATA.faculty.length;
   document.getElementById('stat-clubs').textContent = DATA.clubs.length;
-  document.getElementById('stat-quarters').textContent = DATA.roadmap.length;
 
   document.querySelectorAll('.tab').forEach(t => {
     t.onclick = () => {
@@ -785,9 +865,7 @@ function boot() {
   });
 
   document.getElementById('btn-share-plan').onclick = copyShareLink;
-  document.getElementById('btn-go-my-plan').onclick = () => {
-    document.querySelector('[data-tab="my-plan"]').click();
-  };
+  document.getElementById('btn-go-my-plan').onclick = () => { document.querySelector('[data-tab="my-plan"]').click(); };
   document.getElementById('btn-save-shared').onclick = () => dismissShared(true);
   document.getElementById('btn-dismiss-shared').onclick = () => dismissShared(false);
 
