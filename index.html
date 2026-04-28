@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stanford GSB Prep — Alexis</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #fafaf9;
+  color: #1f2937;
+  line-height: 1.5;
+}
+.wrap { max-width: 1200px; margin: 0 auto; padding: 28px 20px 60px; }
+
+/* Header */
+.hero {
+  background: linear-gradient(135deg, #8C1515 0%, #5e0e0e 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 32px 36px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(140, 21, 21, 0.15);
+}
+.hero h1 { margin: 0 0 8px; font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+.hero .sub { opacity: 0.9; font-size: 15px; }
+.hero .stats { display: flex; gap: 28px; margin-top: 20px; flex-wrap: wrap; }
+.hero .stat { display: flex; flex-direction: column; }
+.hero .stat .num { font-size: 24px; font-weight: 700; }
+.hero .stat .lbl { font-size: 12px; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.5px; }
+.hero .updated { font-size: 12px; opacity: 0.75; margin-top: 8px; font-style: italic; }
+
+/* Tabs */
+.tabs {
+  display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+}
+.tab {
+  padding: 10px 16px; cursor: pointer; font-weight: 500; font-size: 14px;
+  color: #6b7280; border-bottom: 3px solid transparent; transition: all 0.15s;
+  background: none; border-top: none; border-left: none; border-right: none;
+  font-family: inherit;
+}
+.tab:hover { color: #1f2937; }
+.tab.active { color: #8C1515; border-bottom-color: #8C1515; }
+
+/* Interest chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.chip {
+  padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 500;
+  cursor: pointer; transition: all 0.15s; border: 1.5px solid transparent;
+  user-select: none;
+}
+.chip:hover { transform: translateY(-1px); }
+.chip.active { box-shadow: 0 0 0 2px rgba(140, 21, 21, 0.25); }
+
+/* Color tokens */
+.c-energy { background: #DCFCE7; color: #14532D; border-color: #86EFAC; }
+.c-ai { background: #DBEAFE; color: #1E3A8A; border-color: #93C5FD; }
+.c-vc { background: #FEF3C7; color: #78350F; border-color: #FCD34D; }
+.c-search { background: #FCE7F3; color: #831843; border-color: #F9A8D4; }
+.c-consumer { background: #FFE4E6; color: #881337; border-color: #FDA4AF; }
+.c-tech { background: #E0E7FF; color: #312E81; border-color: #A5B4FC; }
+.c-leadership { background: #FED7AA; color: #7C2D12; border-color: #FDBA74; }
+.c-sports { background: #F3E8FF; color: #581C87; border-color: #D8B4FE; }
+.c-cross { background: #F1F5F9; color: #1E293B; border-color: #CBD5E1; }
+.c-all { background: #1f2937; color: white; border-color: #1f2937; }
+
+/* Card grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+.card {
+  background: white; border: 1px solid #e5e7eb; border-radius: 12px;
+  padding: 16px 18px; transition: all 0.15s; position: relative;
+}
+.card:hover { border-color: #d1d5db; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+.card .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+.card .title { font-weight: 600; font-size: 15px; color: #111827; }
+.card .code { font-size: 12px; color: #6b7280; font-family: 'SF Mono', Menlo, monospace; }
+.card .faculty { font-size: 13px; color: #4b5563; margin-bottom: 8px; }
+.card .why { font-size: 13px; color: #374151; line-height: 1.5; }
+.card .meta { display: flex; gap: 10px; margin-top: 10px; font-size: 11px; color: #6b7280; flex-wrap: wrap; }
+.card .meta span { background: #f3f4f6; padding: 2px 8px; border-radius: 6px; }
+.card .pill { font-size: 11px; padding: 3px 10px; border-radius: 999px; font-weight: 500; white-space: nowrap; }
+.card a.link { display: inline-block; margin-top: 10px; font-size: 12px; color: #8C1515; text-decoration: none; font-weight: 500; }
+.card a.link:hover { text-decoration: underline; }
+.card.fac .name { font-weight: 600; font-size: 16px; color: #111827; margin-bottom: 2px; }
+.card.fac .role { font-size: 12px; color: #6b7280; margin-bottom: 8px; }
+.card.fac .teaches { font-size: 13px; color: #4b5563; margin-bottom: 8px; }
+.card.fac .why-meet { font-size: 13px; color: #374151; line-height: 1.5; font-style: italic; }
+.card .star {
+  position: absolute; top: 14px; right: 14px; cursor: pointer;
+  font-size: 18px; color: #d1d5db; user-select: none; transition: color 0.15s;
+}
+.card .star:hover { color: #fbbf24; }
+.card .star.starred { color: #fbbf24; }
+
+/* Roadmap */
+.roadmap { display: flex; flex-direction: column; gap: 12px; }
+.qtr { background: white; border: 1px solid #e5e7eb; border-left: 4px solid #8C1515; border-radius: 10px; padding: 16px 20px; }
+.qtr h3 { margin: 0 0 4px; font-size: 16px; color: #111827; }
+.qtr .focus { font-size: 12px; color: #8C1515; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.qtr .body { font-size: 14px; color: #374151; margin-bottom: 6px; }
+.qtr .notes { font-size: 13px; color: #6b7280; font-style: italic; }
+
+/* Advisor */
+.qlist { display: flex; flex-direction: column; gap: 10px; }
+.qitem { background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 18px; }
+.qitem .topic {
+  display: inline-block; font-size: 11px; font-weight: 600; color: #8C1515;
+  background: #fee2e2; padding: 2px 10px; border-radius: 6px;
+  text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;
+}
+.qitem .q { font-size: 14px; color: #1f2937; margin-bottom: 4px; }
+.qitem .who { font-size: 12px; color: #6b7280; }
+
+/* Resources */
+.reslist { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.res { background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 16px; }
+.res .name { font-weight: 600; font-size: 14px; color: #111827; margin-bottom: 4px; }
+.res .type { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 6px; }
+.res .why { font-size: 13px; color: #4b5563; margin-bottom: 8px; }
+.res a { font-size: 12px; color: #8C1515; text-decoration: none; font-weight: 500; }
+.res a:hover { text-decoration: underline; }
+
+/* Visibility */
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* Misc */
+.empty { text-align: center; padding: 40px 20px; color: #9ca3af; font-size: 14px; }
+.section-h { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 12px; }
+.section-h h2 { margin: 0; font-size: 18px; color: #111827; }
+.count { font-size: 13px; color: #6b7280; background: #f3f4f6; padding: 4px 10px; border-radius: 6px; }
+.about {
+  background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px;
+  padding: 18px 22px; margin-bottom: 24px; font-size: 14px; color: #7c2d12; line-height: 1.6;
+}
+.about strong { color: #431407; }
+
+/* Loading & error states */
+#status {
+  text-align: center; padding: 60px 20px; font-size: 15px; color: #6b7280;
+}
+.error-box {
+  background: #fef2f2; border: 1px solid #fca5a5; border-radius: 12px;
+  padding: 20px 24px; margin: 20px 0; color: #7f1d1d;
+}
+.error-box h3 { margin: 0 0 8px; color: #991b1b; }
+.error-box code {
+  display: block; background: #fee; padding: 12px; border-radius: 6px;
+  font-family: 'SF Mono', Menlo, monospace; font-size: 12px;
+  margin-top: 10px; white-space: pre-wrap; word-break: break-word;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="status">Loading data…</div>
+  <div id="app" style="display:none">
+    <div class="hero">
+      <h1 id="meta-title">Stanford GSB Prep</h1>
+      <div class="sub" id="meta-sub"></div>
+      <div class="updated" id="meta-updated"></div>
+      <div class="stats">
+        <div class="stat"><span class="num" id="stat-courses">—</span><span class="lbl">Courses mapped</span></div>
+        <div class="stat"><span class="num" id="stat-faculty">—</span><span class="lbl">People to meet</span></div>
+        <div class="stat"><span class="num" id="stat-interests">—</span><span class="lbl">Interest areas</span></div>
+        <div class="stat"><span class="num" id="stat-quarters">—</span><span class="lbl">Quarters planned</span></div>
+      </div>
+    </div>
+
+    <div class="about">
+      <strong>How this works:</strong> Click an interest chip to filter courses + faculty. Click ★ to star a card — your stars persist on this device. Use the tabs to jump between sections. <strong>Edit <a href="https://github.com/romanemperor1/stanford-prep/edit/main/data.json" target="_blank" style="color:#8C1515">data.json on GitHub</a> to update the page</strong> — changes go live in ~30 seconds.
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="courses">Courses</button>
+      <button class="tab" data-tab="faculty">Faculty</button>
+      <button class="tab" data-tab="roadmap">2-Year Roadmap</button>
+      <button class="tab" data-tab="advisor">Advisor Questions</button>
+      <button class="tab" data-tab="resources">Resources</button>
+    </div>
+
+    <div class="tab-panel active" id="panel-courses">
+      <div class="chips" id="chips-courses"></div>
+      <div class="section-h"><h2>Courses</h2><span class="count" id="count-courses"></span></div>
+      <div class="grid" id="courses-grid"></div>
+    </div>
+    <div class="tab-panel" id="panel-faculty">
+      <div class="chips" id="chips-faculty"></div>
+      <div class="section-h"><h2>People to meet</h2><span class="count" id="count-faculty"></span></div>
+      <div class="grid" id="faculty-grid"></div>
+    </div>
+    <div class="tab-panel" id="panel-roadmap">
+      <div class="section-h"><h2>Suggested 2-Year Roadmap</h2><span class="count">Draft — revisit each quarter</span></div>
+      <div class="roadmap" id="roadmap-list"></div>
+    </div>
+    <div class="tab-panel" id="panel-advisor">
+      <div class="section-h"><h2>Questions for advisors / centers</h2><span class="count" id="count-advisor"></span></div>
+      <div class="qlist" id="advisor-list"></div>
+    </div>
+    <div class="tab-panel" id="panel-resources">
+      <div class="section-h"><h2>Centers, clubs &amp; programs</h2><span class="count" id="count-resources"></span></div>
+      <div class="reslist" id="resources-list"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+let DATA = null;
+let activeFilter = { courses: 'All', faculty: 'All' };
+
+// === Stars persistence (localStorage) ===
+const STAR_KEY = 'stanford-prep-stars';
+function loadStars() {
+  try { return new Set(JSON.parse(localStorage.getItem(STAR_KEY) || '[]')); }
+  catch { return new Set(); }
+}
+function saveStars(set) {
+  try { localStorage.setItem(STAR_KEY, JSON.stringify([...set])); } catch {}
+}
+let starred = loadStars();
+
+// === Helpers ===
+function escapeHtml(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+}
+const escapeAttr = escapeHtml;
+function clsFor(key) {
+  const i = (DATA?.interests || []).find(x => x.key === key);
+  return i ? i.cls : 'c-cross';
+}
+
+// === Data loading ===
+async function loadData() {
+  try {
+    // Cache-bust so edits show up fast
+    const r = await fetch('data.json?t=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status + ' loading data.json');
+    DATA = await r.json();
+    document.getElementById('status').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    boot();
+  } catch (e) {
+    showError(e);
+  }
+}
+
+function showError(e) {
+  const friendly = `
+    <div class="wrap">
+      <div class="error-box">
+        <h3>Couldn't load data.json</h3>
+        <p>The site loaded but the data file has an issue. Most common cause: a JSON syntax error after a recent edit (missing comma, unmatched quote, trailing comma).</p>
+        <p><strong>How to fix:</strong></p>
+        <ol>
+          <li>Copy the contents of <code>data.json</code> from your repo</li>
+          <li>Paste into <a href="https://jsonlint.com" target="_blank">jsonlint.com</a> — it will point to the exact line with the error</li>
+          <li>Fix and commit the change on GitHub</li>
+        </ol>
+        <p><strong>Technical details:</strong></p>
+        <code>${escapeHtml(e.message || String(e))}</code>
+      </div>
+    </div>`;
+  document.body.innerHTML = friendly;
+}
+
+// === Render ===
+function renderChips(containerId, panel) {
+  const c = document.getElementById(containerId);
+  c.innerHTML = '';
+  const all = document.createElement('button');
+  all.className = 'chip c-all' + (activeFilter[panel] === 'All' ? ' active' : '');
+  all.textContent = 'All';
+  all.onclick = () => { activeFilter[panel] = 'All'; renderAll(); };
+  c.appendChild(all);
+  DATA.interests.forEach(({ key, cls }) => {
+    const b = document.createElement('button');
+    b.className = 'chip ' + cls + (activeFilter[panel] === key ? ' active' : '');
+    b.textContent = key;
+    b.onclick = () => { activeFilter[panel] = key; renderAll(); };
+    c.appendChild(b);
+  });
+}
+
+function renderCourses() {
+  const grid = document.getElementById('courses-grid');
+  const filter = activeFilter.courses;
+  const list = filter === 'All' ? DATA.courses : DATA.courses.filter(c => c.interest === filter);
+  document.getElementById('count-courses').textContent = `${list.length} of ${DATA.courses.length}`;
+  if (list.length === 0) { grid.innerHTML = '<div class="empty">No courses for that filter yet.</div>'; return; }
+  grid.innerHTML = list.map(c => {
+    const isStarred = starred.has('c:' + c.title);
+    return `
+    <div class="card">
+      <span class="star ${isStarred ? 'starred' : ''}" data-key="c:${escapeAttr(c.title)}">★</span>
+      <div class="top">
+        <div>
+          <div class="code">${escapeHtml(c.code)} · ${escapeHtml(c.dept)}</div>
+          <div class="title">${escapeHtml(c.title)}</div>
+        </div>
+        <span class="pill ${clsFor(c.interest)}">${escapeHtml(c.interest)}</span>
+      </div>
+      <div class="faculty">${escapeHtml(c.faculty)}</div>
+      <div class="why">${escapeHtml(c.why)}</div>
+      <div class="meta">
+        <span>${escapeHtml(c.when)}</span>
+        ${c.units && c.units !== '0' ? `<span>${escapeHtml(c.units)} units</span>` : ''}
+      </div>
+      ${c.url ? `<a class="link" href="${escapeAttr(c.url)}" target="_blank" rel="noopener">Source ↗</a>` : ''}
+    </div>`;
+  }).join('');
+  attachStars(grid);
+}
+
+function renderFaculty() {
+  const grid = document.getElementById('faculty-grid');
+  const filter = activeFilter.faculty;
+  const list = filter === 'All' ? DATA.faculty : DATA.faculty.filter(f => f.interest === filter);
+  document.getElementById('count-faculty').textContent = `${list.length} of ${DATA.faculty.length}`;
+  if (list.length === 0) { grid.innerHTML = '<div class="empty">No faculty for that filter yet.</div>'; return; }
+  grid.innerHTML = list.map(f => {
+    const isStarred = starred.has('f:' + f.name);
+    return `
+    <div class="card fac">
+      <span class="star ${isStarred ? 'starred' : ''}" data-key="f:${escapeAttr(f.name)}">★</span>
+      <div class="top">
+        <div>
+          <div class="name">${escapeHtml(f.name)}</div>
+          <div class="role">${escapeHtml(f.role)}</div>
+        </div>
+        <span class="pill ${clsFor(f.interest)}">${escapeHtml(f.interest)}</span>
+      </div>
+      <div class="teaches"><strong>Teaches:</strong> ${escapeHtml(f.teaches)}</div>
+      <div class="why-meet">${escapeHtml(f.why)}</div>
+      ${f.url ? `<a class="link" href="${escapeAttr(f.url)}" target="_blank" rel="noopener">Profile ↗</a>` : ''}
+    </div>`;
+  }).join('');
+  attachStars(grid);
+}
+
+function renderRoadmap() {
+  document.getElementById('roadmap-list').innerHTML = DATA.roadmap.map(r => `
+    <div class="qtr">
+      <div class="focus">${escapeHtml(r.focus)}</div>
+      <h3>${escapeHtml(r.qtr)}</h3>
+      <div class="body">${escapeHtml(r.body)}</div>
+      <div class="notes">${escapeHtml(r.notes)}</div>
+    </div>`).join('');
+}
+
+function renderAdvisor() {
+  document.getElementById('count-advisor').textContent = `${DATA.advisorQs.length} questions`;
+  document.getElementById('advisor-list').innerHTML = DATA.advisorQs.map(item => `
+    <div class="qitem">
+      <div class="topic">${escapeHtml(item.topic)}</div>
+      <div class="q">${escapeHtml(item.q)}</div>
+      <div class="who">Ask: ${escapeHtml(item.who)}</div>
+    </div>`).join('');
+}
+
+function renderResources() {
+  document.getElementById('count-resources').textContent = `${DATA.resources.length} resources`;
+  document.getElementById('resources-list').innerHTML = DATA.resources.map(r => `
+    <div class="res">
+      <div class="type">${escapeHtml(r.type)}</div>
+      <div class="name">${escapeHtml(r.name)}</div>
+      <div class="why">${escapeHtml(r.why)}</div>
+      <a href="${escapeAttr(r.url)}" target="_blank" rel="noopener">Open ↗</a>
+    </div>`).join('');
+}
+
+function renderAll() {
+  renderChips('chips-courses', 'courses');
+  renderChips('chips-faculty', 'faculty');
+  renderCourses();
+  renderFaculty();
+}
+
+function attachStars(grid) {
+  grid.querySelectorAll('.star').forEach(el => {
+    el.onclick = (e) => {
+      e.stopPropagation();
+      const key = el.dataset.key;
+      if (starred.has(key)) starred.delete(key); else starred.add(key);
+      saveStars(starred);
+      el.classList.toggle('starred');
+    };
+  });
+}
+
+function boot() {
+  // Header meta
+  document.getElementById('meta-title').textContent = DATA.meta?.title || 'Stanford GSB Prep';
+  document.getElementById('meta-sub').textContent = DATA.meta?.subtitle || '';
+  document.getElementById('meta-updated').textContent = DATA.meta?.lastUpdated ? `Last updated: ${DATA.meta.lastUpdated}` : '';
+  document.title = DATA.meta?.title || document.title;
+
+  // Stats
+  document.getElementById('stat-courses').textContent = DATA.courses.length;
+  document.getElementById('stat-faculty').textContent = DATA.faculty.length;
+  document.getElementById('stat-interests').textContent = DATA.interests.length;
+  document.getElementById('stat-quarters').textContent = DATA.roadmap.length;
+
+  // Tabs
+  document.querySelectorAll('.tab').forEach(t => {
+    t.onclick = () => {
+      document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById('panel-' + t.dataset.tab).classList.add('active');
+    };
+  });
+
+  renderAll();
+  renderRoadmap();
+  renderAdvisor();
+  renderResources();
+}
+
+loadData();
+</script>
+</body>
+</html>
