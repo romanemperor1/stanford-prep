@@ -16,7 +16,7 @@ body {
 }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 28px 20px 60px; }
 
-/* Header */
+/* Hero */
 .hero {
   background: linear-gradient(135deg, #8C1515 0%, #5e0e0e 100%);
   color: white;
@@ -24,6 +24,7 @@ body {
   padding: 32px 36px;
   margin-bottom: 24px;
   box-shadow: 0 4px 16px rgba(140, 21, 21, 0.15);
+  position: relative;
 }
 .hero h1 { margin: 0 0 8px; font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
 .hero .sub { opacity: 0.9; font-size: 15px; }
@@ -32,6 +33,44 @@ body {
 .hero .stat .num { font-size: 24px; font-weight: 700; }
 .hero .stat .lbl { font-size: 12px; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.5px; }
 .hero .updated { font-size: 12px; opacity: 0.75; margin-top: 8px; font-style: italic; }
+.hero-actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.btn {
+  background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px; padding: 8px 14px; font-size: 13px; font-weight: 500;
+  cursor: pointer; transition: all 0.15s; font-family: inherit;
+}
+.btn:hover { background: rgba(255,255,255,0.25); }
+.btn-light {
+  background: white; color: #8C1515; border-color: white;
+}
+.btn-light:hover { background: #fef2f2; }
+
+/* Share banner */
+.share-banner {
+  background: #fef3c7; border: 1px solid #fbbf24; border-radius: 12px;
+  padding: 16px 20px; margin-bottom: 20px; display: flex;
+  justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.share-banner .msg { color: #78350f; font-size: 14px; }
+.share-banner .msg strong { color: #451a03; }
+.share-banner .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.share-banner button {
+  background: #92400e; color: white; border: none; border-radius: 6px;
+  padding: 6px 12px; font-size: 13px; font-weight: 500; cursor: pointer;
+  font-family: inherit;
+}
+.share-banner button:hover { background: #78350f; }
+.share-banner button.secondary { background: white; color: #92400e; border: 1px solid #92400e; }
+.share-banner button.secondary:hover { background: #fef3c7; }
+
+/* Toast */
+.toast {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  background: #1f2937; color: white; padding: 12px 20px; border-radius: 8px;
+  font-size: 14px; opacity: 0; pointer-events: none; transition: opacity 0.2s;
+  z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.toast.show { opacity: 1; }
 
 /* Tabs */
 .tabs {
@@ -42,10 +81,15 @@ body {
   padding: 10px 16px; cursor: pointer; font-weight: 500; font-size: 14px;
   color: #6b7280; border-bottom: 3px solid transparent; transition: all 0.15s;
   background: none; border-top: none; border-left: none; border-right: none;
-  font-family: inherit;
+  font-family: inherit; position: relative;
 }
 .tab:hover { color: #1f2937; }
 .tab.active { color: #8C1515; border-bottom-color: #8C1515; }
+.tab .badge {
+  display: inline-block; background: #8C1515; color: white; font-size: 10px;
+  padding: 1px 6px; border-radius: 999px; margin-left: 6px; font-weight: 700;
+  vertical-align: middle;
+}
 
 /* Interest chips */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
@@ -69,14 +113,18 @@ body {
 .c-cross { background: #F1F5F9; color: #1E293B; border-color: #CBD5E1; }
 .c-all { background: #1f2937; color: white; border-color: #1f2937; }
 
-/* Card grid */
+/* Cards */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
 .card {
   background: white; border: 1px solid #e5e7eb; border-radius: 12px;
   padding: 16px 18px; transition: all 0.15s; position: relative;
 }
 .card:hover { border-color: #d1d5db; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
-.card .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+.card .top {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 12px; margin-bottom: 8px;
+  padding-right: 32px;  /* reserve space for star marker so the pill never overlaps */
+}
 .card .title { font-weight: 600; font-size: 15px; color: #111827; }
 .card .code { font-size: 12px; color: #6b7280; font-family: 'SF Mono', Menlo, monospace; }
 .card .faculty { font-size: 13px; color: #4b5563; margin-bottom: 8px; }
@@ -90,12 +138,30 @@ body {
 .card.fac .role { font-size: 12px; color: #6b7280; margin-bottom: 8px; }
 .card.fac .teaches { font-size: 13px; color: #4b5563; margin-bottom: 8px; }
 .card.fac .why-meet { font-size: 13px; color: #374151; line-height: 1.5; font-style: italic; }
-.card .star {
+.card.club .why-club { font-size: 13px; color: #374151; line-height: 1.5; }
+
+/* Marker (3-state: empty / starred / planned) */
+.marker {
   position: absolute; top: 14px; right: 14px; cursor: pointer;
-  font-size: 18px; color: #d1d5db; user-select: none; transition: color 0.15s;
+  font-size: 20px; user-select: none; transition: all 0.15s;
+  width: 28px; height: 28px; line-height: 28px; text-align: center;
+  border-radius: 50%; color: #d1d5db; background: transparent;
 }
-.card .star:hover { color: #fbbf24; }
-.card .star.starred { color: #fbbf24; }
+.marker:hover { background: #f3f4f6; transform: scale(1.05); }
+.marker[data-state="starred"] { color: #f59e0b; }
+.marker[data-state="planned"] { color: #16a34a; }
+.marker[data-state="planned"]::before { content: "✓"; }
+.marker[data-state="starred"]::before { content: "★"; }
+.marker:not([data-state])::before, .marker[data-state=""]::before { content: "☆"; }
+
+/* Hint shown on first hover only */
+.marker[title]:hover::after {
+  content: attr(title);
+  position: absolute; right: 36px; top: 4px; white-space: nowrap;
+  background: #1f2937; color: white; font-size: 11px;
+  padding: 4px 8px; border-radius: 6px;
+  pointer-events: none;
+}
 
 /* Roadmap */
 .roadmap { display: flex; flex-direction: column; gap: 12px; }
@@ -125,6 +191,37 @@ body {
 .res a { font-size: 12px; color: #8C1515; text-decoration: none; font-weight: 500; }
 .res a:hover { text-decoration: underline; }
 
+/* My Plan */
+.plan-summary {
+  background: white; border: 1px solid #e5e7eb; border-radius: 12px;
+  padding: 20px 24px; margin-bottom: 16px;
+}
+.plan-counts { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
+.plan-count { display: flex; flex-direction: column; }
+.plan-count .num { font-size: 22px; font-weight: 700; color: #1f2937; }
+.plan-count .lbl { font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; }
+.plan-section h3 {
+  margin: 24px 0 8px; font-size: 14px; color: #6b7280;
+  text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;
+}
+.plan-section h3:first-child { margin-top: 0; }
+.plan-section h3 .icon { color: #f59e0b; margin-right: 6px; font-size: 16px; }
+.plan-section h3.planned .icon { color: #16a34a; }
+.plan-list { display: flex; flex-direction: column; gap: 8px; }
+.plan-item {
+  background: white; border: 1px solid #e5e7eb; border-radius: 8px;
+  padding: 10px 14px; display: flex; align-items: center; gap: 12px;
+  font-size: 13px;
+}
+.plan-item .plan-pill { font-size: 10px; padding: 2px 8px; border-radius: 999px; }
+.plan-item .plan-title { flex: 1; color: #1f2937; font-weight: 500; }
+.plan-item .plan-type { font-size: 11px; color: #6b7280; }
+.plan-empty {
+  background: white; border: 1px dashed #d1d5db; border-radius: 12px;
+  padding: 32px 20px; text-align: center; color: #9ca3af; font-size: 14px;
+}
+.plan-empty strong { color: #1f2937; }
+
 /* Visibility */
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
@@ -140,10 +237,8 @@ body {
 }
 .about strong { color: #431407; }
 
-/* Loading & error states */
-#status {
-  text-align: center; padding: 60px 20px; font-size: 15px; color: #6b7280;
-}
+/* Loading & error */
+#status { text-align: center; padding: 60px 20px; font-size: 15px; color: #6b7280; }
 .error-box {
   background: #fef2f2; border: 1px solid #fca5a5; border-radius: 12px;
   padding: 20px 24px; margin: 20px 0; color: #7f1d1d;
@@ -160,26 +255,41 @@ body {
 <div class="wrap">
   <div id="status">Loading data…</div>
   <div id="app" style="display:none">
+    <div id="share-banner" class="share-banner" style="display:none">
+      <div class="msg" id="share-banner-msg"></div>
+      <div class="actions">
+        <button id="btn-save-shared">Save as my plan</button>
+        <button id="btn-dismiss-shared" class="secondary">Back to my own plan</button>
+      </div>
+    </div>
+
     <div class="hero">
       <h1 id="meta-title">Stanford GSB Prep</h1>
       <div class="sub" id="meta-sub"></div>
       <div class="updated" id="meta-updated"></div>
       <div class="stats">
-        <div class="stat"><span class="num" id="stat-courses">—</span><span class="lbl">Courses mapped</span></div>
-        <div class="stat"><span class="num" id="stat-faculty">—</span><span class="lbl">People to meet</span></div>
-        <div class="stat"><span class="num" id="stat-interests">—</span><span class="lbl">Interest areas</span></div>
+        <div class="stat"><span class="num" id="stat-courses">—</span><span class="lbl">Courses</span></div>
+        <div class="stat"><span class="num" id="stat-faculty">—</span><span class="lbl">Faculty</span></div>
+        <div class="stat"><span class="num" id="stat-clubs">—</span><span class="lbl">Clubs</span></div>
         <div class="stat"><span class="num" id="stat-quarters">—</span><span class="lbl">Quarters planned</span></div>
+        <div class="stat"><span class="num" id="stat-myplan">—</span><span class="lbl">In my plan</span></div>
+      </div>
+      <div class="hero-actions">
+        <button class="btn btn-light" id="btn-share-plan">📤 Share my plan</button>
+        <button class="btn" id="btn-go-my-plan">View my plan →</button>
       </div>
     </div>
 
     <div class="about">
-      <strong>How this works:</strong> Click an interest chip to filter courses + faculty. Click ★ to star a card — your stars persist on this device. Use the tabs to jump between sections. <strong>Edit <a href="https://github.com/romanemperor1/stanford-prep/edit/main/data.json" target="_blank" style="color:#8C1515">data.json on GitHub</a> to update the page</strong> — changes go live in ~30 seconds.
+      <strong>How to mark items:</strong> Click the circle on any card to cycle through three states — <span style="color:#f59e0b">★ Interested</span> → <span style="color:#16a34a">✓ Planned in my schedule</span> → empty. Your selections save to this device's browser. Click "Share my plan" to get a link you can send to anyone — they'll see exactly what you've marked. <strong>Edit <a href="https://github.com/romanemperor1/stanford-prep/edit/main/data.json" target="_blank" style="color:#8C1515">data.json on GitHub</a></strong> to add courses, clubs, or faculty — site auto-updates in ~30 seconds.
     </div>
 
     <div class="tabs">
       <button class="tab active" data-tab="courses">Courses</button>
       <button class="tab" data-tab="faculty">Faculty</button>
+      <button class="tab" data-tab="clubs">Clubs</button>
       <button class="tab" data-tab="roadmap">2-Year Roadmap</button>
+      <button class="tab" data-tab="my-plan">My Plan <span class="badge" id="badge-myplan" style="display:none">0</span></button>
       <button class="tab" data-tab="advisor">Advisor Questions</button>
       <button class="tab" data-tab="resources">Resources</button>
     </div>
@@ -194,9 +304,18 @@ body {
       <div class="section-h"><h2>People to meet</h2><span class="count" id="count-faculty"></span></div>
       <div class="grid" id="faculty-grid"></div>
     </div>
+    <div class="tab-panel" id="panel-clubs">
+      <div class="chips" id="chips-clubs"></div>
+      <div class="section-h"><h2>Clubs</h2><span class="count" id="count-clubs"></span></div>
+      <div class="grid" id="clubs-grid"></div>
+    </div>
     <div class="tab-panel" id="panel-roadmap">
       <div class="section-h"><h2>Suggested 2-Year Roadmap</h2><span class="count">Draft — revisit each quarter</span></div>
       <div class="roadmap" id="roadmap-list"></div>
+    </div>
+    <div class="tab-panel" id="panel-my-plan">
+      <div class="section-h"><h2>My Plan</h2><span class="count" id="count-myplan">0 items</span></div>
+      <div id="my-plan-content"></div>
     </div>
     <div class="tab-panel" id="panel-advisor">
       <div class="section-h"><h2>Questions for advisors / centers</h2><span class="count" id="count-advisor"></span></div>
@@ -209,20 +328,28 @@ body {
   </div>
 </div>
 
+<div id="toast" class="toast"></div>
+
 <script>
 let DATA = null;
-let activeFilter = { courses: 'All', faculty: 'All' };
+let activeFilter = { courses: 'All', faculty: 'All', clubs: 'All' };
 
-// === Stars persistence (localStorage) ===
-const STAR_KEY = 'stanford-prep-stars';
-function loadStars() {
-  try { return new Set(JSON.parse(localStorage.getItem(STAR_KEY) || '[]')); }
-  catch { return new Set(); }
+// === State: selections (Map of itemKey -> "starred" | "planned") ===
+const STORAGE_KEY = 'stanford-prep-selections-v2';
+let selections = new Map();
+let viewingShared = false;       // true if URL has #plan= and we're displaying it
+let myOwnSelections = null;       // backup of localStorage when viewing shared
+
+function loadFromStorage() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) return new Map(Object.entries(JSON.parse(raw)));
+  } catch {}
+  return new Map();
 }
-function saveStars(set) {
-  try { localStorage.setItem(STAR_KEY, JSON.stringify([...set])); } catch {}
+function saveToStorage(map) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(Object.fromEntries(map))); } catch {}
 }
-let starred = loadStars();
 
 // === Helpers ===
 function escapeHtml(s) {
@@ -235,16 +362,104 @@ function clsFor(key) {
   const i = (DATA?.interests || []).find(x => x.key === key);
   return i ? i.cls : 'c-cross';
 }
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(showToast._h);
+  showToast._h = setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+// === Cycle marker state: empty -> starred -> planned -> empty ===
+function cycleMarker(key) {
+  const cur = selections.get(key) || '';
+  const next = cur === '' ? 'starred' : cur === 'starred' ? 'planned' : '';
+  if (next === '') selections.delete(key); else selections.set(key, next);
+  if (!viewingShared) saveToStorage(selections);
+  return next;
+}
+
+// === Share encoding ===
+function encodePlan(map, name) {
+  const obj = { v: 1, n: name || '', s: Object.fromEntries(map), t: Date.now() };
+  const json = JSON.stringify(obj);
+  // URL-safe base64
+  return btoa(unescape(encodeURIComponent(json)))
+    .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+function decodePlan(str) {
+  try {
+    const b64 = str.replace(/-/g, '+').replace(/_/g, '/');
+    const json = decodeURIComponent(escape(atob(b64 + '='.repeat((4 - b64.length % 4) % 4))));
+    const obj = JSON.parse(json);
+    return { name: obj.n || '', selections: new Map(Object.entries(obj.s || {})), timestamp: obj.t };
+  } catch (e) { return null; }
+}
+
+function buildShareLink(name) {
+  const encoded = encodePlan(selections, name);
+  const url = `${location.origin}${location.pathname}#plan=${encoded}`;
+  return url;
+}
+
+async function copyShareLink() {
+  if (selections.size === 0) {
+    showToast('Mark some items first — your plan is empty.');
+    return;
+  }
+  const name = prompt("Add your name to the shared link? (optional, helps the recipient know whose plan it is)", "Alexis") || '';
+  const url = buildShareLink(name);
+  try {
+    await navigator.clipboard.writeText(url);
+    showToast('Share link copied to clipboard!');
+  } catch {
+    prompt('Copy this link:', url);
+  }
+}
+
+function checkSharedURL() {
+  const m = location.hash.match(/^#plan=(.+)$/);
+  if (!m) return;
+  const decoded = decodePlan(m[1]);
+  if (!decoded) {
+    showToast("Couldn't read shared plan link.");
+    return;
+  }
+  myOwnSelections = new Map(selections);
+  selections = decoded.selections;
+  viewingShared = true;
+  const banner = document.getElementById('share-banner');
+  banner.style.display = 'flex';
+  const who = decoded.name ? escapeHtml(decoded.name) + "'s" : 'a shared';
+  document.getElementById('share-banner-msg').innerHTML =
+    `👋 You're viewing <strong>${who} plan</strong> (${decoded.selections.size} items). Your own selections are safely stored — click below to either save this as yours, or return to your own.`;
+}
+
+function dismissShared(saveAsMine) {
+  if (saveAsMine) {
+    saveToStorage(selections);
+    showToast('Saved as your plan.');
+  } else {
+    selections = myOwnSelections || loadFromStorage();
+    showToast('Back to your own plan.');
+  }
+  viewingShared = false;
+  myOwnSelections = null;
+  document.getElementById('share-banner').style.display = 'none';
+  history.replaceState(null, '', location.pathname);
+  rerenderEverything();
+}
 
 // === Data loading ===
 async function loadData() {
   try {
-    // Cache-bust so edits show up fast
     const r = await fetch('data.json?t=' + Date.now());
     if (!r.ok) throw new Error('HTTP ' + r.status + ' loading data.json');
     DATA = await r.json();
+    DATA.clubs = DATA.clubs || [];
     document.getElementById('status').style.display = 'none';
     document.getElementById('app').style.display = 'block';
+    selections = loadFromStorage();
+    checkSharedURL();
     boot();
   } catch (e) {
     showError(e);
@@ -252,7 +467,7 @@ async function loadData() {
 }
 
 function showError(e) {
-  const friendly = `
+  document.body.innerHTML = `
     <div class="wrap">
       <div class="error-box">
         <h3>Couldn't load data.json</h3>
@@ -260,34 +475,58 @@ function showError(e) {
         <p><strong>How to fix:</strong></p>
         <ol>
           <li>Copy the contents of <code>data.json</code> from your repo</li>
-          <li>Paste into <a href="https://jsonlint.com" target="_blank">jsonlint.com</a> — it will point to the exact line with the error</li>
+          <li>Paste into <a href="https://jsonlint.com" target="_blank">jsonlint.com</a> — it points to the exact line</li>
           <li>Fix and commit the change on GitHub</li>
         </ol>
         <p><strong>Technical details:</strong></p>
         <code>${escapeHtml(e.message || String(e))}</code>
       </div>
     </div>`;
-  document.body.innerHTML = friendly;
 }
 
-// === Render ===
+// === Render: chips ===
 function renderChips(containerId, panel) {
   const c = document.getElementById(containerId);
   c.innerHTML = '';
   const all = document.createElement('button');
   all.className = 'chip c-all' + (activeFilter[panel] === 'All' ? ' active' : '');
   all.textContent = 'All';
-  all.onclick = () => { activeFilter[panel] = 'All'; renderAll(); };
+  all.onclick = () => { activeFilter[panel] = 'All'; rerenderEverything(); };
   c.appendChild(all);
   DATA.interests.forEach(({ key, cls }) => {
     const b = document.createElement('button');
     b.className = 'chip ' + cls + (activeFilter[panel] === key ? ' active' : '');
     b.textContent = key;
-    b.onclick = () => { activeFilter[panel] = key; renderAll(); };
+    b.onclick = () => { activeFilter[panel] = key; rerenderEverything(); };
     c.appendChild(b);
   });
 }
 
+function markerHTML(key) {
+  const state = selections.get(key) || '';
+  const title = state === 'starred' ? 'Currently: Interested. Click for Planned.'
+              : state === 'planned' ? 'Currently: Planned. Click to clear.'
+              : 'Click: Interested. Click again: Planned in my schedule.';
+  return `<span class="marker" data-key="${escapeAttr(key)}" data-state="${state}" title="${escapeAttr(title)}"></span>`;
+}
+
+function attachMarkers(container) {
+  container.querySelectorAll('.marker').forEach(el => {
+    el.onclick = (e) => {
+      e.stopPropagation();
+      const k = el.dataset.key;
+      const next = cycleMarker(k);
+      el.dataset.state = next;
+      el.title = next === 'starred' ? 'Currently: Interested. Click for Planned.'
+              : next === 'planned' ? 'Currently: Planned. Click to clear.'
+              : 'Click: Interested. Click again: Planned in my schedule.';
+      updateMyPlanSummary();
+      updateHeroPlanCount();
+    };
+  });
+}
+
+// === Render: courses ===
 function renderCourses() {
   const grid = document.getElementById('courses-grid');
   const filter = activeFilter.courses;
@@ -295,10 +534,10 @@ function renderCourses() {
   document.getElementById('count-courses').textContent = `${list.length} of ${DATA.courses.length}`;
   if (list.length === 0) { grid.innerHTML = '<div class="empty">No courses for that filter yet.</div>'; return; }
   grid.innerHTML = list.map(c => {
-    const isStarred = starred.has('c:' + c.title);
+    const key = 'c:' + c.title;
     return `
     <div class="card">
-      <span class="star ${isStarred ? 'starred' : ''}" data-key="c:${escapeAttr(c.title)}">★</span>
+      ${markerHTML(key)}
       <div class="top">
         <div>
           <div class="code">${escapeHtml(c.code)} · ${escapeHtml(c.dept)}</div>
@@ -315,9 +554,10 @@ function renderCourses() {
       ${c.url ? `<a class="link" href="${escapeAttr(c.url)}" target="_blank" rel="noopener">Source ↗</a>` : ''}
     </div>`;
   }).join('');
-  attachStars(grid);
+  attachMarkers(grid);
 }
 
+// === Render: faculty ===
 function renderFaculty() {
   const grid = document.getElementById('faculty-grid');
   const filter = activeFilter.faculty;
@@ -325,10 +565,10 @@ function renderFaculty() {
   document.getElementById('count-faculty').textContent = `${list.length} of ${DATA.faculty.length}`;
   if (list.length === 0) { grid.innerHTML = '<div class="empty">No faculty for that filter yet.</div>'; return; }
   grid.innerHTML = list.map(f => {
-    const isStarred = starred.has('f:' + f.name);
+    const key = 'f:' + f.name;
     return `
     <div class="card fac">
-      <span class="star ${isStarred ? 'starred' : ''}" data-key="f:${escapeAttr(f.name)}">★</span>
+      ${markerHTML(key)}
       <div class="top">
         <div>
           <div class="name">${escapeHtml(f.name)}</div>
@@ -341,9 +581,35 @@ function renderFaculty() {
       ${f.url ? `<a class="link" href="${escapeAttr(f.url)}" target="_blank" rel="noopener">Profile ↗</a>` : ''}
     </div>`;
   }).join('');
-  attachStars(grid);
+  attachMarkers(grid);
 }
 
+// === Render: clubs ===
+function renderClubs() {
+  const grid = document.getElementById('clubs-grid');
+  const filter = activeFilter.clubs;
+  const list = filter === 'All' ? DATA.clubs : DATA.clubs.filter(k => k.interest === filter);
+  document.getElementById('count-clubs').textContent = `${list.length} of ${DATA.clubs.length}`;
+  if (list.length === 0) { grid.innerHTML = '<div class="empty">No clubs for that filter yet.</div>'; return; }
+  grid.innerHTML = list.map(k => {
+    const key = 'k:' + k.name;
+    return `
+    <div class="card club">
+      ${markerHTML(key)}
+      <div class="top">
+        <div>
+          <div class="title">${escapeHtml(k.name)}</div>
+        </div>
+        <span class="pill ${clsFor(k.interest)}">${escapeHtml(k.interest)}</span>
+      </div>
+      <div class="why-club">${escapeHtml(k.why)}</div>
+      ${k.url ? `<a class="link" href="${escapeAttr(k.url)}" target="_blank" rel="noopener">Source ↗</a>` : ''}
+    </div>`;
+  }).join('');
+  attachMarkers(grid);
+}
+
+// === Render: roadmap, advisor, resources ===
 function renderRoadmap() {
   document.getElementById('roadmap-list').innerHTML = DATA.roadmap.map(r => `
     <div class="qtr">
@@ -353,7 +619,6 @@ function renderRoadmap() {
       <div class="notes">${escapeHtml(r.notes)}</div>
     </div>`).join('');
 }
-
 function renderAdvisor() {
   document.getElementById('count-advisor').textContent = `${DATA.advisorQs.length} questions`;
   document.getElementById('advisor-list').innerHTML = DATA.advisorQs.map(item => `
@@ -363,7 +628,6 @@ function renderAdvisor() {
       <div class="who">Ask: ${escapeHtml(item.who)}</div>
     </div>`).join('');
 }
-
 function renderResources() {
   document.getElementById('count-resources').textContent = `${DATA.resources.length} resources`;
   document.getElementById('resources-list').innerHTML = DATA.resources.map(r => `
@@ -375,52 +639,159 @@ function renderResources() {
     </div>`).join('');
 }
 
-function renderAll() {
-  renderChips('chips-courses', 'courses');
-  renderChips('chips-faculty', 'faculty');
-  renderCourses();
-  renderFaculty();
+// === Render: My Plan ===
+function lookupItem(key) {
+  const [type, ...rest] = key.split(':');
+  const id = rest.join(':');
+  if (type === 'c') return DATA.courses.find(c => c.title === id);
+  if (type === 'f') return DATA.faculty.find(f => f.name === id);
+  if (type === 'k') return DATA.clubs.find(k => k.name === id);
+  return null;
+}
+function typeLabel(key) {
+  const t = key.split(':')[0];
+  return t === 'c' ? 'Course' : t === 'f' ? 'Faculty' : t === 'k' ? 'Club' : '';
+}
+function planItemHTML(key, item) {
+  const title = item ? (item.title || item.name) : key.split(':').slice(1).join(':');
+  const interest = item?.interest;
+  const cls = interest ? clsFor(interest) : 'c-cross';
+  return `
+    <div class="plan-item">
+      <span class="plan-type">${escapeHtml(typeLabel(key))}</span>
+      <span class="plan-title">${escapeHtml(title)}</span>
+      ${interest ? `<span class="plan-pill ${cls}">${escapeHtml(interest)}</span>` : ''}
+      <span class="marker" data-key="${escapeAttr(key)}" data-state="${selections.get(key) || ''}"></span>
+    </div>`;
+}
+function renderMyPlan() {
+  const container = document.getElementById('my-plan-content');
+  const total = selections.size;
+  document.getElementById('count-myplan').textContent = `${total} item${total !== 1 ? 's' : ''}`;
+  if (total === 0) {
+    container.innerHTML = `
+      <div class="plan-empty">
+        <p><strong>Your plan is empty.</strong></p>
+        <p>Go to Courses, Faculty, or Clubs and click the circle on a card to mark something as <span style="color:#f59e0b">★ Interested</span> or <span style="color:#16a34a">✓ Planned</span>.</p>
+      </div>`;
+    return;
+  }
+  const starred = [...selections].filter(([_, v]) => v === 'starred').map(([k]) => k);
+  const planned = [...selections].filter(([_, v]) => v === 'planned').map(([k]) => k);
+  const summary = `
+    <div class="plan-summary">
+      <div class="plan-counts">
+        <div class="plan-count"><span class="num" style="color:#f59e0b">${starred.length}</span><span class="lbl">★ Interested</span></div>
+        <div class="plan-count"><span class="num" style="color:#16a34a">${planned.length}</span><span class="lbl">✓ Planned</span></div>
+        <div class="plan-count"><span class="num">${total}</span><span class="lbl">Total</span></div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn" style="background:#8C1515;color:white;border:none" onclick="copyShareLink()">📤 Share my plan</button>
+        <button class="btn" style="background:#f3f4f6;color:#1f2937;border:1px solid #e5e7eb" onclick="copyPlanAsText()">📋 Copy as text</button>
+        ${viewingShared ? '' : `<button class="btn" style="background:#fef2f2;color:#991b1b;border:1px solid #fca5a5" onclick="confirmClearPlan()">Clear all</button>`}
+      </div>
+    </div>`;
+  let html = summary;
+  if (planned.length) {
+    html += `<div class="plan-section"><h3 class="planned"><span class="icon">✓</span>Planned in my schedule (${planned.length})</h3><div class="plan-list">`;
+    planned.forEach(k => { html += planItemHTML(k, lookupItem(k)); });
+    html += `</div></div>`;
+  }
+  if (starred.length) {
+    html += `<div class="plan-section"><h3><span class="icon">★</span>Interested (${starred.length})</h3><div class="plan-list">`;
+    starred.forEach(k => { html += planItemHTML(k, lookupItem(k)); });
+    html += `</div></div>`;
+  }
+  container.innerHTML = html;
+  attachMarkers(container);
+}
+function copyPlanAsText() {
+  if (selections.size === 0) { showToast('Plan is empty.'); return; }
+  const lines = ['My Stanford GSB Prep Plan', '=========================', ''];
+  const planned = [...selections].filter(([_, v]) => v === 'planned');
+  const starred = [...selections].filter(([_, v]) => v === 'starred');
+  if (planned.length) {
+    lines.push('PLANNED IN MY SCHEDULE');
+    planned.forEach(([k]) => {
+      const it = lookupItem(k);
+      lines.push(`  ✓ [${typeLabel(k)}] ${it ? (it.title || it.name) : k}`);
+    });
+    lines.push('');
+  }
+  if (starred.length) {
+    lines.push('INTERESTED');
+    starred.forEach(([k]) => {
+      const it = lookupItem(k);
+      lines.push(`  ★ [${typeLabel(k)}] ${it ? (it.title || it.name) : k}`);
+    });
+  }
+  const txt = lines.join('\n');
+  navigator.clipboard.writeText(txt).then(
+    () => showToast('Plan copied as text!'),
+    () => prompt('Copy this:', txt)
+  );
+}
+function confirmClearPlan() {
+  if (!confirm('Clear all marked items? This cannot be undone.')) return;
+  selections.clear();
+  saveToStorage(selections);
+  rerenderEverything();
+  showToast('Plan cleared.');
 }
 
-function attachStars(grid) {
-  grid.querySelectorAll('.star').forEach(el => {
-    el.onclick = (e) => {
-      e.stopPropagation();
-      const key = el.dataset.key;
-      if (starred.has(key)) starred.delete(key); else starred.add(key);
-      saveStars(starred);
-      el.classList.toggle('starred');
-    };
-  });
+// === Update plan count UI ===
+function updateHeroPlanCount() {
+  const n = selections.size;
+  document.getElementById('stat-myplan').textContent = n;
+  const badge = document.getElementById('badge-myplan');
+  if (n > 0) { badge.textContent = n; badge.style.display = 'inline-block'; }
+  else { badge.style.display = 'none'; }
+}
+function updateMyPlanSummary() { renderMyPlan(); }
+
+function rerenderEverything() {
+  renderChips('chips-courses', 'courses');
+  renderChips('chips-faculty', 'faculty');
+  renderChips('chips-clubs', 'clubs');
+  renderCourses();
+  renderFaculty();
+  renderClubs();
+  renderRoadmap();
+  renderAdvisor();
+  renderResources();
+  renderMyPlan();
+  updateHeroPlanCount();
 }
 
 function boot() {
-  // Header meta
   document.getElementById('meta-title').textContent = DATA.meta?.title || 'Stanford GSB Prep';
   document.getElementById('meta-sub').textContent = DATA.meta?.subtitle || '';
   document.getElementById('meta-updated').textContent = DATA.meta?.lastUpdated ? `Last updated: ${DATA.meta.lastUpdated}` : '';
   document.title = DATA.meta?.title || document.title;
 
-  // Stats
   document.getElementById('stat-courses').textContent = DATA.courses.length;
   document.getElementById('stat-faculty').textContent = DATA.faculty.length;
-  document.getElementById('stat-interests').textContent = DATA.interests.length;
+  document.getElementById('stat-clubs').textContent = DATA.clubs.length;
   document.getElementById('stat-quarters').textContent = DATA.roadmap.length;
 
-  // Tabs
   document.querySelectorAll('.tab').forEach(t => {
     t.onclick = () => {
       document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
       document.querySelectorAll('.tab-panel').forEach(x => x.classList.remove('active'));
       t.classList.add('active');
       document.getElementById('panel-' + t.dataset.tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     };
   });
 
-  renderAll();
-  renderRoadmap();
-  renderAdvisor();
-  renderResources();
+  document.getElementById('btn-share-plan').onclick = copyShareLink;
+  document.getElementById('btn-go-my-plan').onclick = () => {
+    document.querySelector('[data-tab="my-plan"]').click();
+  };
+  document.getElementById('btn-save-shared').onclick = () => dismissShared(true);
+  document.getElementById('btn-dismiss-shared').onclick = () => dismissShared(false);
+
+  rerenderEverything();
 }
 
 loadData();
