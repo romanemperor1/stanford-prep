@@ -2,7 +2,7 @@
   "_comment": "Edit this file to update the live tracker. After saving, the site auto-rebuilds in ~30s. JSON syntax matters — every string in double quotes, commas between items, no trailing commas. Paste into jsonlint.com if unsure. To add a new course/faculty/club: copy an existing block, paste, edit fields. The 'interest' field MUST exactly match one of the keys in the 'interests' array.",
   "meta": {
     "title": "Stanford GSB Prep — Class of 2028",
-    "subtitle": "Built for Alexis · Edit data.json on GitHub to update this page · Filter, mark interested ★ or planned ✓, share via link",
+    "subtitle": "Built for Alexis · Course planning, faculty to meet, the 2-year roadmap",
     "lastUpdated": "2026-04-29"
   },
   "interests": [

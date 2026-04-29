@@ -16,21 +16,30 @@ body {
 }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 28px 20px 60px; }
 
-/* ===== HERO with Stanford imagery ===== */
+/* ===== HERO with Stanford photo background ===== */
 .hero {
   position: relative; overflow: hidden;
   background: linear-gradient(135deg, #8C1515 0%, #5e0e0e 65%, #3d0808 100%);
   color: white;
   border-radius: 16px;
-  padding: 36px 36px 32px;
+  padding: 56px 40px 52px;
   margin-bottom: 24px;
   box-shadow: 0 6px 24px rgba(140, 21, 21, 0.20);
+  min-height: 280px;
+}
+.hero-photo {
+  position: absolute; inset: 0;
+  background-image: url("images/main-quad-arches.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(140,21,21,0.80) 0%, rgba(94,14,14,0.74) 60%, rgba(61,8,8,0.82) 100%);
+  z-index: 1;
 }
 .hero-content { position: relative; z-index: 2; max-width: 720px; }
-.hero-illust {
-  position: absolute; right: -10px; top: 0; bottom: 0;
-  width: 420px; opacity: 0.95; pointer-events: none; z-index: 1;
-}
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 11px; font-weight: 700; text-transform: uppercase;
@@ -440,8 +449,9 @@ body {
 
     <!-- ===== HERO ===== -->
     <div class="hero">
-      <!-- SVG illustration of Stanford campus silhouette -->
-      <svg class="hero-illust" viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <div class="hero-photo"></div>
+      <div class="hero-overlay"></div>
+      <svg style="display:none" class="hero-illust" viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <!-- Sky gradient (subtle) -->
         <defs>
           <linearGradient id="skyGrad" x1="0" x2="0" y1="0" y2="1">
@@ -516,16 +526,6 @@ body {
         <h1 id="meta-title">Stanford GSB Prep</h1>
         <div class="sub" id="meta-sub"></div>
         <div class="updated" id="meta-updated"></div>
-        <div class="stats">
-          <div class="stat"><span class="num" id="stat-courses">—</span><span class="lbl">Courses</span></div>
-          <div class="stat"><span class="num" id="stat-faculty">—</span><span class="lbl">Faculty</span></div>
-          <div class="stat"><span class="num" id="stat-clubs">—</span><span class="lbl">Clubs</span></div>
-          <div class="stat"><span class="num" id="stat-myplan">—</span><span class="lbl">In my plan</span></div>
-        </div>
-        <div class="hero-actions">
-          <button class="btn btn-light" id="btn-share-plan">📤 Share my plan</button>
-          <button class="btn" id="btn-go-my-plan">View my plan →</button>
-        </div>
       </div>
     </div>
 
@@ -1287,10 +1287,13 @@ function confirmClearPlan() {
 
 function updateHeroPlanCount() {
   const n = selections.size;
-  document.getElementById('stat-myplan').textContent = n;
+  const stat = document.getElementById('stat-myplan');
+  if (stat) stat.textContent = n;
   const badge = document.getElementById('badge-myplan');
-  if (n > 0) { badge.textContent = n; badge.style.display = 'inline-block'; }
-  else { badge.style.display = 'none'; }
+  if (badge) {
+    if (n > 0) { badge.textContent = n; badge.style.display = 'inline-block'; }
+    else { badge.style.display = 'none'; }
+  }
 }
 
 function rerenderEverything() {
@@ -1314,10 +1317,6 @@ function boot() {
   document.getElementById('meta-updated').textContent = DATA.meta?.lastUpdated ? `Last updated: ${DATA.meta.lastUpdated}` : '';
   document.title = DATA.meta?.title || document.title;
 
-  document.getElementById('stat-courses').textContent = DATA.courses.length;
-  document.getElementById('stat-faculty').textContent = DATA.faculty.length;
-  document.getElementById('stat-clubs').textContent = DATA.clubs.length;
-
   document.querySelectorAll('.tab').forEach(t => {
     t.onclick = () => {
       document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
@@ -1328,8 +1327,6 @@ function boot() {
     };
   });
 
-  document.getElementById('btn-share-plan').onclick = copyShareLink;
-  document.getElementById('btn-go-my-plan').onclick = () => document.querySelector('[data-tab="my-plan"]').click();
   document.getElementById('btn-save-shared').onclick = () => dismissShared(true);
   document.getElementById('btn-dismiss-shared').onclick = () => dismissShared(false);
 
