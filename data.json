@@ -3,7 +3,7 @@
   "meta": {
     "title": "Stanford GSB Prep — Class of 2028",
     "subtitle": "Built for Alexis · Edit data.json on GitHub to update this page · Filter, mark interested ★ or planned ✓, share via link",
-    "lastUpdated": "2026-04-28"
+    "lastUpdated": "2026-04-29"
   },
   "interests": [
     {
@@ -59,7 +59,11 @@
       "apply": "Open enrollment",
       "prereqs": "None",
       "tip": "Counts toward the Climate Solutions Initiative certificate. Mandatory attendance.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -76,7 +80,10 @@
       "apply": "Open enrollment / pre-qualification",
       "prereqs": "Finance fundamentals helpful",
       "tip": "Rare access to someone who has pioneered renewable project finance. Best for climate VC, green infra, or policy paths.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y2-Autumn"
+      ]
     },
     {
       "code": "—",
@@ -87,7 +94,10 @@
       "when": "Y2 Winter",
       "units": "3",
       "why": "Pairs strategy with regulation — useful for emerging-markets work.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/stefan-j-reichelstein"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/stefan-j-reichelstein",
+      "quarters": [
+        "Y2-Winter"
+      ]
     },
     {
       "code": "—",
@@ -98,7 +108,10 @@
       "when": "Y2 Spring",
       "units": "3",
       "why": "Scaling sustainable businesses. Project-based.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/erica-plambeck"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/erica-plambeck",
+      "quarters": [
+        "Y2-Spring"
+      ]
     },
     {
       "code": "MS&E",
@@ -109,7 +122,10 @@
       "when": "Y2 Fall",
       "units": "3",
       "why": "Quant policy lens; cross-register if you want depth.",
-      "url": "https://engineering.stanford.edu/people/james-sweeney"
+      "url": "https://engineering.stanford.edu/people/james-sweeney",
+      "quarters": [
+        "Y2-Autumn"
+      ]
     },
     {
       "code": "—",
@@ -120,7 +136,12 @@
       "when": "Y2 full year",
       "units": "9",
       "why": "Project sequence with engineers + scientists; real deployment problems.",
-      "url": "https://energy.stanford.edu/"
+      "url": "https://energy.stanford.edu/",
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -137,7 +158,10 @@
       "apply": "Likely lottery / pre-qualification",
       "prereqs": "None — designed for non-engineers",
       "tip": "Best for PMs, founders, strategists. Not for data scientists. Heavy practitioner visits.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y2-Autumn"
+      ]
     },
     {
       "code": "—",
@@ -154,7 +178,11 @@
       "apply": "Application-only (highly selective)",
       "prereqs": "None",
       "tip": "Spring 2026 emphasis on AI startups makes it especially relevant for you. Also available on Coursera if you can't get in-person.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y1-Spring",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -165,7 +193,10 @@
       "when": "Y2 Winter",
       "units": "3",
       "why": "Project-based. Best class for applying ML to real biz decisions.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/susan-athey"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/susan-athey",
+      "quarters": [
+        "Y2-Winter"
+      ]
     },
     {
       "code": "—",
@@ -176,7 +207,12 @@
       "when": "Y2 (varies)",
       "units": "2",
       "why": "Newer GSB AI Lab series. Multiple short modules — pick 1–2.",
-      "url": "https://www.gsb.stanford.edu/experience/learning/applied-ai"
+      "url": "https://www.gsb.stanford.edu/experience/learning/applied-ai",
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -187,7 +223,15 @@
       "when": "Both years",
       "units": "0",
       "why": "Not a course — but the most practical applied-AI prep at GSB. Sign up week 1.",
-      "url": "https://www.gsb.stanford.edu/experience/learning/applied-ai"
+      "url": "https://www.gsb.stanford.edu/experience/learning/applied-ai",
+      "quarters": [
+        "Y1-Autumn",
+        "Y1-Winter",
+        "Y1-Spring",
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "FINANCE 384",
@@ -204,7 +248,10 @@
       "apply": "Open enrollment (bid in Super Round)",
       "prereqs": "Finance fundamentals recommended",
       "tip": "~1,000 students have taken this. Pair with Strebulaev's VC Initiative office hours and events.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y2-Winter"
+      ]
     },
     {
       "code": "STRAMGT 353",
@@ -221,7 +268,11 @@
       "apply": "Open enrollment",
       "prereqs": "None",
       "tip": "Take in Y1 spring or Y2 fall if seriously considering founding. No exam — grade is participation + projects. Mandatory attendance.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y1-Spring",
+        "Y2-Autumn"
+      ]
     },
     {
       "code": "STRAMGT 359",
@@ -238,7 +289,11 @@
       "apply": "Open enrollment",
       "prereqs": "STRAMGT 353 recommended",
       "tip": "Rachleff (Benchmark, Wealthfront founder) is a legendary product strategist. Rare practitioner access.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -255,7 +310,11 @@
       "apply": "Team application (2-5 people)",
       "prereqs": "None",
       "tip": "Commit to a real business idea, not a class project. Network + feedback are the real value. Apply early — fills fast.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y1-Spring",
+        "Y2-Autumn"
+      ]
     },
     {
       "code": "ENGR 245",
@@ -272,7 +331,13 @@
       "apply": "Team application (4-5 people)",
       "prereqs": "None (open to MBA + grad)",
       "tip": "More disciplined than Startup Garage if you have a deep-tech idea. Expect heavy weekly homework.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y1-Spring",
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "STRAMGT 315",
@@ -283,7 +348,12 @@
       "when": "Y2 (intermittent)",
       "units": "3",
       "why": "Scale → exit playbook. Strong for VC investors who want to coach founders.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/hayagreeva-rao"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/hayagreeva-rao",
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -294,7 +364,12 @@
       "when": "Y2",
       "units": "3",
       "why": "EM-specific lens. Confirm offering — varies by year.",
-      "url": "https://www.gsb.stanford.edu/experience/learning/entrepreneurship/courses"
+      "url": "https://www.gsb.stanford.edu/experience/learning/entrepreneurship/courses",
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "S543",
@@ -311,7 +386,11 @@
       "apply": "Open enrollment",
       "prereqs": "None (foundational for S549)",
       "tip": "Essential if you're considering search funds, bolt-ons, or CEO-via-acquisition. Take before S549.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter"
+      ]
     },
     {
       "code": "S355",
@@ -328,7 +407,11 @@
       "apply": "Open enrollment",
       "prereqs": "None",
       "tip": "Grade is 65% participation + 35% projects. Show up engaged.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter"
+      ]
     },
     {
       "code": "S549",
@@ -345,7 +428,10 @@
       "apply": "Application / pre-qualification (limited cohort)",
       "prereqs": "S543 strongly recommended",
       "tip": "Only take if you're serious about searching post-graduation. Most graduates do launch within 1-2 years.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y2-Spring"
+      ]
     },
     {
       "code": "STRAMGT 544",
@@ -356,7 +442,12 @@
       "when": "Y2",
       "units": "3",
       "why": "Operational scaling — pairs with ETA stack.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/hayagreeva-rao"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/hayagreeva-rao",
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "MKTG 240",
@@ -367,7 +458,10 @@
       "when": "Y2 Fall",
       "units": "3",
       "why": "Distribution req in marketing. Foundation for any consumer play.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/pedro-m-gardete"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/pedro-m-gardete",
+      "quarters": [
+        "Y2-Autumn"
+      ]
     },
     {
       "code": "—",
@@ -378,7 +472,10 @@
       "when": "Y2 Winter",
       "units": "3",
       "why": "Neuroeconomics of choice. Direct application to beauty branding (sensory + emotion).",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/baba-shiv"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/baba-shiv",
+      "quarters": [
+        "Y2-Winter"
+      ]
     },
     {
       "code": "—",
@@ -389,7 +486,12 @@
       "when": "Y2",
       "units": "3",
       "why": "Aaker's brand-personality framework underpins modern beauty positioning.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/jennifer-aaker"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/jennifer-aaker",
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "GSBGEN 527",
@@ -400,7 +502,12 @@
       "when": "Y2",
       "units": "3",
       "why": "DTC + cross-border. Critical for any modern beauty brand.",
-      "url": "https://www.gsb.stanford.edu/experience/learning"
+      "url": "https://www.gsb.stanford.edu/experience/learning",
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -411,7 +518,12 @@
       "when": "Y2",
       "units": "3",
       "why": "Project-based with a real brand client.",
-      "url": "https://www.gsb.stanford.edu/experience/learning/experiential-learning/action-learning-program/digital-marketing"
+      "url": "https://www.gsb.stanford.edu/experience/learning/experiential-learning/action-learning-program/digital-marketing",
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -428,7 +540,10 @@
       "apply": "Open enrollment",
       "prereqs": "None",
       "tip": "For tech strategists, product leaders, corporate VC. Deep frameworks; old-school case method.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y2-Autumn"
+      ]
     },
     {
       "code": "—",
@@ -439,7 +554,12 @@
       "when": "Y2",
       "units": "3",
       "why": "Practitioner-led tech industry deep dives. Heavy case + guest based.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/robert-e-siegel"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/robert-e-siegel",
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -450,7 +570,12 @@
       "when": "Y2",
       "units": "3",
       "why": "How incumbents innovate. Useful for search-fund-acquired companies.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/charles-oreilly"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/charles-oreilly",
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -461,7 +586,10 @@
       "when": "Y2 Winter",
       "units": "3",
       "why": "Marketplaces, ads, fintech. Best class for understanding modern tech moats.",
-      "url": "https://gsb-faculty.stanford.edu/susan-athey/"
+      "url": "https://gsb-faculty.stanford.edu/susan-athey/",
+      "quarters": [
+        "Y2-Winter"
+      ]
     },
     {
       "code": "MS&E 271/273",
@@ -472,7 +600,12 @@
       "when": "Y2",
       "units": "3",
       "why": "Cross-register if you want engineering-flavored tech strategy.",
-      "url": "https://msande.stanford.edu/academics-admissions/graduate/ms-program"
+      "url": "https://msande.stanford.edu/academics-admissions/graduate/ms-program",
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "OB 374",
@@ -489,7 +622,10 @@
       "apply": "Mandatory (auto-enrolled Y1)",
       "prereqs": "N/A",
       "tip": "Quality of your reflection shapes the learning for your peers. Don't phone it in.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y1-Autumn"
+      ]
     },
     {
       "code": "OB 375",
@@ -506,7 +642,12 @@
       "apply": "Lottery + pre-qualification",
       "prereqs": "None",
       "tip": "Best for Y2s ready for emotional bandwidth investment. The most consistently top-rated course at GSB across 45+ years. Pre-qualification is via a Canvas assignment ~5 weeks before quarter start.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "OB 377",
@@ -523,7 +664,12 @@
       "apply": "Lottery (~2:1 rejection ratio)",
       "prereqs": "None",
       "tip": "Counterintuitive but practical. Especially valuable if you tend to underestimate the role of politics in advancement. Read Pfeffer's '7 Rules of Power' before applying.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "OB 533",
@@ -540,7 +686,12 @@
       "apply": "Lottery / pre-qualification",
       "prereqs": "None",
       "tip": "Pair with Paths to Power. Best for those uncomfortable in hierarchy or wanting executive presence.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -551,7 +702,10 @@
       "when": "Apply Y1",
       "units": "0",
       "why": "Apply Y1 spring to coach Y1s in Y2. Free executive-coach training.",
-      "url": "https://www.gsb.stanford.edu/experience/learning/leadership/arbuckle-leadership-fellows-program"
+      "url": "https://www.gsb.stanford.edu/experience/learning/leadership/arbuckle-leadership-fellows-program",
+      "quarters": [
+        "Y1-Spring"
+      ]
     },
     {
       "code": "—",
@@ -562,7 +716,12 @@
       "when": "Y2",
       "units": "3",
       "why": "Neale's Negotiations is must-take in Y1 or Y2.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/academic-areas/organizational-behavior"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/academic-areas/organizational-behavior",
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "GSBGEN 360",
@@ -579,7 +738,12 @@
       "apply": "Open enrollment",
       "prereqs": "None",
       "tip": "Mandatory attendance. Foster runs the Sports Management Initiative — connects to the Lacob/Ballmer alumni network.",
-      "featured": true
+      "featured": true,
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -590,7 +754,12 @@
       "when": "Y2",
       "units": "3",
       "why": "Tableau/SQL/Python for sports decisions. Light on prereqs.",
-      "url": "https://gsbresearchhub.stanford.edu/research-labs-and-initiatives/sports-management-initiative"
+      "url": "https://gsbresearchhub.stanford.edu/research-labs-and-initiatives/sports-management-initiative",
+      "quarters": [
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -601,7 +770,15 @@
       "when": "Both years",
       "units": "0",
       "why": "Annual conference (13th in 2026). Volunteer to meet the speakers.",
-      "url": "http://www.gsbsic.com/"
+      "url": "http://www.gsbsic.com/",
+      "quarters": [
+        "Y1-Autumn",
+        "Y1-Winter",
+        "Y1-Spring",
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -612,7 +789,14 @@
       "when": "Y1 or Y2",
       "units": "3",
       "why": "Neale is iconic. Useful for VC, ETA, and life.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/margaret-neale"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/margaret-neale",
+      "quarters": [
+        "Y1-Winter",
+        "Y1-Spring",
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -623,7 +807,13 @@
       "when": "Y1 Summer or Y2",
       "units": "0",
       "why": "4-week summer abroad. Use for EM VC connections (LatAm/Africa/SEA).",
-      "url": "https://www.gsb.stanford.edu/experience/learning/entrepreneurship/beyond-classroom"
+      "url": "https://www.gsb.stanford.edu/experience/learning/entrepreneurship/beyond-classroom",
+      "quarters": [
+        "Summer",
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     },
     {
       "code": "—",
@@ -634,7 +824,15 @@
       "when": "Both years",
       "units": "0",
       "why": "Short regional deep-dives. Cheap way to satisfy Global Experience Req.",
-      "url": "https://www.gsb.stanford.edu/experience/learning"
+      "url": "https://www.gsb.stanford.edu/experience/learning",
+      "quarters": [
+        "Y1-Autumn",
+        "Y1-Winter",
+        "Y1-Spring",
+        "Y2-Autumn",
+        "Y2-Winter",
+        "Y2-Spring"
+      ]
     }
   ],
   "faculty": [
@@ -644,7 +842,20 @@
       "interest": "Energy",
       "teaches": "Clean energy economics, carbon accounting, hydrogen, storage cost curves",
       "why": "Most accessible energy faculty for non-technical MBAs. Co-teaches Clean Energy Opportunities.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/stefan-j-reichelstein"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/stefan-j-reichelstein",
+      "bio": "William R. Timken Professor of Accounting and Faculty Research Director for the Steyer-Taylor Center for Energy Policy and Finance. Known for management accounting and cost analysis research. In recent years, focused on cost competitiveness of low-carbon energy solutions including solar PV, hydrogen, and carbon capture.",
+      "works": [
+        {
+          "title": "Corporate Carbon Emission Statements",
+          "type": "paper",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4672099"
+        },
+        {
+          "title": "Assessing the Costs of Industrial Decarbonization (2024)",
+          "type": "paper",
+          "url": "https://ideas.repec.org/p/zbw/zewdip/283586.html"
+        }
+      ]
     },
     {
       "name": "Dan Reicher",
@@ -652,7 +863,20 @@
       "interest": "Energy",
       "teaches": "Project finance, federal energy policy, climate venture",
       "why": "Best person for project finance + EM angle. Goes way back in clean energy.",
-      "url": "https://law.stanford.edu/steyer-taylor-center-for-energy-policy-and-finance/"
+      "url": "https://law.stanford.edu/steyer-taylor-center-for-energy-policy-and-finance/",
+      "bio": "Executive Director of the Steyer-Taylor Center for Energy Policy and Finance and Lecturer at Stanford GSB. Former U.S. Assistant Secretary of Energy under Clinton and Google VP for Energy. 25+ years across energy policy, law, finance, and technology.",
+      "works": [
+        {
+          "title": "Smarter Finance for Cleaner Energy: MLPs and REITs for Renewables",
+          "type": "paper",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2174650"
+        },
+        {
+          "title": "A Tale of Three Markets: California, Texas, Germany Renewable Experiences (2016)",
+          "type": "paper",
+          "url": "https://ideas.repec.org/p/zbw/zewdip/2743696.html"
+        }
+      ]
     },
     {
       "name": "Sally Benson",
@@ -660,7 +884,20 @@
       "interest": "Energy",
       "teaches": "Carbon capture, geological storage, IPCC contributor",
       "why": "If you want to understand the technical realities of decarbonization at scale.",
-      "url": "https://sustainability.stanford.edu/people/sally-benson"
+      "url": "https://sustainability.stanford.edu/people/sally-benson",
+      "bio": "Precourt Family Professor in Energy Resources Engineering at Stanford's School of Earth, Energy & Environmental Sciences. Director of the Global Climate and Energy Project; former Energy Division Director at the White House Office of Science and Technology Policy (2021-2023). Lead voice on geologic CO2 storage.",
+      "works": [
+        {
+          "title": "Carbon Dioxide Capture and Storage: Issues and Prospects",
+          "type": "paper",
+          "url": "https://sccs.stanford.edu/publications/journal-articles/carbon-dioxide-capture-and-storage-issues-and-prospects"
+        },
+        {
+          "title": "The Role of Carbon Capture and Storage in Decarbonizing California's Electricity Grid",
+          "type": "paper",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3821029"
+        }
+      ]
     },
     {
       "name": "Arun Majumdar",
@@ -668,7 +905,15 @@
       "interest": "Energy",
       "teaches": "Energy systems, innovation, government-industry interface",
       "why": "Dean of Doerr; busy but engages with MBAs through Precourt events.",
-      "url": "https://sustainability.stanford.edu/our-community/leadership/dean-arun-majumdar"
+      "url": "https://sustainability.stanford.edu/our-community/leadership/dean-arun-majumdar",
+      "bio": "Inaugural Dean of the Stanford Doerr School of Sustainability and Jay Precourt Provostial Chair Professor. Founding Director of ARPA-E under Obama; former VP of Energy at Google. Member of U.S. National Academy of Sciences and Academy of Engineering. Research on redox reactions for sustainable energy.",
+      "works": [
+        {
+          "title": "Nanoscale thermal rectification (Science, 2006)",
+          "type": "paper",
+          "url": "https://sustainability.stanford.edu/our-community/leadership/dean-arun-majumdar"
+        }
+      ]
     },
     {
       "name": "Erica Plambeck",
@@ -676,7 +921,20 @@
       "interest": "Energy",
       "teaches": "Sustainable supply chains, environmental ops",
       "why": "Teaches Environmental Entrepreneurship. Approachable, action-oriented.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/erica-plambeck"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/erica-plambeck",
+      "bio": "Charles A. Holloway Professor of Operations, Information & Technology at Stanford GSB. Expert in supply chain management and environmental sustainability. 2003 Presidential Early Career Award recipient. Focuses on aligning supply chain operations with climate and sustainability goals.",
+      "works": [
+        {
+          "title": "Engaging Supply Chains in Climate Change",
+          "type": "paper",
+          "url": "https://pubsonline.informs.org/doi/10.1287/msom.1120.0420"
+        },
+        {
+          "title": "Reducing Greenhouse Gas Emissions Through Operations and Supply Chain Management (2012)",
+          "type": "paper",
+          "url": "https://www.researchgate.net/publication/256967838"
+        }
+      ]
     },
     {
       "name": "Jim Sweeney",
@@ -684,7 +942,20 @@
       "interest": "Energy",
       "teaches": "Energy economics, electricity markets, policy",
       "why": "Teaches MS&E energy policy class — open to MBAs.",
-      "url": "https://engineering.stanford.edu/people/james-sweeney"
+      "url": "https://engineering.stanford.edu/people/james-sweeney",
+      "bio": "Professor of Management Science and Engineering at Stanford. Senior Fellow at SIEPR, Hoover Institution, and Precourt Institute for Energy. 40+ years studying energy economics, electricity markets, and climate policy. Former director of Precourt Energy Efficiency Center.",
+      "works": [
+        {
+          "title": "Energy Efficiency: Building a Clean, Secure Economy",
+          "type": "book",
+          "url": "https://www.amazon.com/Energy-Efficiency-Building-Secure-Economy/dp/0817919546"
+        },
+        {
+          "title": "California Electricity Crisis (Hoover Press, 2002)",
+          "type": "book",
+          "url": "https://www.hoover.org/research/california-electricity-crisis"
+        }
+      ]
     },
     {
       "name": "Erik Brynjolfsson",
@@ -692,7 +963,20 @@
       "interest": "AI",
       "teaches": "Economics of AI, productivity, future of work",
       "why": "THE economist of generative AI. Heavy industry network.",
-      "url": "https://hai.stanford.edu/people/erik-brynjolfsson"
+      "url": "https://hai.stanford.edu/people/erik-brynjolfsson",
+      "bio": "Jerry Yang and Akiko Yamazaki Professor and Director of the Stanford Digital Economy Lab. Former MIT Sloan professor (1990-2020) and Director of the MIT Digital Business Initiative. Author of nine books and 100+ academic articles on IT productivity. Leading Transformative AI research at Stanford.",
+      "works": [
+        {
+          "title": "The Second Machine Age (NYT bestseller)",
+          "type": "book",
+          "url": "https://www.amazon.com/Second-Machine-Age-Prosperity-Technologies/dp/0393350649"
+        },
+        {
+          "title": "Machine, Platform, Crowd: Harnessing Our Digital Future",
+          "type": "book",
+          "url": "https://books.google.com/books/about/Machine_Platform_Crowd_Harnessing_Our_Di.html?id=zh1DDQAAQBAJ"
+        }
+      ]
     },
     {
       "name": "Susan Athey",
@@ -700,7 +984,20 @@
       "interest": "AI",
       "teaches": "ML / causal inference applied to digital marketplaces",
       "why": "Best applied-ML teacher at GSB. Project-based pedagogy. National Academy member.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/susan-athey"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/susan-athey",
+      "bio": "The Economics of Technology Professor at Stanford GSB. 2023 President of the American Economic Association. Former Chief Economist at U.S. DOJ Antitrust Division (2022-2024). First female winner of the John Bates Clark Medal. Research on digitization economics, marketplace design, and ML/econometrics intersection.",
+      "works": [
+        {
+          "title": "Economists (and Economics) in Tech Companies (JEP 2019)",
+          "type": "paper",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3254039"
+        },
+        {
+          "title": "The Impact of Consumer Multi-homing on Advertising Markets (Mgmt Science 2018)",
+          "type": "paper",
+          "url": "https://gsb-faculty.stanford.edu/susan-athey/"
+        }
+      ]
     },
     {
       "name": "Fei-Fei Li",
@@ -708,7 +1005,20 @@
       "interest": "AI",
       "teaches": "Computer vision, ImageNet, AI policy",
       "why": "Hard to get time with, but HAI events and lectures are open. Aim for those.",
-      "url": "https://hai.stanford.edu/people/fei-fei-li"
+      "url": "https://hai.stanford.edu/people/fei-fei-li",
+      "bio": "Sequoia Capital Professor of Computer Science and Senior Fellow at Stanford HAI; courtesy appointment at GSB. Co-Director of Stanford HAI. Former VP at Google and Chief Scientist of AI/ML at Google Cloud. 300+ peer-reviewed publications, 346,000+ citations. Co-led ImageNet, foundational to modern deep learning.",
+      "works": [
+        {
+          "title": "ImageNet: A Large-Scale Hierarchical Image Database (2009)",
+          "type": "paper",
+          "url": "https://scholar.google.com/citations?user=rDfyQnIAAAAJ&hl=en"
+        },
+        {
+          "title": "Rapid Natural Scene Categorization in the Near Absence of Attention (PNAS 2002)",
+          "type": "paper",
+          "url": "https://hai.stanford.edu/people/fei-fei-li"
+        }
+      ]
     },
     {
       "name": "Ilya Strebulaev",
@@ -716,7 +1026,25 @@
       "interest": "VC/Entrepreneurship",
       "teaches": "Venture finance, fund dynamics, private market data",
       "why": "VC class instructor. EM-friendly — has worked on emerging market VC research.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/ilya-strebulaev"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/ilya-strebulaev",
+      "bio": "David S. Lobel Professor of Private Equity and Professor of Finance at Stanford GSB. Founder and Director of the Stanford Venture Capital Initiative. Winner of the First Paper Prize in Journal of Finance and Fama-DFA Prize. MBA teaching award recipient.",
+      "works": [
+        {
+          "title": "Interim Valuations, Predictability, and Outcomes in Private Equity",
+          "type": "paper",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4833819"
+        },
+        {
+          "title": "Squaring Venture Capital Valuations with Reality",
+          "type": "paper",
+          "url": "https://gsb-faculty.stanford.edu/ilya-a-strebulaev/publication-listings/squaring-venture-capital-valuations-with-reality/"
+        },
+        {
+          "title": "The Venture Mindset (book, 2024)",
+          "type": "book",
+          "url": "https://www.gsb.stanford.edu/faculty-research/faculty/ilya-strebulaev"
+        }
+      ]
     },
     {
       "name": "Andy Rachleff",
@@ -724,7 +1052,20 @@
       "interest": "VC/Entrepreneurship",
       "teaches": "Product-market fit, startup boards",
       "why": "Maybe the best practitioner-teacher at GSB. Office hours fill fast.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/andrew-s-rachleff"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/andrew-s-rachleff",
+      "bio": "Lecturer at Stanford GSB. Co-founder of Benchmark Capital (1995) and Wealthfront. Coined the term \"product-market fit.\" Teaches courses on innovation, non-founder CEOs, and aligning startups with their markets.",
+      "works": [
+        {
+          "title": "Andy Rachleff on Democratizing Investment",
+          "type": "article",
+          "url": "https://www.gsb.stanford.edu/insights/andy-rachleff-democratizing-investment-business"
+        },
+        {
+          "title": "Wealthfront case study",
+          "type": "case",
+          "url": "https://www.gsb.stanford.edu/faculty-research/case-studies/wealthfront"
+        }
+      ]
     },
     {
       "name": "Bill Barnett",
@@ -732,7 +1073,15 @@
       "interest": "VC/Entrepreneurship",
       "teaches": "Strategy, market dynamics, the 'Red Queen' framework",
       "why": "Co-teaches with Rachleff. Sharp strategic mind.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/william-barnett"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/william-barnett",
+      "bio": "Thomas M. Siebel Professor of Business Leadership, Strategy, and Organizations at Stanford GSB. Chair of Environmental Social Sciences at the Doerr School of Sustainability. Directs the Stanford Initiative on Business and Environmental Sustainability. Studies organizational adaptation — known for the \"Red Queen\" framework on competitive evolution.",
+      "works": [
+        {
+          "title": "Red Queen research on organizational competition",
+          "type": "paper",
+          "url": "https://www.gsb.stanford.edu/faculty-research/faculty/william-barnett"
+        }
+      ]
     },
     {
       "name": "Hayagreeva 'Huggy' Rao",
@@ -740,7 +1089,20 @@
       "interest": "VC/Entrepreneurship",
       "teaches": "Scaling, organizational design, friction reduction",
       "why": "Author of Scaling Up Excellence + The Friction Project. Warm, generous.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/hayagreeva-rao"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/hayagreeva-rao",
+      "bio": "Atholl McBean Professor of Organizational Behavior and Human Resources at Stanford GSB; Professor of Sociology (by courtesy). Studies social and cultural causes of organizational change and scaling. Co-director of GSB's Customer-Focused Innovation Executive Program.",
+      "works": [
+        {
+          "title": "Scaling Up Excellence (WSJ bestseller, with Bob Sutton)",
+          "type": "book",
+          "url": "https://www.amazon.com/Scaling-Up-Excellence-Getting-Settling/dp/0385347022"
+        },
+        {
+          "title": "The Friction Project: How Smart Leaders Make the Right Things Easier (2024)",
+          "type": "book",
+          "url": "https://huggyrao.com/the-friction-project/"
+        }
+      ]
     },
     {
       "name": "Theresia Gouw",
@@ -748,7 +1110,15 @@
       "interest": "VC/Entrepreneurship",
       "teaches": "Early-stage VC, diversity in VC",
       "why": "Co-teaches VC with Strebulaev. Useful network bridge.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/ilya-strebulaev"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/ilya-strebulaev",
+      "bio": "Co-founder of Acrew Capital. Stanford GSB MBA '94. Former Managing Partner at Accel Partners (first female partner) and Aspect Ventures. Forbes 100 Most Powerful Women; Forbes Midas List 9 times; Time's 40 Most Influential Minds in Tech. Co-teaches the VC course with Ilya Strebulaev.",
+      "works": [
+        {
+          "title": "Co-teaches Venture Capital course at Stanford GSB",
+          "type": "article",
+          "url": "https://www.gsb.stanford.edu/faculty-research/faculty/theresia-gouw"
+        }
+      ]
     },
     {
       "name": "Peter Kelly",
@@ -756,7 +1126,20 @@
       "interest": "Search Fund",
       "teaches": "ETA, search fund mechanics, scaling",
       "why": "THE search fund teacher today. Office hours = priority access for searchers.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/peter-b-kelly"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/peter-b-kelly",
+      "bio": "Lecturer at Stanford GSB; teaches Entrepreneurial Acquisition, Managing Growing Enterprises, and Search Fund Garage. Three-time Stanford grad (BA, MS, MBA). Former CEO of Pacific Pulmonary Services (acquired via search fund he co-founded, 1993-2010). Invested in 60+ search-acquired companies; serves on 16 boards. Author of the Stanford Search Fund Studies.",
+      "works": [
+        {
+          "title": "2024 Search Fund Study",
+          "type": "study",
+          "url": "https://www.gsb.stanford.edu/faculty-research/case-studies/2024-search-fund-study"
+        },
+        {
+          "title": "2022 Search Fund Study: Selected Observations",
+          "type": "study",
+          "url": "https://www.gsb.stanford.edu/faculty-research/case-studies/2022-search-fund-study-selected-observations"
+        }
+      ]
     },
     {
       "name": "Irv Grousbeck",
@@ -764,7 +1147,15 @@
       "interest": "Search Fund",
       "teaches": "Operating, ownership, leadership at growing enterprises",
       "why": "Living legend of GSB ETA. Verify availability in 2026.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/h-irving-grousbeck"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/h-irving-grousbeck",
+      "bio": "MBA Class of 1980 Adjunct Professor of Management. Co-founder and co-director of the Center for Entrepreneurial Studies (1996, with Charles Holloway). Founded Continental Cablevision in 1964. Principal owner of the Boston Celtics. Living legend of GSB ETA / search fund.",
+      "works": [
+        {
+          "title": "New Business Ventures and the Entrepreneur (textbook)",
+          "type": "book",
+          "url": "https://www.gsb.stanford.edu/faculty-research/faculty/h-irving-grousbeck"
+        }
+      ]
     },
     {
       "name": "David Dodson",
@@ -772,7 +1163,20 @@
       "interest": "Search Fund",
       "teaches": "Operating CEOs, MGE",
       "why": "Dodson's MGE section is highly rated. Practical playbooks.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/david-m-dodson"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/david-m-dodson",
+      "bio": "Lecturer in Management at Stanford GSB. Stanford grad (Econ '83, MBA '87). Raised three search funds and served as CEO/Executive Chairman in tech and telecom. Co-founded Project Healthy Children (later Sanku) — grain fortification tech named in Time's 100 Best Inventions.",
+      "works": [
+        {
+          "title": "The Manager's Handbook (WSJ + USA Today bestseller)",
+          "type": "book",
+          "url": "https://www.amazon.com/Managers-Handbook-Focused-Decisions-Competition/dp/1394174071"
+        },
+        {
+          "title": "Professor Dodson teaching case",
+          "type": "case",
+          "url": "https://www.gsb.stanford.edu/faculty-research/case-studies/professor-dodson"
+        }
+      ]
     },
     {
       "name": "Graham Weaver",
@@ -780,7 +1184,15 @@
       "interest": "Search Fund",
       "teaches": "PE operating, leadership development",
       "why": "2024 Distinguished Teaching Award. Inspiring.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/graham-weaver"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/graham-weaver",
+      "bio": "Stanford GSB MBA '99. Lecturer at Stanford GSB; 2024 MBA Distinguished Teaching Award winner for Managing Growing Enterprises. Founder and Partner of Alpine Investors — a PeopleFirst PE firm investing in software and services for 20+ years. Pioneered the CEO-in-Residence talent model.",
+      "works": [
+        {
+          "title": "Alpine Investors case study",
+          "type": "case",
+          "url": "https://www.gsb.stanford.edu/faculty-research/case-studies/graham-weaver"
+        }
+      ]
     },
     {
       "name": "Coley Andrews",
@@ -788,7 +1200,15 @@
       "interest": "Search Fund",
       "teaches": "Search fund investing, MGE",
       "why": "Investor side of ETA — meet if raising a search fund.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/coley-andrews"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/coley-andrews",
+      "bio": "Lecturer at Stanford GSB; teaches Managing Growing Enterprises and Managerial Skills. Dartmouth + Stanford MBA. Co-founder and Managing Partner of Pacific Lake Partners (founded 2009) — invests exclusively in the search fund model; partnered with 200+ search fund entrepreneurs. Former Golden Gate Capital and Parthenon Group.",
+      "works": [
+        {
+          "title": "Coley Andrews teaching case",
+          "type": "case",
+          "url": "https://www.gsb.stanford.edu/faculty-research/case-studies/coley-andrews"
+        }
+      ]
     },
     {
       "name": "Jennifer Aaker",
@@ -796,7 +1216,20 @@
       "interest": "Consumer/Cosmetics",
       "teaches": "Brand personality, storytelling, humor & meaning",
       "why": "Foundational frameworks for any consumer brand builder.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/jennifer-aaker"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/jennifer-aaker",
+      "bio": "General Atlantic Professor at Stanford GSB. Pioneering behavioral scientist on how purpose, meaning, time perception, and storytelling drive performance and well-being. Award-winning research featured across top journals; books translated into 20+ languages.",
+      "works": [
+        {
+          "title": "The Dragonfly Effect",
+          "type": "book",
+          "url": "https://www.amazon.com/Dragonfly-Effect-Effective-Powerful-Social/dp/0470614153"
+        },
+        {
+          "title": "Humor, Seriously: Why Humor Is A Secret Weapon in Business",
+          "type": "book",
+          "url": "https://www.goodreads.com/author/show/3459278.Jennifer_Aaker"
+        }
+      ]
     },
     {
       "name": "Baba Shiv",
@@ -804,7 +1237,20 @@
       "interest": "Consumer/Cosmetics",
       "teaches": "Neuroeconomics, emotion & decision-making",
       "why": "His Frinky Science class is a cult favorite. Direct cosmetics relevance.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/baba-shiv"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/baba-shiv",
+      "bio": "Sanwa Bank, Ltd. Professor of Marketing at Stanford GSB. Renowned behavioral economist specializing in neuroeconomics — how the emotional brain shapes decisions. Applies neuroeconomic insights to innovation and entrepreneurial leadership across Silicon Valley startups and Fortune 500.",
+      "works": [
+        {
+          "title": "Brain Activity Forecasts Video Engagement (PNAS 2020)",
+          "type": "paper",
+          "url": "https://www.gsb.stanford.edu/faculty-research/faculty/baba-shiv"
+        },
+        {
+          "title": "The Role of Hedonic Behavior in Reducing Perceived Risk (JCR 2005)",
+          "type": "paper",
+          "url": "https://www.gsb.stanford.edu/faculty-research/faculty/baba-shiv"
+        }
+      ]
     },
     {
       "name": "Pedro Gardete",
@@ -812,7 +1258,20 @@
       "interest": "Consumer/Cosmetics",
       "teaches": "Advertising, info asymmetry, personalization",
       "why": "Strong on DTC + targeted marketing.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/pedro-m-gardete"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/pedro-m-gardete",
+      "bio": "Associate Professor of Marketing at Stanford GSB. Empirical research on how peer influences shape consumer behavior, advertising strategy, and market outcomes. Showed that in-flight purchase proximity increases buying likelihood by 30% — pioneering work on social context in spending.",
+      "works": [
+        {
+          "title": "Social Effects in the In-Flight Marketplace (JMR 2015)",
+          "type": "paper",
+          "url": "https://gardete.people.stanford.edu/research"
+        },
+        {
+          "title": "Tailored Cheap Talk: Privacy Policy Effects on Ad Markets (Mktg Science 2018)",
+          "type": "paper",
+          "url": "https://gardete.people.stanford.edu/research"
+        }
+      ]
     },
     {
       "name": "Jonathan Levav",
@@ -820,7 +1279,20 @@
       "interest": "Consumer/Cosmetics",
       "teaches": "Behavioral economics, consumer experiments",
       "why": "Award-winning teacher.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/jonathan-levav"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/jonathan-levav",
+      "bio": "Professor of Marketing at Stanford GSB. Two-time winner of dean's award for teaching excellence. Faculty director of the Behavioral Lab. Uses experimental psychology and behavioral economics to study how cognitive biases, emotions, and social influences shape consumer choices.",
+      "works": [
+        {
+          "title": "Virtual Communication Curbs Creative Idea Generation (Nature 2022)",
+          "type": "paper",
+          "url": "https://www.gsb.stanford.edu/faculty-research/faculty/jonathan-levav"
+        },
+        {
+          "title": "The Asymmetric Impact of Context on Advantaged vs. Disadvantaged Options (JMR 2018)",
+          "type": "paper",
+          "url": "https://scholar.google.com/citations?user=2nuN1FoAAAAJ&hl=en"
+        }
+      ]
     },
     {
       "name": "Robert Burgelman",
@@ -828,7 +1300,15 @@
       "interest": "Tech",
       "teaches": "Strategy in tech industries, corporate evolution",
       "why": "200+ case studies. Old-school sharp.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/robert-burgelman"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/robert-burgelman",
+      "bio": "Edmund W. Littlefield Professor of Management at Stanford GSB since 1981. Leading strategy scholar. His longitudinal field research on Intel's transformation over 30 years produced his seminal Strategy is Destiny. 2017 honorary doctorate from University of St. Gallen; PICMET Leadership in Technology Award.",
+      "works": [
+        {
+          "title": "Strategy is Destiny: How Strategy-Making Shapes a Company's Future (with Andy Grove)",
+          "type": "book",
+          "url": "https://www.gsb.stanford.edu/faculty-research/books/strategy-destiny-how-strategy-making-shapes-companys-future"
+        }
+      ]
     },
     {
       "name": "Robert Siegel",
@@ -836,7 +1316,20 @@
       "interest": "Tech",
       "teaches": "Industry deep-dives, scaled companies",
       "why": "Practitioner who runs 'The Industry' — pulls in great guests.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/robert-e-siegel"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/robert-e-siegel",
+      "bio": "Lecturer in Management at Stanford GSB for 20+ years. Researches strategy and innovation across sectors. Authored 115+ cases and led primary research on Google, PayPal, Stripe, SoftBank. Venture Partner at Piva Capital and General Partner at XSeed Capital.",
+      "works": [
+        {
+          "title": "The Systems Leader (2024)",
+          "type": "book",
+          "url": "https://www.amazon.com/Systems-Leader-Mastering-Cross-Pressures-Companies/dp/0593800044"
+        },
+        {
+          "title": "The Brains and Brawn Company (2021)",
+          "type": "book",
+          "url": "https://www.amazon.com/Brains-Brawn-Company-Organizations-Physical/dp/1264257775"
+        }
+      ]
     },
     {
       "name": "Charles O'Reilly",
@@ -844,7 +1337,20 @@
       "interest": "Tech",
       "teaches": "Org culture, ambidexterity, innovation in incumbents",
       "why": "Lifetime Achievement Award. Direct relevance to ETA-acquired companies.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/charles-oreilly"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/charles-oreilly",
+      "bio": "Frank E. Buck Professor of Management at Stanford GSB. Leading organizational scholar on leadership, culture, diversity, and innovation. Published 100+ papers and six books. Winner of Distinguished Scholar Award (Academy of Management) and Lifetime Achievement Award (Organizational Behavior Division).",
+      "works": [
+        {
+          "title": "Lead and Disrupt: How To Solve the Innovator's Dilemma (with Tushman)",
+          "type": "book",
+          "url": "https://www.gsb.stanford.edu/faculty-research/faculty/charles-oreilly"
+        },
+        {
+          "title": "Leadership for Organizations (2019, with Waldman)",
+          "type": "book",
+          "url": "https://us.sagepub.com/en-us/nam/leadership-for-organizations/book260617"
+        }
+      ]
     },
     {
       "name": "Bob Sutton",
@@ -852,7 +1358,20 @@
       "interest": "Tech",
       "teaches": "Innovation scaling, no-bs management",
       "why": "Author 'Good Boss, Bad Boss', 'No Asshole Rule'. Approachable.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/robert-i-sutton"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/robert-i-sutton",
+      "bio": "Professor Emeritus, Management Science and Engineering at Stanford. Organizational psychologist and NYT bestselling author on leadership, innovation, and workplace culture. Co-founded Center for Work, Technology and Organization, Stanford Technology Ventures Program, and the d.school.",
+      "works": [
+        {
+          "title": "The No Asshole Rule (2007)",
+          "type": "book",
+          "url": "https://bobsutton.net/about-bob/"
+        },
+        {
+          "title": "Good Boss, Bad Boss",
+          "type": "book",
+          "url": "https://bobsutton.net/about-bob/"
+        }
+      ]
     },
     {
       "name": "Jeffrey Pfeffer",
@@ -860,7 +1379,25 @@
       "interest": "Leadership",
       "teaches": "Power, organizational politics",
       "why": "Read 'Power' and '7 Rules of Power' before approaching. Blunt and brilliant.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/jeffrey-pfeffer"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/jeffrey-pfeffer",
+      "bio": "Thomas D. Dee II Professor of Organizational Behavior at Stanford GSB since 1979. Leading organizational theorist; author of 16 books. His Paths to Power course is one of GSB's most sought-after electives. Has served on boards of several human capital management companies.",
+      "works": [
+        {
+          "title": "7 Rules of Power (2022)",
+          "type": "book",
+          "url": "https://www.gsb.stanford.edu/faculty-research/books/7-rules-power-surprising-true-advice-how-get-things-done-advance-your-career"
+        },
+        {
+          "title": "Hidden Value: How Companies Get Extraordinary Results (with O'Reilly, 2000)",
+          "type": "book",
+          "url": "https://jeffreypfeffer.com/books/7-rules-of-power/"
+        },
+        {
+          "title": "Power: Why Some People Have It — And Others Don't",
+          "type": "book",
+          "url": "https://jeffreypfeffer.com/"
+        }
+      ]
     },
     {
       "name": "Deborah Gruenfeld",
@@ -868,7 +1405,20 @@
       "interest": "Leadership",
       "teaches": "Power, status, performance",
       "why": "Acting With Power instructor. Pair with Pfeffer.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/deborah-h-gruenfeld"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/deborah-h-gruenfeld",
+      "bio": "Joseph McDonald Professor of Organizational Behavior at Stanford GSB. Social psychologist studying how people are transformed by organizational and social structures, with particular expertise in the psychology of power. Co-directs the Stanford Executive Programs for Women Leaders.",
+      "works": [
+        {
+          "title": "Acting With Power: Why We Are More Powerful Than We Believe (2020)",
+          "type": "book",
+          "url": "https://www.gsb.stanford.edu/faculty-research/faculty/deborah-h-gruenfeld"
+        },
+        {
+          "title": "Power and Influence theory (with Keltner & Anderson)",
+          "type": "paper",
+          "url": "https://scholar.google.com/citations?user=X_RB3M8AAAAJ&hl=en"
+        }
+      ]
     },
     {
       "name": "Frank Flynn",
@@ -876,7 +1426,20 @@
       "interest": "Leadership",
       "teaches": "Leadership emergence, status, gender dynamics",
       "why": "Often teaches the OB core. Strong researcher + teacher.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/francis-j-flynn"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/francis-j-flynn",
+      "bio": "Paul E. Holden Professor of Organizational Behavior at Stanford GSB (joined 2006). Studies employee cooperation, work group dynamics, and leadership emergence through experimental and field research. Has informed exec ed at Google, Microsoft, Goldman Sachs, McKinsey.",
+      "works": [
+        {
+          "title": "Are We Intuitively Cooperative or Selfish? (multiple journals)",
+          "type": "paper",
+          "url": "https://francisflynn.org/"
+        },
+        {
+          "title": "Research on prosocial leadership (Academy of Management Review)",
+          "type": "paper",
+          "url": "https://www.gsb.stanford.edu/faculty-research/faculty/francis-j-flynn"
+        }
+      ]
     },
     {
       "name": "Margaret Neale",
@@ -884,7 +1447,15 @@
       "interest": "Leadership",
       "teaches": "Negotiation, decision-making",
       "why": "Negotiations is a must-take. Neale is THE name.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/margaret-neale"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/margaret-neale",
+      "bio": "Adams Distinguished Professor of Management Emerita. John G. McCoy-Banc One Corporation Professor (2000-2012); Academic Associate Dean (1997-2000). First woman to receive the Davis Award for lifetime achievement. 25+ years at GSB. THE name in negotiation research.",
+      "works": [
+        {
+          "title": "Getting (More of) What You Want (2015, with Lys)",
+          "type": "book",
+          "url": "https://gettingmoreofwhatyouwant.com/"
+        }
+      ]
     },
     {
       "name": "George Foster",
@@ -892,7 +1463,20 @@
       "interest": "Sports",
       "teaches": "Sports business, league/team economics",
       "why": "Runs the only formal sports business class. Connects to Lacob/Ballmer alumni network.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/george-foster"
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/george-foster",
+      "bio": "Konosuke Matsushita Professor of Management at Stanford GSB and Director of Sports Management Initiatives. Australian economist with prolific research in financial analysis, entrepreneurship, and sports business. Order of Australia (AM) honoree; honorary doctorate from University of Sydney; Australian Accounting Hall of Fame.",
+      "works": [
+        {
+          "title": "Sports Business Management: Decision Making Around the Globe (3rd ed, 2026)",
+          "type": "book",
+          "url": "https://www.amazon.com/Sports-Business-Management-Decision-Making/dp/1032738499"
+        },
+        {
+          "title": "The Business of Sports: Text and Cases on Strategy and Management",
+          "type": "book",
+          "url": "https://www.gsb.stanford.edu/faculty-research/books/business-sports-text-cases-strategy-management"
+        }
+      ]
     },
     {
       "name": "Roger Noll",
@@ -900,7 +1484,20 @@
       "interest": "Sports",
       "teaches": "Sports economics, antitrust, stadium financing",
       "why": "Less course-active but unmissable for sports econ context.",
-      "url": "https://profiles.stanford.edu/roger-noll"
+      "url": "https://profiles.stanford.edu/roger-noll",
+      "bio": "Professor Emeritus of Economics at Stanford and Senior Fellow at the American Antitrust Institute. Leading expert on antitrust, regulation, and the economics of sports and entertainment. Testified as expert witness in O'Bannon v. NCAA and Alston v. NCAA. Author of 17 books.",
+      "works": [
+        {
+          "title": "Sports Economics on Trial: Alston v. NCAA (2022)",
+          "type": "paper",
+          "url": "https://journals.sagepub.com/doi/abs/10.1177/15270025221078504"
+        },
+        {
+          "title": "Sports, Jobs and Taxes (1997)",
+          "type": "book",
+          "url": "https://www.brookings.edu/books/sports-jobs-and-taxes/"
+        }
+      ]
     }
   ],
   "roadmap": [
@@ -963,87 +1560,104 @@
     {
       "topic": "Curriculum",
       "q": "What's the realistic course load per quarter? When do most people front-load vs. back-load?",
-      "who": "Academic Services + 2nd-year peer advisor"
+      "who": "Academic Services + 2nd-year peer advisor",
+      "group": "Curriculum & registration"
     },
     {
       "topic": "Distribution",
       "q": "Which Distribution Requirement classes are over-subscribed and which can I take any quarter?",
-      "who": "Academic Services"
+      "who": "Academic Services",
+      "group": "Curriculum & registration"
     },
     {
       "topic": "Lottery strategy",
       "q": "Which electives lose 50%+ of applicants? When should I apply for Touchy Feely / Paths to Power / Acting With Power?",
-      "who": "Peer advisor + OB department"
+      "who": "Peer advisor + OB department",
+      "group": "Curriculum & registration"
     },
     {
       "topic": "Bidding mechanics",
       "q": "Walk me through course bidding. How many points do I get? Is bidding strategy a thing here?",
-      "who": "Academic Services"
+      "who": "Academic Services",
+      "group": "Curriculum & registration"
     },
     {
       "topic": "Joint degrees",
       "q": "Realistically, can I add the MS Environment & Resources (E-IPER) joint degree after I arrive, or do I need to apply now?",
-      "who": "E-IPER admissions + Academic Services"
+      "who": "E-IPER admissions + Academic Services",
+      "group": "Joint degrees & specialization"
     },
     {
       "topic": "AI track",
       "q": "Is the new GSB Applied AI initiative considered a 'certificate'? What does formal participation give me?",
-      "who": "GSB Applied AI Initiative office"
+      "who": "GSB Applied AI Initiative office",
+      "group": "Joint degrees & specialization"
     },
     {
       "topic": "Search Fund",
       "q": "What's the standard prep timeline for someone planning to launch a search fund right after graduation?",
-      "who": "Peter Kelly / CES Search Fund team"
+      "who": "Peter Kelly / CES Search Fund team",
+      "group": "Joint degrees & specialization"
     },
     {
       "topic": "Energy career",
       "q": "I'm a non-technical investor interested in project development. Should I prioritize Doerr classes or GSB energy electives?",
-      "who": "Dan Reicher / Precourt MBA contact / CES energy advisor"
+      "who": "Dan Reicher / Precourt MBA contact / CES energy advisor",
+      "group": "Joint degrees & specialization"
     },
     {
       "topic": "EM VC",
       "q": "What classes touch emerging market VC, and which professors actively research it?",
-      "who": "Strebulaev's VC Initiative + CES"
+      "who": "Strebulaev's VC Initiative + CES",
+      "group": "Joint degrees & specialization"
     },
     {
       "topic": "Cosmetics",
       "q": "Are there GSB faculty/lecturers from beauty, or alumni who'd guest-lecture? Who runs Retail & Luxury Club?",
-      "who": "Marketing dept + Retail Club leadership"
+      "who": "Marketing dept + Retail Club leadership",
+      "group": "Joint degrees & specialization"
     },
     {
       "topic": "Sports",
       "q": "Beyond GSBGEN 360, is there a way to do a Stanford Athletics-side independent study or project?",
-      "who": "George Foster / Sports Mgmt Initiative"
+      "who": "George Foster / Sports Mgmt Initiative",
+      "group": "Joint degrees & specialization"
     },
     {
       "topic": "Trips",
       "q": "Which Global Study Trips are best for VC + emerging markets? (LatAm? Africa? SEA?)",
-      "who": "Study Trips program office + CES"
+      "who": "Study Trips program office + CES",
+      "group": "Joint degrees & specialization"
     },
     {
       "topic": "Career advisors",
       "q": "Can I be assigned a career advisor who specializes in (a) VC, (b) ETA, and (c) climate tech? Or do I have to pick one?",
-      "who": "Career Management Center"
+      "who": "Career Management Center",
+      "group": "Career planning"
     },
     {
       "topic": "Etiquette",
       "q": "What's the etiquette for cold-emailing a faculty member I haven't taken a class with? Lunch programs?",
-      "who": "Peer advisor + Academic Services"
+      "who": "Peer advisor + Academic Services",
+      "group": "Community & etiquette"
     },
     {
       "topic": "Independent study",
       "q": "Can I run an independent study for credit, e.g. building an AI use case for a small business I'm scoping for ETA?",
-      "who": "Peter Kelly / Susan Athey / dept chair"
+      "who": "Peter Kelly / Susan Athey / dept chair",
+      "group": "Career planning"
     },
     {
       "topic": "Audit",
       "q": "Can I audit classes I didn't get into the lottery for?",
-      "who": "Academic Services + course instructor"
+      "who": "Academic Services + course instructor",
+      "group": "Curriculum & registration"
     },
     {
       "topic": "Off-campus",
       "q": "How much time off campus is realistic in Y2 (board roles, deal-sourcing, beauty brand consulting)?",
-      "who": "Peer advisor + section faculty advisor"
+      "who": "Peer advisor + section faculty advisor",
+      "group": "Career planning"
     }
   ],
   "resources": [
@@ -1051,109 +1665,106 @@
       "name": "Center for Entrepreneurial Studies (CES)",
       "type": "Center",
       "why": "Home base for VC, entrepreneurship, search fund. Curates 50+ courses. Office hours, mentor pool.",
-      "url": "https://www.gsb.stanford.edu/experience/about/centers-institutes/ces"
+      "url": "https://www.gsb.stanford.edu/experience/about/centers-institutes/ces",
+      "category": "Centers & Institutes"
     },
     {
       "name": "Venture Capital Initiative (Strebulaev)",
       "type": "Research lab",
       "why": "VC research, data, events. Get on the mailing list day 1.",
-      "url": "https://www.gsb.stanford.edu/faculty-research/labs-initiatives/vci"
+      "url": "https://www.gsb.stanford.edu/faculty-research/labs-initiatives/vci",
+      "category": "Initiatives & Labs"
     },
     {
       "name": "Search Fund Primer + 2024 Search Fund Study",
       "type": "Publications",
       "why": "GSB's official ETA bibles. Read both before fall.",
-      "url": "https://www.gsb.stanford.edu/experience/about/centers-institutes/ces/research/search-funds/primer"
+      "url": "https://www.gsb.stanford.edu/experience/about/centers-institutes/ces/research/search-funds/primer",
+      "category": "Publications"
     },
     {
       "name": "Precourt Institute for Energy",
       "type": "Center",
       "why": "Energy seminars, fellowships, sustainable finance initiative. Cross-school.",
-      "url": "https://energy.stanford.edu/"
+      "url": "https://energy.stanford.edu/",
+      "category": "Centers & Institutes"
     },
     {
       "name": "Doerr School of Sustainability",
       "type": "School",
       "why": "Cross-register here for technical energy/climate classes.",
-      "url": "https://sustainability.stanford.edu/"
+      "url": "https://sustainability.stanford.edu/",
+      "category": "Centers & Institutes"
     },
     {
       "name": "Steyer-Taylor Center for Energy Policy & Finance",
       "type": "Center",
       "why": "Reicher's home. Project finance focus.",
-      "url": "https://law.stanford.edu/steyer-taylor-center-for-energy-policy-and-finance/"
+      "url": "https://law.stanford.edu/steyer-taylor-center-for-energy-policy-and-finance/",
+      "category": "Centers & Institutes"
     },
     {
       "name": "Stanford HAI",
       "type": "Institute",
       "why": "Best AI events on campus. Open to MBAs.",
-      "url": "https://hai.stanford.edu/"
+      "url": "https://hai.stanford.edu/",
+      "category": "Centers & Institutes"
     },
     {
       "name": "AI@GSB / Applied AI Initiative",
       "type": "Student-led + faculty",
       "why": "Hands-on AI workshops, practitioner sessions. Your fast track to applied AI.",
-      "url": "https://www.gsb.stanford.edu/experience/learning/applied-ai"
+      "url": "https://www.gsb.stanford.edu/experience/learning/applied-ai",
+      "category": "Initiatives & Labs"
     },
     {
       "name": "GSB Sports Management Initiative",
       "type": "Initiative",
       "why": "George Foster's research + cases. Engages with Lacob/Ballmer alumni.",
-      "url": "https://gsbresearchhub.stanford.edu/research-labs-and-initiatives/sports-management-initiative"
+      "url": "https://gsbresearchhub.stanford.edu/research-labs-and-initiatives/sports-management-initiative",
+      "category": "Initiatives & Labs"
     },
     {
       "name": "GSB Sports Innovation Conference (March)",
       "type": "Annual conference",
       "why": "13th in 2026. Volunteer to access speakers.",
-      "url": "http://www.gsbsic.com/"
-    },
-    {
-      "name": "Stanford Energy Club",
-      "type": "Student club",
-      "why": "Speaker series, treks (e.g. geothermal in Iceland). Join Y1 fall.",
-      "url": "https://www.stanfordenergyclub.com/"
-    },
-    {
-      "name": "GSB Consumer & Retail Club / Luxury Trek",
-      "type": "Student club",
-      "why": "Luxury Trek visits LVMH, Cartier, prestige brands in Europe.",
-      "url": "https://www.stanfordretail.com"
-    },
-    {
-      "name": "Sports Management Club (GSB)",
-      "type": "Student club",
-      "why": "Treks to teams + leagues. Hosts SIC.",
-      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities"
+      "url": "http://www.gsbsic.com/",
+      "category": "Conferences & Events"
     },
     {
       "name": "Arbuckle Leadership Fellows Program",
       "type": "Program",
       "why": "Apply Y1 spring. Coach Y1s in Y2. Built-in executive-coach training.",
-      "url": "https://www.gsb.stanford.edu/experience/learning/leadership/arbuckle-leadership-fellows-program"
+      "url": "https://www.gsb.stanford.edu/experience/learning/leadership/arbuckle-leadership-fellows-program",
+      "category": "Programs & Fellowships"
     },
     {
       "name": "MS Environment & Resources (E-IPER) / MBA",
       "type": "Joint degree",
       "why": "If energy is your THING, evaluate this in Y1 fall.",
-      "url": "https://www.gsb.stanford.edu/programs/mba/academic-experience/joint-dual-degrees/e-iper"
+      "url": "https://www.gsb.stanford.edu/programs/mba/academic-experience/joint-dual-degrees/e-iper",
+      "category": "Programs & Fellowships"
     },
     {
       "name": "GMIX (Global Management Immersion)",
       "type": "Summer program",
       "why": "4 weeks abroad — perfect for EM VC connections.",
-      "url": "https://www.gsb.stanford.edu/experience/learning/entrepreneurship/beyond-classroom"
+      "url": "https://www.gsb.stanford.edu/experience/learning/entrepreneurship/beyond-classroom",
+      "category": "Programs & Fellowships"
     },
     {
       "name": "Explore Courses",
       "type": "Tool",
       "why": "The actual source of truth for course offerings each quarter.",
-      "url": "https://explorecourses.stanford.edu/"
+      "url": "https://explorecourses.stanford.edu/",
+      "category": "Tools"
     },
     {
       "name": "GSB Academic Calendar",
       "type": "Tool",
       "why": "Bidding/registration windows. Bookmark and live by it.",
-      "url": "https://www.gsb.stanford.edu/programs/mba/academic-experience/academic-calendar"
+      "url": "https://www.gsb.stanford.edu/programs/mba/academic-experience/academic-calendar",
+      "category": "Tools"
     }
   ],
   "clubs": [
@@ -1161,97 +1772,350 @@
       "name": "Africa Business Club",
       "interest": "VC/Entrepreneurship",
       "why": "Most direct on-ramp into the Africa-focused community at GSB. Speaker series, treks (Lagos, Nairobi, Cape Town), case discussions. Bridges to Stanford Seed.",
-      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities"
+      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities",
+      "scope": "GSB MBA only",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Africa Business Conference",
+        "Treks to Lagos / Nairobi / Cape Town"
+      ]
     },
     {
       "name": "Latin American Student Association (LASA)",
       "interest": "VC/Entrepreneurship",
       "why": "Speaker series, career events, social glue for Latam community at GSB. Useful if you ever want to source/deploy in LatAm.",
-      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities"
+      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities",
+      "scope": "GSB MBA only"
     },
     {
       "name": "GSB Energy Club",
       "interest": "Energy",
       "why": "Speaker series on grid, electrification, decarbonization, climate tech. Treks. Often the first place energy career intel lands.",
-      "url": "https://gsbenergyclub.wordpress.com/"
+      "url": "https://gsbenergyclub.wordpress.com/",
+      "scope": "GSB-led, broader Stanford",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Energy speakers series",
+        "Cleantech treks"
+      ]
     },
     {
       "name": "Stanford Energy Club (cross-campus)",
       "interest": "Energy",
       "why": "Bigger umbrella across Stanford — engineers, scientists, MBAs. Worth being a member of both this and the GSB-only club.",
-      "url": "https://www.stanfordenergyclub.com/"
+      "url": "https://www.stanfordenergyclub.com/",
+      "scope": "Stanford-wide",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Stanford Energy Week"
+      ]
     },
     {
       "name": "GSB VC Club",
       "interest": "VC/Entrepreneurship",
       "why": "Pitch competitions, VC firm visits, panels with practitioners. Apply to leadership team in Y1 spring if you want a louder voice.",
-      "url": "https://x.com/gsbvcclub"
+      "url": "https://x.com/gsbvcclub",
+      "scope": "GSB MBA only",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Pitch competitions",
+        "Sand Hill Road tours",
+        "VC firm visits"
+      ]
     },
     {
       "name": "GSB AI Club",
       "interest": "AI",
       "why": "Bridges frontier AI development to business applications. Hosts builders from frontier labs (OpenAI, Anthropic, etc.).",
-      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities"
+      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities",
+      "scope": "GSB MBA only",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "AI@GSB events",
+        "Frontier lab visits"
+      ]
     },
     {
       "name": "Entrepreneur Club (E-Club)",
       "interest": "VC/Entrepreneurship",
       "why": "First stop for any entrepreneurial interest at GSB. Founders' lunches, idea labs, demo days.",
-      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities"
+      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities",
+      "scope": "GSB MBA only",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Founders' lunches",
+        "Demo days"
+      ]
     },
     {
       "name": "Search Fund / ETA community at CES",
       "interest": "Search Fund",
       "why": "Not a formal 'club' but a tight community via CES. Search fund dinners, alumni searcher visits, mentor matching.",
-      "url": "https://www.gsb.stanford.edu/experience/about/centers-institutes/ces/research/search-funds"
+      "url": "https://www.gsb.stanford.edu/experience/about/centers-institutes/ces/research/search-funds",
+      "scope": "GSB MBA only",
+      "whenJoin": "Y1 spring",
+      "annualEvents": [
+        "Stanford Search Fund Conference",
+        "Searcher dinners"
+      ]
     },
     {
       "name": "Consumer & Retail Club / Luxury Trek",
       "interest": "Consumer/Cosmetics",
       "why": "Luxury Trek (Europe) visits LVMH, Cartier, prestige beauty. CPG and beauty exec speakers throughout the year.",
-      "url": "https://www.stanfordretail.com"
+      "url": "https://www.stanfordretail.com",
+      "scope": "GSB MBA only",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Luxury Trek (Europe — LVMH/Cartier)",
+        "CPG/beauty exec speakers"
+      ]
     },
     {
       "name": "High Tech Club",
       "interest": "Tech",
       "why": "Tech career fair, recruiter events, treks to Bay Area tech companies. Massive — most popular career-track club.",
-      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities"
+      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities",
+      "scope": "GSB MBA only",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Tech career fair",
+        "Bay Area tech treks"
+      ]
     },
     {
       "name": "Sports Management Club (GSB)",
       "interest": "Sports",
       "why": "Annual Sports Innovation Conference, treks to teams + leagues, owner/exec speakers (Lacob, Ballmer network).",
-      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities"
+      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities",
+      "scope": "GSB MBA only",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Sports Innovation Conference (March)",
+        "Team and league treks"
+      ]
     },
     {
       "name": "Stanford Sports Analytics Club (cross-campus)",
       "interest": "Sports",
       "why": "Quant side of sports — analytics talks, datathons. Worth checking out for fun even if not your career.",
-      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities"
+      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities",
+      "scope": "Stanford-wide"
     },
     {
       "name": "Investment Management Club (Public Markets)",
       "interest": "VC/Entrepreneurship",
       "why": "More public markets than VC, but solid speaker series and useful for understanding capital flows broadly.",
-      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities"
+      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities",
+      "scope": "GSB MBA only",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Investor speaker series"
+      ]
     },
     {
       "name": "Private Equity Club",
       "interest": "Search Fund",
       "why": "Adjacent to ETA — many search funders engage. PE recruiting events too.",
-      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities"
+      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities",
+      "scope": "GSB MBA only",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "PE recruiting events",
+        "GP/LP speaker panels"
+      ]
     },
     {
       "name": "Real Estate Club",
       "interest": "Cross-cutting",
       "why": "Useful if you ever look at infrastructure / RE-adjacent deals (data centers, solar farms, etc.).",
-      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities"
+      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities",
+      "scope": "GSB MBA only",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "RE treks",
+        "Speaker series"
+      ]
     },
     {
       "name": "Stanford Women in Business (SWIB)",
       "interest": "Leadership",
       "why": "Speaker series, mentorship, career programming. Open to all genders as allies.",
+      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities",
+      "scope": "GSB MBA only",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Speaker panels",
+        "Career programming"
+      ]
+    },
+    {
+      "name": "Healthcare Club",
+      "scope": "GSB MBA only",
+      "interest": "Cross-cutting",
+      "why": "Premier life sciences and healthcare industry club. Annual conference brings 1,000+ attendees including execs, clinicians, policymakers. Strong track record launching health tech ventures.",
+      "whenJoin": "Anytime",
+      "annualEvents": [
+        "GSB Healthcare Conference (1000+ attendees)"
+      ],
+      "url": "https://www.gsbhealthcare.org/"
+    },
+    {
+      "name": "Black Business Student Association (BBSA)",
+      "scope": "GSB MBA only",
+      "interest": "Leadership",
+      "why": "Founded 1982. Support network for Black MBAs. Mentorship programs, annual gala, strong alumni connections. Open to all GSB students as allies.",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "BBSA Annual Gala",
+        "Alumni mentorship programs"
+      ],
+      "url": "https://www.instagram.com/blackatgsb/"
+    },
+    {
+      "name": "Greater China Business Club",
+      "scope": "GSB MBA only",
+      "interest": "VC/Entrepreneurship",
+      "why": "Build networks in Greater China region (Mainland, Taiwan, HK). Educational events on Chinese business, alumni connections, cultural mixers.",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Speaker series",
+        "Alumni mixers"
+      ],
+      "url": "https://cardinalengage.stanford.edu/club_signup?view=all&group_type=84651"
+    },
+    {
+      "name": "GSB India Club",
+      "scope": "GSB MBA only",
+      "interest": "VC/Entrepreneurship",
+      "why": "Community for India-focused careers (VC, entrepreneurship, impact investing). Regular speaker events and networking.",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Alumni networking events",
+        "Speaker series"
+      ],
       "url": "https://www.gsb.stanford.edu/programs/mba/life-community/clubs-activities"
+    },
+    {
+      "name": "South Asian Business Students Association (SABSA)",
+      "scope": "GSB MBA only",
+      "interest": "Cross-cutting",
+      "why": "Community for South Asian students and those interested in South Asian culture/business. Works with ABSA for broader outreach.",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Cultural celebrations",
+        "AAPI heritage events"
+      ],
+      "url": "https://www.gsb.stanford.edu/experience/life/activities-organizations"
+    },
+    {
+      "name": "Management Consulting Club",
+      "scope": "GSB MBA only",
+      "interest": "Tech",
+      "why": "Prepares students for consulting careers. Case interview training, workshops, partner firm interactions. One of the most popular clubs at GSB.",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Partner firm events",
+        "Case competitions"
+      ],
+      "url": "https://umbrex.com/resources/directory-of-consulting-clubs/stanford-graduate-school-of-business-management-consulting-club/"
+    },
+    {
+      "name": "Social Innovation Club",
+      "scope": "GSB MBA only",
+      "interest": "Leadership",
+      "why": "Innovative solutions to global social challenges. Connects with social innovation leaders, idea forums, career support.",
+      "whenJoin": "Anytime",
+      "annualEvents": [
+        "Speaker events",
+        "Alumni roundtables",
+        "Impact showcases"
+      ],
+      "url": "https://cardinalsync.orgsync.com/org/gsbsocialinnovationclub50133/About"
+    },
+    {
+      "name": "FinTech Club",
+      "scope": "GSB MBA only",
+      "interest": "AI",
+      "why": "Financial technology landscape (banking, payments, insurtech, wealth management). Connects students with founders, investors, companies.",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "GSB FinTech Forward Summit"
+      ],
+      "url": "https://gsbfintech.com/"
+    },
+    {
+      "name": "Women in Management (WIM)",
+      "scope": "GSB MBA only",
+      "interest": "Leadership",
+      "why": "Supportive community for gender equity in business. Strong network, executive speakers, annual banquet, career trek, leadership panels. Open to all genders.",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Annual banquet",
+        "Leadership retreat",
+        "Career trek"
+      ],
+      "url": "https://www.gsb.stanford.edu/programs/mba/life-community/diversity/women"
+    },
+    {
+      "name": "Business & Environment Club",
+      "scope": "GSB MBA only",
+      "interest": "Energy",
+      "why": "Cultivates environmental sustainability community at GSB. Climate Conference brings 500+ attendees. Active alumni network.",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "GSB Climate, Business & Innovation Conference"
+      ],
+      "url": "https://gsbclimateinnovation.com/"
+    },
+    {
+      "name": "Arts, Media & Entertainment Club",
+      "scope": "GSB MBA only",
+      "interest": "Cross-cutting",
+      "why": "Film, TV, music, publishing, new media. Members from MTV, Disney, Universal, Fox. Membership up 40% in recent years.",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "FAME Conference (flagship)"
+      ],
+      "url": "https://www.gsbfame.com/"
+    },
+    {
+      "name": "Product Design & Manufacturing Club (PDMC)",
+      "scope": "GSB MBA only",
+      "interest": "Tech",
+      "why": "Bridges disciplines on product innovation. Design thinking applied to real-world challenges.",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Product competitions",
+        "Design sprints",
+        "Company visits"
+      ],
+      "url": "https://events.stanford.edu/group/gsb_product_design_and_manufacturing_club"
+    },
+    {
+      "name": "Asian Business Student Association (ABSA)",
+      "scope": "GSB MBA only",
+      "interest": "Leadership",
+      "why": "Unites GSB students from Asia, of Asian descent, or interested in Asia. Cultural integration, career exploration.",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "ABSA Gala",
+        "Fireside chats",
+        "AAPI events"
+      ],
+      "url": "https://www.instagram.com/p/Cso_F3NSuMK/"
+    },
+    {
+      "name": "Pride Club (GSB Pride)",
+      "scope": "GSB MBA only",
+      "interest": "Leadership",
+      "why": "Social and socially active org for LGBTQ students and allies. Community building, awareness events, alumni networking.",
+      "whenJoin": "Y1 fall",
+      "annualEvents": [
+        "Social gatherings",
+        "LGBTQ MBA Conference"
+      ],
+      "url": "https://www.gsbpride.com/"
     }
   ],
   "registration": {
@@ -1363,5 +2227,208 @@
         "url": "https://leanlaunchpad.stanford.edu/"
       }
     ]
-  }
+  },
+  "y1Core": {
+    "_note": "Y1 Core list is approximate — Stanford GSB updates these slightly each year. Verify with Academic Services after admit.",
+    "Y1-Autumn": [
+      {
+        "title": "Leadership Labs",
+        "code": "OB 374",
+        "note": "Mandatory, auto-enrolled"
+      },
+      {
+        "title": "Leading with Values",
+        "code": "STRAMGT/OB",
+        "note": "Foundational ethics + leadership"
+      },
+      {
+        "title": "Strategic Leadership",
+        "code": "STRAMGT",
+        "note": "Strategy core"
+      },
+      {
+        "title": "Microeconomics for Managers",
+        "code": "MGTECON",
+        "note": "May be waivable with strong econ background"
+      },
+      {
+        "title": "OB Foundations",
+        "code": "OB",
+        "note": "Individual + group behavior"
+      },
+      {
+        "title": "Critical Analytical Thinking (CAT)",
+        "code": "CAT",
+        "note": "Argumentation + writing"
+      }
+    ],
+    "Y1-Winter": [
+      {
+        "title": "Finance I (Capital Markets)",
+        "code": "FINANCE",
+        "note": "May be waivable"
+      },
+      {
+        "title": "Financial Accounting",
+        "code": "ACCT",
+        "note": "May be waivable"
+      },
+      {
+        "title": "Operations",
+        "code": "OIT",
+        "note": "Process + operations management"
+      },
+      {
+        "title": "Marketing",
+        "code": "MKTG",
+        "note": "Marketing fundamentals"
+      },
+      {
+        "title": "Modeling",
+        "code": "MGTECON/MS&E",
+        "note": "Quantitative modeling"
+      }
+    ],
+    "Y1-Spring": [
+      {
+        "title": "Strategy Beyond Markets",
+        "code": "STRAMGT",
+        "note": "Non-market strategy (regulation, politics)"
+      },
+      {
+        "title": "Finance II (Corporate Finance)",
+        "code": "FINANCE",
+        "note": "May be waivable"
+      },
+      {
+        "title": "Negotiations",
+        "code": "OB",
+        "note": "Often offered Y1 or Y2"
+      }
+    ]
+  },
+  "distributionAreas": {
+    "_note": "GSB requires 15+ units across these areas (one course per area in Y1 or Y2). Mix of mandatory and choose-from-list.",
+    "areas": [
+      {
+        "name": "Accounting",
+        "minCourses": 1
+      },
+      {
+        "name": "Finance",
+        "minCourses": 1
+      },
+      {
+        "name": "Marketing",
+        "minCourses": 1
+      },
+      {
+        "name": "Strategy",
+        "minCourses": 1
+      },
+      {
+        "name": "Organizational Behavior",
+        "minCourses": 1
+      },
+      {
+        "name": "Managerial Economics",
+        "minCourses": 1
+      },
+      {
+        "name": "Political Economics",
+        "minCourses": 1
+      },
+      {
+        "name": "Data Analysis / Quantitative Methods",
+        "minCourses": 1
+      },
+      {
+        "name": "Global / International Business",
+        "minCourses": 1
+      }
+    ]
+  },
+  "advisorPrimer": {
+    "intro": "GSB doesn't assign you ONE academic advisor — you have a network of them. Each plays a different role. Don't wait for them to find you; the smartest move is reaching out in your first two weeks.",
+    "types": [
+      {
+        "name": "Career Management Center (CMC)",
+        "role": "Your primary career partner. Customized career plans, job search strategy, network access, internship + full-time placement support.",
+        "when": "Pre-arrival intro email; orientation; bi-weekly Y1 fall; ongoing throughout the program.",
+        "tip": "Schedule meetings early and often. Update before recruiting seasons. Debrief after employer conversations."
+      },
+      {
+        "name": "Academic Services / Course Planning Advisor",
+        "role": "Help align coursework to career goals. Guide core + distribution requirement choices. Walk you through bidding mechanics.",
+        "when": "Available on-demand. Especially important during orientation and before each quarter's Super Round.",
+        "tip": "Before registering for Y1 winter and spring, work with them to ensure your elective + distribution selections build toward your post-MBA plan."
+      },
+      {
+        "name": "Section Faculty Advisor",
+        "role": "Faculty member assigned with your section in Y1. General mentorship, big-picture career conversations, recommendations.",
+        "when": "Assigned at orientation. Lean on them throughout Y1; less frequent in Y2.",
+        "tip": "Take their first office hour early so you're not a stranger when you need a recommendation."
+      },
+      {
+        "name": "Center Advisors (CES, Doerr, etc.)",
+        "role": "Domain experts in your interest areas. CES = entrepreneurship + search funds. Doerr/Precourt = energy. HAI = AI. They unlock specialized networks.",
+        "when": "On-demand once you've identified an interest area — typically Y1 spring or Y2.",
+        "tip": "Don't wait for Y2. Reach out in Y1 fall if you know your direction. Early relationships unlock research projects, alumni intros, and founder networks."
+      },
+      {
+        "name": "Leadership Coach",
+        "role": "1:1 personal/professional development. Communication, executive presence, decision-making.",
+        "when": "Often paired with Leadership Labs in autumn; available throughout.",
+        "tip": "Underutilized. Especially valuable for non-traditional or international backgrounds. It's included in tuition — use it."
+      },
+      {
+        "name": "Peer Advisors (2nd-years)",
+        "role": "Informal guidance on student life, workload, course intel, club picks, what's actually worth taking.",
+        "when": "Introduced at orientation; ongoing informal access.",
+        "tip": "Pick 2-3 from your section in your first week. Use peer advice for filtering and reality checks; use the formal advisors for strategic decisions."
+      }
+    ],
+    "timeline": [
+      {
+        "phase": "Pre-arrival (May–July 2026)",
+        "who": "CMC + Academic Services",
+        "what": "Welcome email/call, MBA checklist, course registration prep, career goal inventory."
+      },
+      {
+        "phase": "Orientation (Aug 2026)",
+        "who": "All advisors + peer mentors",
+        "what": "Meet academic advisor, CMC advisor, leadership coach. Squad formation. First advising meetings."
+      },
+      {
+        "phase": "Y1 Fall (Sept–Dec 2026)",
+        "who": "CMC, academic, coaches",
+        "what": "Bi-weekly CMC check-ins. 1:1 course planning. Leadership coaching starts."
+      },
+      {
+        "phase": "Y1 Winter–Spring (Jan–Jun 2027)",
+        "who": "CMC + on-demand",
+        "what": "Career exploration. Internship search. Distribution requirement planning."
+      },
+      {
+        "phase": "Y2 (Sept 2027–Jun 2028)",
+        "who": "CMC + center advisors",
+        "what": "Job search (summer internships → full-time offers). Elective planning. Specialization advising."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Career Impact (GSB)",
+        "url": "https://www.gsb.stanford.edu/programs/mba/career-impact"
+      },
+      {
+        "label": "Career Support (GSB)",
+        "url": "https://www.gsb.stanford.edu/programs/mba/career-impact/support"
+      },
+      {
+        "label": "Student Services (GSB)",
+        "url": "https://www.gsb.stanford.edu/experience/life/student-services"
+      }
+    ]
+  },
+  "resourcesIntro": "Stanford uses a few specific terms here. **Centers / Institutes** are faculty-led research and education hubs (CES = Center for Entrepreneurial Studies; Precourt = energy). **Initiatives & Labs** are smaller research efforts within or across centers. **Programs & Fellowships** are formal multi-week or multi-quarter programs you apply to. **Tools** are systems you'll use day-to-day (course catalog, calendar)."
 }

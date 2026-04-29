@@ -16,23 +16,40 @@ body {
 }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 28px 20px 60px; }
 
-/* Hero */
+/* ===== HERO with Stanford imagery ===== */
 .hero {
-  background: linear-gradient(135deg, #8C1515 0%, #5e0e0e 100%);
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #8C1515 0%, #5e0e0e 65%, #3d0808 100%);
   color: white;
   border-radius: 16px;
-  padding: 32px 36px;
+  padding: 36px 36px 32px;
   margin-bottom: 24px;
-  box-shadow: 0 4px 16px rgba(140, 21, 21, 0.15);
+  box-shadow: 0 6px 24px rgba(140, 21, 21, 0.20);
 }
-.hero h1 { margin: 0 0 8px; font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
-.hero .sub { opacity: 0.9; font-size: 15px; }
-.hero .stats { display: flex; gap: 28px; margin-top: 20px; flex-wrap: wrap; }
+.hero-content { position: relative; z-index: 2; max-width: 720px; }
+.hero-illust {
+  position: absolute; right: -10px; top: 0; bottom: 0;
+  width: 420px; opacity: 0.95; pointer-events: none; z-index: 1;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1.5px; color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.10); padding: 5px 12px; border-radius: 999px;
+  margin-bottom: 14px; border: 1px solid rgba(255,255,255,0.18);
+}
+.hero-eyebrow svg { width: 14px; height: 14px; }
+.hero h1 {
+  margin: 0 0 6px; font-size: 30px; font-weight: 700; letter-spacing: -0.6px;
+  font-family: 'Times New Roman', Georgia, serif;
+}
+.hero .sub { opacity: 0.92; font-size: 15px; max-width: 600px; }
+.hero .stats { display: flex; gap: 24px; margin-top: 20px; flex-wrap: wrap; }
 .hero .stat { display: flex; flex-direction: column; }
-.hero .stat .num { font-size: 24px; font-weight: 700; }
-.hero .stat .lbl { font-size: 12px; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.5px; }
-.hero .updated { font-size: 12px; opacity: 0.75; margin-top: 8px; font-style: italic; }
-.hero-actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.hero .stat .num { font-size: 22px; font-weight: 700; }
+.hero .stat .lbl { font-size: 11px; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.5px; }
+.hero .updated { font-size: 12px; opacity: 0.7; margin-top: 8px; font-style: italic; }
+.hero-actions { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
 .btn {
   background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.3);
   border-radius: 8px; padding: 8px 14px; font-size: 13px; font-weight: 500;
@@ -42,7 +59,12 @@ body {
 .btn-light { background: white; color: #8C1515; border-color: white; }
 .btn-light:hover { background: #fef2f2; }
 
-/* Share banner */
+@media (max-width: 800px) {
+  .hero-illust { width: 240px; opacity: 0.35; }
+  .hero h1 { font-size: 24px; }
+}
+
+/* ===== Share banner ===== */
 .share-banner {
   background: #fef3c7; border: 1px solid #fbbf24; border-radius: 12px;
   padding: 16px 20px; margin-bottom: 20px; display: flex;
@@ -53,14 +75,12 @@ body {
 .share-banner .actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .share-banner button {
   background: #92400e; color: white; border: none; border-radius: 6px;
-  padding: 6px 12px; font-size: 13px; font-weight: 500; cursor: pointer;
-  font-family: inherit;
+  padding: 6px 12px; font-size: 13px; font-weight: 500; cursor: pointer; font-family: inherit;
 }
 .share-banner button:hover { background: #78350f; }
 .share-banner button.secondary { background: white; color: #92400e; border: 1px solid #92400e; }
-.share-banner button.secondary:hover { background: #fef3c7; }
 
-/* Toast */
+/* ===== Toast ===== */
 .toast {
   position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
   background: #1f2937; color: white; padding: 12px 20px; border-radius: 8px;
@@ -69,10 +89,9 @@ body {
 }
 .toast.show { opacity: 1; }
 
-/* Tabs */
+/* ===== Tabs ===== */
 .tabs {
-  display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 1px solid #e5e7eb;
-  flex-wrap: wrap;
+  display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 1px solid #e5e7eb; flex-wrap: wrap;
 }
 .tab {
   padding: 10px 16px; cursor: pointer; font-weight: 500; font-size: 14px;
@@ -85,10 +104,9 @@ body {
 .tab .badge {
   display: inline-block; background: #8C1515; color: white; font-size: 10px;
   padding: 1px 6px; border-radius: 999px; margin-left: 6px; font-weight: 700;
-  vertical-align: middle;
 }
 
-/* Interest chips */
+/* ===== Interest chips ===== */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
 .chip {
   padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 500;
@@ -110,7 +128,7 @@ body {
 .c-cross { background: #F1F5F9; color: #1E293B; border-color: #CBD5E1; }
 .c-all { background: #1f2937; color: white; border-color: #1f2937; }
 
-/* Cards */
+/* ===== Cards ===== */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
 .card {
   background: white; border: 1px solid #e5e7eb; border-radius: 12px;
@@ -130,13 +148,23 @@ body {
 .card .pill { font-size: 11px; padding: 3px 10px; border-radius: 999px; font-weight: 500; white-space: nowrap; }
 .card a.link { display: inline-block; margin-top: 10px; font-size: 12px; color: #8C1515; text-decoration: none; font-weight: 500; }
 .card a.link:hover { text-decoration: underline; }
+
 .card.fac .name { font-weight: 600; font-size: 16px; color: #111827; margin-bottom: 2px; }
 .card.fac .role { font-size: 12px; color: #6b7280; margin-bottom: 8px; }
 .card.fac .teaches { font-size: 13px; color: #4b5563; margin-bottom: 8px; }
-.card.fac .why-meet { font-size: 13px; color: #374151; line-height: 1.5; font-style: italic; }
-.card.club .why-club { font-size: 13px; color: #374151; line-height: 1.5; }
+.card.fac .why-meet { font-size: 13px; color: #374151; line-height: 1.5; font-style: italic; margin-bottom: 6px; }
+.card.fac .bio { font-size: 13px; color: #374151; line-height: 1.55; }
 
-/* Apply badge — color coded by application route */
+.card.club .why-club { font-size: 13px; color: #374151; line-height: 1.5; }
+.scope-badge {
+  display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 8px;
+  border-radius: 999px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.4px;
+}
+.scope-mba { background: #fef2f2; color: #991b1b; }
+.scope-gsb { background: #fef3c7; color: #78350F; }
+.scope-stanford { background: #dbeafe; color: #1E3A8A; }
+
+/* Apply badge */
 .apply-badge {
   display: inline-flex; align-items: center; gap: 4px;
   font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 6px;
@@ -175,8 +203,15 @@ body {
   border-left: 3px solid #f59e0b; border-radius: 4px; font-style: italic;
 }
 .details-content .tip strong { color: #78350f; font-style: normal; }
+.details-content ul.works-list { margin: 4px 0 0; padding-left: 18px; }
+.details-content ul.works-list li { margin-bottom: 4px; font-size: 12px; }
+.details-content .work-type {
+  display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.4px; padding: 1px 6px; border-radius: 4px;
+  background: #e5e7eb; color: #4b5563; margin-right: 6px;
+}
 
-/* Marker (3-state) */
+/* Marker */
 .marker {
   position: absolute; top: 14px; right: 14px; cursor: pointer;
   font-size: 20px; user-select: none; transition: all 0.15s;
@@ -190,35 +225,7 @@ body {
 .marker[data-state="starred"]::before { content: "★"; }
 .marker:not([data-state])::before, .marker[data-state=""]::before { content: "☆"; }
 
-/* Roadmap */
-.roadmap { display: flex; flex-direction: column; gap: 12px; }
-.qtr { background: white; border: 1px solid #e5e7eb; border-left: 4px solid #8C1515; border-radius: 10px; padding: 16px 20px; }
-.qtr h3 { margin: 0 0 4px; font-size: 16px; color: #111827; }
-.qtr .focus { font-size: 12px; color: #8C1515; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
-.qtr .body { font-size: 14px; color: #374151; margin-bottom: 6px; }
-.qtr .notes { font-size: 13px; color: #6b7280; font-style: italic; }
-
-/* Advisor */
-.qlist { display: flex; flex-direction: column; gap: 10px; }
-.qitem { background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 18px; }
-.qitem .topic {
-  display: inline-block; font-size: 11px; font-weight: 600; color: #8C1515;
-  background: #fee2e2; padding: 2px 10px; border-radius: 6px;
-  text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;
-}
-.qitem .q { font-size: 14px; color: #1f2937; margin-bottom: 4px; }
-.qitem .who { font-size: 12px; color: #6b7280; }
-
-/* Resources */
-.reslist { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
-.res { background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 16px; }
-.res .name { font-weight: 600; font-size: 14px; color: #111827; margin-bottom: 4px; }
-.res .type { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 6px; }
-.res .why { font-size: 13px; color: #4b5563; margin-bottom: 8px; }
-.res a { font-size: 12px; color: #8C1515; text-decoration: none; font-weight: 500; }
-.res a:hover { text-decoration: underline; }
-
-/* Registration tab */
+/* ===== Registration tab ===== */
 .reg-intro {
   background: white; border: 1px solid #e5e7eb; border-radius: 12px;
   padding: 20px 24px; margin-bottom: 16px; font-size: 15px; color: #374151;
@@ -245,22 +252,156 @@ body {
 .reg-deadline .date { font-family: 'SF Mono', Menlo, monospace; font-size: 13px; color: #9a3412; margin: 2px 0; }
 .reg-deadline .note { font-size: 12px; color: #78350f; }
 
-/* My Plan */
-.plan-summary { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px 24px; margin-bottom: 16px; }
+/* ===== Advisor primer / questions ===== */
+.advisor-intro {
+  background: white; border: 1px solid #e5e7eb; border-radius: 12px;
+  padding: 18px 22px; margin-bottom: 16px; font-size: 14px; color: #374151; line-height: 1.6;
+}
+.advisor-types { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; margin-bottom: 24px; }
+.advisor-type {
+  background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 16px;
+  border-left: 4px solid #8C1515;
+}
+.advisor-type h4 { margin: 0 0 6px; font-size: 14px; color: #111827; }
+.advisor-type .role { font-size: 12px; color: #4b5563; margin-bottom: 6px; line-height: 1.5; }
+.advisor-type .when { font-size: 11px; color: #6b7280; margin-bottom: 6px; }
+.advisor-type .when strong { color: #8C1515; }
+.advisor-type .tip { font-size: 12px; color: #78350f; background: #fffbeb; padding: 8px 10px; border-radius: 6px; line-height: 1.5; }
+.advisor-timeline {
+  background: white; border: 1px solid #e5e7eb; border-radius: 10px;
+  padding: 14px 18px; margin-bottom: 24px;
+}
+.advisor-timeline h3 { margin: 0 0 10px; font-size: 15px; color: #8C1515; }
+.advisor-timeline-item { display: grid; grid-template-columns: 200px 1fr; gap: 10px; padding: 8px 0; border-top: 1px solid #f3f4f6; font-size: 13px; }
+.advisor-timeline-item:first-of-type { border-top: none; }
+.advisor-timeline-item .phase { font-weight: 600; color: #1f2937; }
+.advisor-timeline-item .who { color: #6b7280; font-size: 12px; }
+.advisor-timeline-item .what { color: #374151; }
+
+.qgroup {
+  background: white; border: 1px solid #e5e7eb; border-radius: 12px;
+  padding: 14px 18px 8px; margin-bottom: 14px;
+}
+.qgroup h3 {
+  margin: 0 0 10px; font-size: 13px; color: #8C1515;
+  text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700;
+}
+.qitem-mini { padding: 10px 0; border-top: 1px solid #f3f4f6; }
+.qitem-mini:first-of-type { border-top: none; }
+.qitem-mini .topic-mini { display: inline-block; font-size: 10px; font-weight: 600; color: #8C1515; background: #fee2e2; padding: 1px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 4px; }
+.qitem-mini .q { font-size: 13px; color: #1f2937; margin-bottom: 4px; }
+.qitem-mini .who { font-size: 11px; color: #6b7280; }
+
+/* ===== Resources grouped ===== */
+.res-intro {
+  background: white; border: 1px solid #e5e7eb; border-radius: 12px;
+  padding: 16px 20px; margin-bottom: 16px; font-size: 13px; color: #4b5563; line-height: 1.6;
+}
+.res-intro strong { color: #1f2937; }
+.res-group { margin-bottom: 22px; }
+.res-group h3 { margin: 0 0 10px; font-size: 13px; color: #8C1515; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; }
+.reslist { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.res {
+  background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 16px;
+}
+.res .name { font-weight: 600; font-size: 14px; color: #111827; margin-bottom: 4px; }
+.res .type { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 6px; }
+.res .why { font-size: 13px; color: #4b5563; margin-bottom: 8px; line-height: 1.5; }
+.res a { font-size: 12px; color: #8C1515; text-decoration: none; font-weight: 500; }
+.res a:hover { text-decoration: underline; }
+
+/* Faculty research subsection inside Resources */
+.res-research-list { display: flex; flex-direction: column; gap: 6px; }
+.res-research-item {
+  background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px 14px;
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.res-research-item .author { font-size: 12px; color: #6b7280; min-width: 130px; }
+.res-research-item .work-title { flex: 1; font-size: 13px; color: #1f2937; min-width: 200px; }
+.res-research-item .work-type { display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; padding: 1px 6px; border-radius: 4px; background: #e5e7eb; color: #4b5563; }
+.res-research-item a { font-size: 12px; color: #8C1515; text-decoration: none; }
+.res-research-collapse {
+  background: white; border: 1px solid #e5e7eb; border-radius: 10px; margin-bottom: 10px;
+}
+.res-research-collapse summary {
+  list-style: none; cursor: pointer; padding: 12px 16px;
+  font-weight: 600; font-size: 14px; color: #111827;
+}
+.res-research-collapse summary::-webkit-details-marker { display: none; }
+.res-research-collapse summary::after { content: " ▾"; color: #8C1515; font-size: 11px; }
+.res-research-collapse[open] summary::after { content: " ▴"; }
+.res-research-collapse .body { padding: 0 16px 14px; }
+
+/* ===== My Plan / Roadmap (merged) ===== */
+.plan-summary {
+  background: white; border: 1px solid #e5e7eb; border-radius: 12px;
+  padding: 20px 24px; margin-bottom: 16px;
+}
 .plan-counts { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
 .plan-count { display: flex; flex-direction: column; }
 .plan-count .num { font-size: 22px; font-weight: 700; color: #1f2937; }
 .plan-count .lbl { font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; }
-.plan-section h3 { margin: 24px 0 8px; font-size: 14px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
-.plan-section h3:first-child { margin-top: 0; }
-.plan-section h3 .icon { color: #f59e0b; margin-right: 6px; font-size: 16px; }
-.plan-section h3.planned .icon { color: #16a34a; }
-.plan-list { display: flex; flex-direction: column; gap: 8px; }
-.plan-item { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px 14px; display: flex; align-items: center; gap: 12px; font-size: 13px; }
-.plan-item .plan-pill { font-size: 10px; padding: 2px 8px; border-radius: 999px; }
-.plan-item .plan-title { flex: 1; color: #1f2937; font-weight: 500; }
-.plan-item .plan-type { font-size: 11px; color: #6b7280; }
-.plan-empty { background: white; border: 1px dashed #d1d5db; border-radius: 12px; padding: 32px 20px; text-align: center; color: #9ca3af; font-size: 14px; }
+
+.timeline { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+.qcard {
+  background: white; border: 1px solid #e5e7eb; border-radius: 10px;
+  border-left: 4px solid #8C1515; overflow: hidden;
+}
+.qcard-header {
+  padding: 14px 18px; cursor: pointer; user-select: none;
+  display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap;
+}
+.qcard-header:hover { background: #fafaf9; }
+.qcard-title { font-weight: 600; color: #111827; font-size: 15px; }
+.qcard-dates { font-size: 12px; color: #8C1515; font-weight: 600; }
+.qcard-counts { font-size: 12px; color: #6b7280; }
+.qcard-counts .pill-mini {
+  display: inline-block; padding: 2px 8px; border-radius: 999px; margin-left: 6px;
+  font-size: 11px; font-weight: 600;
+}
+.qcard-counts .pill-required { background: #fee2e2; color: #991b1b; }
+.qcard-counts .pill-yours { background: #dcfce7; color: #14532d; }
+.qcard-counts .pill-cap { background: #fef3c7; color: #78350f; }
+.qcard-counts .pill-cap.over { background: #fee2e2; color: #991b1b; }
+.qcard-arrow { color: #8C1515; font-size: 14px; transition: transform 0.15s; }
+.qcard.open .qcard-arrow { transform: rotate(180deg); }
+.qcard-body { padding: 0 18px 16px; display: none; border-top: 1px solid #f3f4f6; }
+.qcard.open .qcard-body { display: block; }
+.qcard-section { margin-top: 14px; }
+.qcard-section h4 {
+  margin: 0 0 6px; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.5px; font-weight: 700;
+}
+.qcard-section.required h4 { color: #991b1b; }
+.qcard-section.yours h4 { color: #14532d; }
+.qcard-section.suggested h4 { color: #6b7280; }
+.qcard-item-list { display: flex; flex-direction: column; gap: 6px; }
+.qcard-item {
+  background: white; border: 1px solid #e5e7eb; border-radius: 6px;
+  padding: 8px 12px; font-size: 13px; color: #1f2937; display: flex;
+  align-items: center; gap: 8px; flex-wrap: wrap;
+}
+.qcard-item.required { background: #fef2f2; border-color: #fecaca; }
+.qcard-item.suggested { background: #fafaf9; opacity: 0.85; }
+.qcard-item .qcard-item-pill { font-size: 10px; padding: 1px 6px; border-radius: 999px; }
+.qcard-item .marker { position: static; font-size: 16px; width: 22px; height: 22px; line-height: 22px; }
+.qcard-empty { color: #9ca3af; font-size: 12px; font-style: italic; padding: 6px 0; }
+
+.unallocated {
+  background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px;
+  padding: 16px 20px; margin-top: 16px;
+}
+.unallocated h3 { margin: 0 0 8px; font-size: 14px; color: #7c2d12; }
+.unallocated .item-list { display: flex; flex-direction: column; gap: 6px; }
+.unallocated .ua-item {
+  background: white; border: 1px solid #fed7aa; border-radius: 6px;
+  padding: 8px 12px; font-size: 13px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+}
+
+.plan-empty {
+  background: white; border: 1px dashed #d1d5db; border-radius: 12px;
+  padding: 32px 20px; text-align: center; color: #9ca3af; font-size: 14px;
+}
 .plan-empty strong { color: #1f2937; }
 
 /* Visibility */
@@ -278,7 +419,6 @@ body {
 }
 .about strong { color: #431407; }
 
-/* Loading & error */
 #status { text-align: center; padding: 60px 20px; font-size: 15px; color: #6b7280; }
 .error-box { background: #fef2f2; border: 1px solid #fca5a5; border-radius: 12px; padding: 20px 24px; margin: 20px 0; color: #7f1d1d; }
 .error-box h3 { margin: 0 0 8px; color: #991b1b; }
@@ -289,6 +429,7 @@ body {
 <div class="wrap">
   <div id="status">Loading data…</div>
   <div id="app" style="display:none">
+
     <div id="share-banner" class="share-banner" style="display:none">
       <div class="msg" id="share-banner-msg"></div>
       <div class="actions">
@@ -297,34 +438,108 @@ body {
       </div>
     </div>
 
+    <!-- ===== HERO ===== -->
     <div class="hero">
-      <h1 id="meta-title">Stanford GSB Prep</h1>
-      <div class="sub" id="meta-sub"></div>
-      <div class="updated" id="meta-updated"></div>
-      <div class="stats">
-        <div class="stat"><span class="num" id="stat-courses">—</span><span class="lbl">Courses</span></div>
-        <div class="stat"><span class="num" id="stat-faculty">—</span><span class="lbl">Faculty</span></div>
-        <div class="stat"><span class="num" id="stat-clubs">—</span><span class="lbl">Clubs</span></div>
-        <div class="stat"><span class="num" id="stat-myplan">—</span><span class="lbl">In my plan</span></div>
-      </div>
-      <div class="hero-actions">
-        <button class="btn btn-light" id="btn-share-plan">📤 Share my plan</button>
-        <button class="btn" id="btn-go-my-plan">View my plan →</button>
+      <!-- SVG illustration of Stanford campus silhouette -->
+      <svg class="hero-illust" viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Sky gradient (subtle) -->
+        <defs>
+          <linearGradient id="skyGrad" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="420" height="280" fill="url(#skyGrad)"/>
+        <!-- Sun -->
+        <circle cx="320" cy="62" r="22" fill="#fff" opacity="0.18"/>
+        <circle cx="320" cy="62" r="12" fill="#fff" opacity="0.30"/>
+        <!-- Rolling hills (foothills behind campus) -->
+        <path d="M 0 220 Q 90 195, 180 215 T 420 200 L 420 280 L 0 280 Z" fill="#fff" opacity="0.08"/>
+        <!-- Hoover Tower silhouette -->
+        <g opacity="0.85">
+          <rect x="180" y="80" width="32" height="155" fill="#fff" opacity="0.72"/>
+          <rect x="186" y="72" width="20" height="8" fill="#fff" opacity="0.72"/>
+          <polygon points="180,80 196,55 212,80" fill="#fff" opacity="0.72"/>
+          <circle cx="196" cy="62" r="3" fill="#8C1515"/>
+          <!-- Tower windows -->
+          <rect x="190" y="100" width="3" height="8" fill="#8C1515" opacity="0.6"/>
+          <rect x="199" y="100" width="3" height="8" fill="#8C1515" opacity="0.6"/>
+          <rect x="190" y="120" width="3" height="8" fill="#8C1515" opacity="0.6"/>
+          <rect x="199" y="120" width="3" height="8" fill="#8C1515" opacity="0.6"/>
+          <rect x="190" y="140" width="3" height="8" fill="#8C1515" opacity="0.6"/>
+          <rect x="199" y="140" width="3" height="8" fill="#8C1515" opacity="0.6"/>
+          <rect x="190" y="160" width="3" height="8" fill="#8C1515" opacity="0.6"/>
+          <rect x="199" y="160" width="3" height="8" fill="#8C1515" opacity="0.6"/>
+          <rect x="190" y="180" width="3" height="8" fill="#8C1515" opacity="0.6"/>
+          <rect x="199" y="180" width="3" height="8" fill="#8C1515" opacity="0.6"/>
+        </g>
+        <!-- Mission-style arches (Main Quad evocation) -->
+        <g opacity="0.55">
+          <rect x="60" y="180" width="100" height="55" fill="#fff" opacity="0.40"/>
+          <path d="M 70 180 Q 78 165, 88 180 Z" fill="#8C1515" opacity="0.55"/>
+          <path d="M 95 180 Q 103 165, 113 180 Z" fill="#8C1515" opacity="0.55"/>
+          <path d="M 120 180 Q 128 165, 138 180 Z" fill="#8C1515" opacity="0.55"/>
+          <path d="M 145 180 Q 153 165, 163 180 Z" fill="#8C1515" opacity="0.55"/>
+          <!-- Tile roof line -->
+          <rect x="56" y="170" width="108" height="6" fill="#fff" opacity="0.42"/>
+          <polygon points="56,170 60,162 164,162 168,170" fill="#fff" opacity="0.30"/>
+        </g>
+        <g opacity="0.55">
+          <rect x="230" y="190" width="80" height="45" fill="#fff" opacity="0.40"/>
+          <path d="M 240 190 Q 248 178, 258 190 Z" fill="#8C1515" opacity="0.55"/>
+          <path d="M 265 190 Q 273 178, 283 190 Z" fill="#8C1515" opacity="0.55"/>
+          <path d="M 290 190 Q 298 178, 308 190 Z" fill="#8C1515" opacity="0.55"/>
+          <rect x="226" y="180" width="88" height="6" fill="#fff" opacity="0.42"/>
+        </g>
+        <!-- Palm trees (left + right) -->
+        <g opacity="0.85">
+          <!-- Left palm -->
+          <rect x="22" y="155" width="4" height="80" fill="#fff" opacity="0.58"/>
+          <ellipse cx="24" cy="145" rx="22" ry="6" fill="#fff" opacity="0.40" transform="rotate(-22 24 145)"/>
+          <ellipse cx="24" cy="145" rx="22" ry="5" fill="#fff" opacity="0.40" transform="rotate(22 24 145)"/>
+          <ellipse cx="24" cy="148" rx="20" ry="4" fill="#fff" opacity="0.50"/>
+          <!-- Right palm -->
+          <rect x="370" y="160" width="4" height="75" fill="#fff" opacity="0.58"/>
+          <ellipse cx="372" cy="150" rx="22" ry="6" fill="#fff" opacity="0.40" transform="rotate(-18 372 150)"/>
+          <ellipse cx="372" cy="150" rx="22" ry="5" fill="#fff" opacity="0.40" transform="rotate(18 372 150)"/>
+          <ellipse cx="372" cy="153" rx="20" ry="4" fill="#fff" opacity="0.50"/>
+        </g>
+        <!-- Ground plane -->
+        <rect x="0" y="235" width="420" height="45" fill="#000" opacity="0.10"/>
+      </svg>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2 5 5 .5-3.8 3.4 1.2 5.1L8 12.5 3.6 15l1.2-5.1L1 6.5 6 6z"/></svg>
+          Stanford GSB · Class of 2028
+        </div>
+        <h1 id="meta-title">Stanford GSB Prep</h1>
+        <div class="sub" id="meta-sub"></div>
+        <div class="updated" id="meta-updated"></div>
+        <div class="stats">
+          <div class="stat"><span class="num" id="stat-courses">—</span><span class="lbl">Courses</span></div>
+          <div class="stat"><span class="num" id="stat-faculty">—</span><span class="lbl">Faculty</span></div>
+          <div class="stat"><span class="num" id="stat-clubs">—</span><span class="lbl">Clubs</span></div>
+          <div class="stat"><span class="num" id="stat-myplan">—</span><span class="lbl">In my plan</span></div>
+        </div>
+        <div class="hero-actions">
+          <button class="btn btn-light" id="btn-share-plan">📤 Share my plan</button>
+          <button class="btn" id="btn-go-my-plan">View my plan →</button>
+        </div>
       </div>
     </div>
 
     <div class="about">
-      <strong>How to mark items:</strong> Click the circle on any card to cycle through three states — <span style="color:#f59e0b">★ Interested</span> → <span style="color:#16a34a">✓ Planned in my schedule</span> → empty. Your selections save to this device's browser. Click "Share my plan" to get a link you can send anyone — they'll see exactly what you've marked. <strong>Edit <a href="https://github.com/romanemperor1/stanford-prep/edit/main/data.json" target="_blank" style="color:#8C1515">data.json on GitHub</a></strong> to add courses, clubs, faculty, or events — site auto-updates in ~30 seconds.
+      <strong>How to mark items:</strong> Click the circle on any card to cycle: empty → <span style="color:#f59e0b">★ Interested</span> → <span style="color:#16a34a">✓ Planned in my schedule</span> → empty. Selections save to this device. Share via "Share my plan" — generates a link that carries your selections inside the URL.
     </div>
 
     <div class="tabs">
       <button class="tab active" data-tab="courses">Courses</button>
       <button class="tab" data-tab="faculty">Faculty</button>
       <button class="tab" data-tab="clubs">Clubs</button>
-      <button class="tab" data-tab="roadmap">2-Year Roadmap</button>
+      <button class="tab" data-tab="my-plan">My Plan + Roadmap <span class="badge" id="badge-myplan" style="display:none">0</span></button>
       <button class="tab" data-tab="registration">How Registration Works</button>
-      <button class="tab" data-tab="my-plan">My Plan <span class="badge" id="badge-myplan" style="display:none">0</span></button>
-      <button class="tab" data-tab="advisor">Advisor Questions</button>
+      <button class="tab" data-tab="advisor">Advisors</button>
       <button class="tab" data-tab="resources">Resources</button>
     </div>
 
@@ -340,28 +555,25 @@ body {
     </div>
     <div class="tab-panel" id="panel-clubs">
       <div class="chips" id="chips-clubs"></div>
+      <div id="clubs-scope-filter" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;font-size:12px;color:#6b7280;align-items:center"></div>
       <div class="section-h"><h2>Clubs</h2><span class="count" id="count-clubs"></span></div>
       <div class="grid" id="clubs-grid"></div>
     </div>
-    <div class="tab-panel" id="panel-roadmap">
-      <div class="section-h"><h2>Suggested 2-Year Roadmap</h2><span class="count">Draft — revisit each quarter</span></div>
-      <div class="roadmap" id="roadmap-list"></div>
+    <div class="tab-panel" id="panel-my-plan">
+      <div class="section-h"><h2>My Plan + Roadmap</h2><span class="count" id="count-myplan">0 items</span></div>
+      <div id="my-plan-content"></div>
     </div>
     <div class="tab-panel" id="panel-registration">
       <div class="section-h"><h2>How Registration Works</h2><span class="count">The bidding system, in plain English</span></div>
       <div id="registration-content"></div>
     </div>
-    <div class="tab-panel" id="panel-my-plan">
-      <div class="section-h"><h2>My Plan</h2><span class="count" id="count-myplan">0 items</span></div>
-      <div id="my-plan-content"></div>
-    </div>
     <div class="tab-panel" id="panel-advisor">
-      <div class="section-h"><h2>Questions for advisors / centers</h2><span class="count" id="count-advisor"></span></div>
-      <div class="qlist" id="advisor-list"></div>
+      <div class="section-h"><h2>Advisors</h2><span class="count">Who they are, when you meet them, what to ask</span></div>
+      <div id="advisor-content"></div>
     </div>
     <div class="tab-panel" id="panel-resources">
-      <div class="section-h"><h2>Centers, clubs &amp; programs</h2><span class="count" id="count-resources"></span></div>
-      <div class="reslist" id="resources-list"></div>
+      <div class="section-h"><h2>Resources</h2><span class="count" id="count-resources"></span></div>
+      <div id="resources-content"></div>
     </div>
   </div>
 </div>
@@ -371,36 +583,37 @@ body {
 <script>
 let DATA = null;
 let activeFilter = { courses: 'All', faculty: 'All', clubs: 'All' };
+let activeScope = 'All';
 let detailsOpen = new Set();
+let qcardOpen = new Set(['Y1-Autumn']); // start with Y1 Fall expanded
 
-// === State ===
 const STORAGE_KEY = 'stanford-prep-selections-v2';
 let selections = new Map();
 let viewingShared = false;
 let myOwnSelections = null;
 
+const QUARTERS = [
+  { key: 'PRE', label: 'Pre-arrival', dates: 'Summer 2026', y1Core: false },
+  { key: 'Y1-Autumn', label: 'Y1 Autumn', dates: 'Sept – Dec 2026', y1Core: true },
+  { key: 'Y1-Winter', label: 'Y1 Winter', dates: 'Jan – Mar 2027', y1Core: true },
+  { key: 'Y1-Spring', label: 'Y1 Spring', dates: 'Apr – Jun 2027', y1Core: true },
+  { key: 'Summer', label: 'Summer', dates: 'Jul – Aug 2027', y1Core: false },
+  { key: 'Y2-Autumn', label: 'Y2 Autumn', dates: 'Sept – Dec 2027', y1Core: false },
+  { key: 'Y2-Winter', label: 'Y2 Winter', dates: 'Jan – Mar 2028', y1Core: false },
+  { key: 'Y2-Spring', label: 'Y2 Spring', dates: 'Apr – Jun 2028', y1Core: false },
+  { key: 'POST', label: 'Post-graduation', dates: 'Jul 2028 →', y1Core: false }
+];
+const QUARTER_CAP_UNITS = { 'Y1-Autumn': 16, 'Y1-Winter': 16, 'Y1-Spring': 16, 'Y2-Autumn': 16, 'Y2-Winter': 16, 'Y2-Spring': 16 };
+
 function loadFromStorage() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) return new Map(Object.entries(JSON.parse(raw)));
-  } catch {}
+  try { const raw = localStorage.getItem(STORAGE_KEY); if (raw) return new Map(Object.entries(JSON.parse(raw))); } catch {}
   return new Map();
 }
-function saveToStorage(map) {
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(Object.fromEntries(map))); } catch {}
-}
+function saveToStorage(map) { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(Object.fromEntries(map))); } catch {} }
 
-// === Helpers ===
-function escapeHtml(s) {
-  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  }[c]));
-}
+function escapeHtml(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 const escapeAttr = escapeHtml;
-function clsFor(key) {
-  const i = (DATA?.interests || []).find(x => x.key === key);
-  return i ? i.cls : 'c-cross';
-}
+function clsFor(key) { const i = (DATA?.interests || []).find(x => x.key === key); return i ? i.cls : 'c-cross'; }
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg; t.classList.add('show');
@@ -408,20 +621,26 @@ function showToast(msg) {
   showToast._h = setTimeout(() => t.classList.remove('show'), 2000);
 }
 
-// === Apply badge categorization ===
 function applyBadge(applyStr) {
   if (!applyStr) return null;
   const s = applyStr.toLowerCase();
-  let cls = 'apply-other', label = applyStr;
+  let cls = 'apply-other';
   if (s.includes('mandatory') || s.includes('auto-enroll')) cls = 'apply-mandatory';
   else if (s.includes('lottery')) cls = 'apply-lottery';
   else if (s.includes('team application')) cls = 'apply-team';
   else if (s.includes('application') || s.includes('pre-qualif')) cls = 'apply-application';
-  else if (s.includes('open enrollment') || s.includes('open ')) cls = 'apply-open';
-  return `<span class="apply-badge ${cls}">Apply: ${escapeHtml(label)}</span>`;
+  else if (s.includes('open enrollment') || s.startsWith('open ') || s === 'open') cls = 'apply-open';
+  return `<span class="apply-badge ${cls}">Apply: ${escapeHtml(applyStr)}</span>`;
 }
 
-// === Cycle marker ===
+function scopeBadge(scope) {
+  if (!scope) return '';
+  let cls = 'scope-mba';
+  if (scope.includes('Stanford-wide')) cls = 'scope-stanford';
+  else if (scope.includes('GSB-led')) cls = 'scope-gsb';
+  return `<span class="scope-badge ${cls}">${escapeHtml(scope)}</span>`;
+}
+
 function cycleMarker(key) {
   const cur = selections.get(key) || '';
   const next = cur === '' ? 'starred' : cur === 'starred' ? 'planned' : '';
@@ -430,12 +649,10 @@ function cycleMarker(key) {
   return next;
 }
 
-// === Share encoding ===
 function encodePlan(map, name) {
   const obj = { v: 1, n: name || '', s: Object.fromEntries(map), t: Date.now() };
   const json = JSON.stringify(obj);
-  return btoa(unescape(encodeURIComponent(json)))
-    .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  return btoa(unescape(encodeURIComponent(json))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
 function decodePlan(str) {
   try {
@@ -443,12 +660,9 @@ function decodePlan(str) {
     const json = decodeURIComponent(escape(atob(b64 + '='.repeat((4 - b64.length % 4) % 4))));
     const obj = JSON.parse(json);
     return { name: obj.n || '', selections: new Map(Object.entries(obj.s || {})), timestamp: obj.t };
-  } catch (e) { return null; }
+  } catch { return null; }
 }
-function buildShareLink(name) {
-  const encoded = encodePlan(selections, name);
-  return `${location.origin}${location.pathname}#plan=${encoded}`;
-}
+function buildShareLink(name) { return `${location.origin}${location.pathname}#plan=${encodePlan(selections, name)}`; }
 async function copyShareLink() {
   if (selections.size === 0) { showToast('Mark some items first — your plan is empty.'); return; }
   const name = prompt("Add your name to the shared link? (optional)", "Alexis") || '';
@@ -478,7 +692,6 @@ function dismissShared(saveAsMine) {
   rerenderEverything();
 }
 
-// === Data loading ===
 async function loadData() {
   try {
     const r = await fetch('data.json?t=' + Date.now());
@@ -486,6 +699,8 @@ async function loadData() {
     DATA = await r.json();
     DATA.clubs = DATA.clubs || [];
     DATA.registration = DATA.registration || null;
+    DATA.advisorPrimer = DATA.advisorPrimer || null;
+    DATA.y1Core = DATA.y1Core || {};
     document.getElementById('status').style.display = 'none';
     document.getElementById('app').style.display = 'block';
     selections = loadFromStorage();
@@ -495,23 +710,16 @@ async function loadData() {
 }
 function showError(e) {
   document.body.innerHTML = `
-    <div class="wrap">
-      <div class="error-box">
-        <h3>Couldn't load data.json</h3>
-        <p>The site loaded but the data file has an issue. Most common cause: a JSON syntax error after a recent edit.</p>
-        <p><strong>How to fix:</strong></p>
-        <ol>
-          <li>Copy the contents of <code>data.json</code> from your repo</li>
-          <li>Paste into <a href="https://jsonlint.com" target="_blank">jsonlint.com</a> — it points to the exact line</li>
-          <li>Fix and commit the change on GitHub</li>
-        </ol>
-        <p><strong>Technical details:</strong></p>
-        <code>${escapeHtml(e.message || String(e))}</code>
-      </div>
-    </div>`;
+    <div class="wrap"><div class="error-box">
+      <h3>Couldn't load data.json</h3>
+      <p>JSON syntax error after a recent edit (missing comma, unmatched quote, trailing comma).</p>
+      <p><strong>Fix:</strong></p>
+      <ol><li>Copy data.json</li><li>Paste into <a href="https://jsonlint.com" target="_blank">jsonlint.com</a></li><li>Fix the line it points to and commit</li></ol>
+      <code>${escapeHtml(e.message || String(e))}</code>
+    </div></div>`;
 }
 
-// === Render: chips ===
+// === Chips ===
 function renderChips(containerId, panel) {
   const c = document.getElementById(containerId);
   c.innerHTML = '';
@@ -540,13 +748,12 @@ function attachMarkers(container) {
   container.querySelectorAll('.marker').forEach(el => {
     el.onclick = (e) => {
       e.stopPropagation();
-      const k = el.dataset.key;
-      const next = cycleMarker(k);
+      const next = cycleMarker(el.dataset.key);
       el.dataset.state = next;
       el.title = next === 'starred' ? 'Currently: Interested. Click for Planned.'
               : next === 'planned' ? 'Currently: Planned. Click to clear.'
               : 'Click: Interested. Click again: Planned in my schedule.';
-      updateMyPlanSummary();
+      renderMyPlan();
       updateHeroPlanCount();
     };
   });
@@ -565,21 +772,21 @@ function attachDetailsToggles(container) {
   });
 }
 
-// === Render: courses ===
-function detailsBlock(c) {
+// === Courses ===
+function courseDetailsBlock(c) {
   const parts = [];
   if (c.description) parts.push(`<div><strong>What it covers</strong>${escapeHtml(c.description)}</div>`);
   if (c.format) parts.push(`<div><strong>Format</strong>${escapeHtml(c.format)}</div>`);
   if (c.prereqs && c.prereqs !== 'None' && c.prereqs !== 'N/A') parts.push(`<div><strong>Prereqs</strong>${escapeHtml(c.prereqs)}</div>`);
   if (c.tip) parts.push(`<div class="tip"><strong>Insider tip · </strong>${escapeHtml(c.tip)}</div>`);
-  return parts.length ? parts.join('') : '';
+  return parts.join('');
 }
 function renderCourses() {
   const grid = document.getElementById('courses-grid');
   const filter = activeFilter.courses;
   const list = filter === 'All' ? DATA.courses : DATA.courses.filter(c => c.interest === filter);
   document.getElementById('count-courses').textContent = `${list.length} of ${DATA.courses.length}`;
-  if (list.length === 0) { grid.innerHTML = '<div class="empty">No courses for that filter yet.</div>'; return; }
+  if (list.length === 0) { grid.innerHTML = '<div class="empty">No courses for that filter.</div>'; return; }
   grid.innerHTML = list.map(c => {
     const key = 'c:' + c.title;
     const hasDetails = c.description || c.format || c.tip;
@@ -601,10 +808,8 @@ function renderCourses() {
         <span>${escapeHtml(c.when)}</span>
         ${c.units && c.units !== '0' ? `<span>${escapeHtml(c.units)} units</span>` : ''}
       </div>
-      ${hasDetails ? `
-        <span class="details-toggle" data-key="${escapeAttr(key)}">${isOpen ? '− Hide details' : '+ Show details'}</span>
-        <div class="details-content" style="display:${isOpen ? 'block' : 'none'}">${detailsBlock(c)}</div>
-      ` : ''}
+      ${hasDetails ? `<span class="details-toggle" data-key="${escapeAttr(key)}">${isOpen ? '− Hide details' : '+ Show details'}</span>
+        <div class="details-content" style="display:${isOpen ? 'block' : 'none'}">${courseDetailsBlock(c)}</div>` : ''}
       ${c.url ? `<a class="link" href="${escapeAttr(c.url)}" target="_blank" rel="noopener">Source ↗</a>` : ''}
     </div>`;
   }).join('');
@@ -612,15 +817,27 @@ function renderCourses() {
   attachDetailsToggles(grid);
 }
 
-// === Render: faculty / clubs ===
+// === Faculty (with bio + works in expandable) ===
+function facultyDetailsBlock(f) {
+  const parts = [];
+  if (f.bio) parts.push(`<div><strong>Background</strong>${escapeHtml(f.bio)}</div>`);
+  if (f.works && f.works.length) {
+    parts.push(`<div><strong>Notable works</strong><ul class="works-list">${f.works.map(w =>
+      `<li><span class="work-type">${escapeHtml(w.type || 'work')}</span>${w.url ? `<a href="${escapeAttr(w.url)}" target="_blank" rel="noopener" style="color:#8C1515;text-decoration:none">${escapeHtml(w.title)}</a>` : escapeHtml(w.title)}</li>`
+    ).join('')}</ul></div>`);
+  }
+  return parts.join('');
+}
 function renderFaculty() {
   const grid = document.getElementById('faculty-grid');
   const filter = activeFilter.faculty;
   const list = filter === 'All' ? DATA.faculty : DATA.faculty.filter(f => f.interest === filter);
   document.getElementById('count-faculty').textContent = `${list.length} of ${DATA.faculty.length}`;
-  if (list.length === 0) { grid.innerHTML = '<div class="empty">No faculty for that filter yet.</div>'; return; }
+  if (list.length === 0) { grid.innerHTML = '<div class="empty">No faculty for that filter.</div>'; return; }
   grid.innerHTML = list.map(f => {
     const key = 'f:' + f.name;
+    const hasDetails = f.bio || (f.works && f.works.length);
+    const isOpen = detailsOpen.has(key);
     return `
     <div class="card fac">
       ${markerHTML(key)}
@@ -633,149 +850,316 @@ function renderFaculty() {
       </div>
       <div class="teaches"><strong>Teaches:</strong> ${escapeHtml(f.teaches)}</div>
       <div class="why-meet">${escapeHtml(f.why)}</div>
+      ${hasDetails ? `<span class="details-toggle" data-key="${escapeAttr(key)}">${isOpen ? '− Hide details' : '+ Show bio + research'}</span>
+        <div class="details-content" style="display:${isOpen ? 'block' : 'none'}">${facultyDetailsBlock(f)}</div>` : ''}
       ${f.url ? `<a class="link" href="${escapeAttr(f.url)}" target="_blank" rel="noopener">Profile ↗</a>` : ''}
     </div>`;
   }).join('');
   attachMarkers(grid);
+  attachDetailsToggles(grid);
+}
+
+// === Clubs (with scope filter + expandable) ===
+function clubDetailsBlock(k) {
+  const parts = [];
+  if (k.whenJoin) parts.push(`<div><strong>When to join</strong>${escapeHtml(k.whenJoin)}</div>`);
+  if (k.annualEvents && k.annualEvents.length) parts.push(`<div><strong>Signature events</strong><ul style="margin:0;padding-left:18px">${k.annualEvents.map(e => `<li style="font-size:12px;margin-bottom:3px">${escapeHtml(e)}</li>`).join('')}</ul></div>`);
+  return parts.join('');
+}
+function renderScopeFilter() {
+  const c = document.getElementById('clubs-scope-filter');
+  const scopes = ['All', 'GSB MBA only', 'GSB-led, broader Stanford', 'Stanford-wide'];
+  c.innerHTML = '<span style="font-weight:600;color:#374151">Scope:</span>' + scopes.map(s => {
+    const active = activeScope === s;
+    return `<button class="chip ${s === 'GSB MBA only' ? 'scope-mba' : s === 'Stanford-wide' ? 'scope-stanford' : s === 'GSB-led, broader Stanford' ? 'scope-gsb' : 'c-all'}${active ? ' active' : ''}" data-scope="${escapeAttr(s)}">${escapeHtml(s)}</button>`;
+  }).join('');
+  c.querySelectorAll('button').forEach(b => b.onclick = () => { activeScope = b.dataset.scope; renderClubs(); renderScopeFilter(); });
 }
 function renderClubs() {
   const grid = document.getElementById('clubs-grid');
   const filter = activeFilter.clubs;
-  const list = filter === 'All' ? DATA.clubs : DATA.clubs.filter(k => k.interest === filter);
+  let list = filter === 'All' ? DATA.clubs : DATA.clubs.filter(k => k.interest === filter);
+  if (activeScope !== 'All') list = list.filter(k => (k.scope || 'GSB MBA only') === activeScope);
   document.getElementById('count-clubs').textContent = `${list.length} of ${DATA.clubs.length}`;
-  if (list.length === 0) { grid.innerHTML = '<div class="empty">No clubs for that filter yet.</div>'; return; }
+  if (list.length === 0) { grid.innerHTML = '<div class="empty">No clubs match that combination.</div>'; return; }
   grid.innerHTML = list.map(k => {
     const key = 'k:' + k.name;
+    const hasDetails = k.whenJoin || (k.annualEvents && k.annualEvents.length);
+    const isOpen = detailsOpen.has(key);
     return `
     <div class="card club">
       ${markerHTML(key)}
       <div class="top">
-        <div><div class="title">${escapeHtml(k.name)}</div></div>
+        <div>
+          ${scopeBadge(k.scope)}
+          <div class="title">${escapeHtml(k.name)}</div>
+        </div>
         <span class="pill ${clsFor(k.interest)}">${escapeHtml(k.interest)}</span>
       </div>
       <div class="why-club">${escapeHtml(k.why)}</div>
+      ${hasDetails ? `<span class="details-toggle" data-key="${escapeAttr(key)}">${isOpen ? '− Hide details' : '+ Show details'}</span>
+        <div class="details-content" style="display:${isOpen ? 'block' : 'none'}">${clubDetailsBlock(k)}</div>` : ''}
       ${k.url ? `<a class="link" href="${escapeAttr(k.url)}" target="_blank" rel="noopener">Source ↗</a>` : ''}
     </div>`;
   }).join('');
   attachMarkers(grid);
+  attachDetailsToggles(grid);
 }
 
-// === Render: roadmap, advisor, resources ===
-function renderRoadmap() {
-  document.getElementById('roadmap-list').innerHTML = DATA.roadmap.map(r => `
-    <div class="qtr">
-      <div class="focus">${escapeHtml(r.focus)}</div>
-      <h3>${escapeHtml(r.qtr)}</h3>
-      <div class="body">${escapeHtml(r.body)}</div>
-      <div class="notes">${escapeHtml(r.notes)}</div>
-    </div>`).join('');
-}
-function renderAdvisor() {
-  document.getElementById('count-advisor').textContent = `${DATA.advisorQs.length} questions`;
-  document.getElementById('advisor-list').innerHTML = DATA.advisorQs.map(item => `
-    <div class="qitem">
-      <div class="topic">${escapeHtml(item.topic)}</div>
-      <div class="q">${escapeHtml(item.q)}</div>
-      <div class="who">Ask: ${escapeHtml(item.who)}</div>
-    </div>`).join('');
-}
-function renderResources() {
-  document.getElementById('count-resources').textContent = `${DATA.resources.length} resources`;
-  document.getElementById('resources-list').innerHTML = DATA.resources.map(r => `
-    <div class="res">
-      <div class="type">${escapeHtml(r.type)}</div>
-      <div class="name">${escapeHtml(r.name)}</div>
-      <div class="why">${escapeHtml(r.why)}</div>
-      <a href="${escapeAttr(r.url)}" target="_blank" rel="noopener">Open ↗</a>
-    </div>`).join('');
-}
-
-// === Render: registration ===
+// === Registration tab ===
 function renderRegistration() {
   const c = document.getElementById('registration-content');
-  if (!DATA.registration) {
-    c.innerHTML = '<div class="empty">No registration data in data.json yet.</div>';
-    return;
-  }
+  if (!DATA.registration) { c.innerHTML = '<div class="empty">No registration data.</div>'; return; }
   const r = DATA.registration;
   let html = '';
   if (r.intro) html += `<div class="reg-intro">${escapeHtml(r.intro)}</div>`;
   (r.sections || []).forEach(s => {
     html += `<div class="reg-section"><h3>${escapeHtml(s.title)}</h3>`;
     if (s.body) html += `<div class="body">${escapeHtml(s.body)}</div>`;
-    if (s.items && s.items.length) {
-      html += '<ul>' + s.items.map(i => `<li>${escapeHtml(i)}</li>`).join('') + '</ul>';
-    }
+    if (s.items && s.items.length) html += '<ul>' + s.items.map(i => `<li>${escapeHtml(i)}</li>`).join('') + '</ul>';
     html += '</div>';
   });
   if (r.deadlines && r.deadlines.length) {
     html += `<div class="reg-section"><h3>Quarterly add/drop deadlines</h3><div class="reg-deadlines">`;
-    r.deadlines.forEach(d => {
-      html += `<div class="reg-deadline"><div class="qtr-name">${escapeHtml(d.quarter)}</div><div class="date">${escapeHtml(d.addDropApprox)}</div><div class="note">${escapeHtml(d.note)}</div></div>`;
-    });
+    r.deadlines.forEach(d => html += `<div class="reg-deadline"><div class="qtr-name">${escapeHtml(d.quarter)}</div><div class="date">${escapeHtml(d.addDropApprox)}</div><div class="note">${escapeHtml(d.note)}</div></div>`);
     html += '</div></div>';
   }
   if (r.glossary && r.glossary.length) {
     html += `<div class="reg-section"><h3>Glossary</h3><div class="reg-grid">`;
-    r.glossary.forEach(g => {
-      html += `<div class="reg-glossary-item"><div class="term">${escapeHtml(g.term)}</div><div class="def">${escapeHtml(g.def)}</div></div>`;
-    });
+    r.glossary.forEach(g => html += `<div class="reg-glossary-item"><div class="term">${escapeHtml(g.term)}</div><div class="def">${escapeHtml(g.def)}</div></div>`);
     html += '</div></div>';
   }
   if (r.sources && r.sources.length) {
     html += `<div class="reg-section"><h3>Sources</h3><ul style="list-style:none;padding-left:0">`;
-    r.sources.forEach(s => {
-      html += `<li style="margin-bottom:4px"><a href="${escapeAttr(s.url)}" target="_blank" rel="noopener" style="color:#8C1515;text-decoration:none">→ ${escapeHtml(s.label)}</a></li>`;
-    });
+    r.sources.forEach(s => html += `<li style="margin-bottom:4px"><a href="${escapeAttr(s.url)}" target="_blank" rel="noopener" style="color:#8C1515;text-decoration:none">→ ${escapeHtml(s.label)}</a></li>`);
     html += '</ul></div>';
   }
   c.innerHTML = html;
 }
 
-// === My Plan ===
+// === Advisor tab (primer + grouped questions) ===
+function renderAdvisor() {
+  const c = document.getElementById('advisor-content');
+  let html = '';
+  if (DATA.advisorPrimer) {
+    const p = DATA.advisorPrimer;
+    if (p.intro) html += `<div class="advisor-intro">${escapeHtml(p.intro)}</div>`;
+    if (p.types && p.types.length) {
+      html += `<div class="advisor-types">`;
+      p.types.forEach(t => {
+        html += `<div class="advisor-type">
+          <h4>${escapeHtml(t.name)}</h4>
+          <div class="role">${escapeHtml(t.role)}</div>
+          <div class="when"><strong>When:</strong> ${escapeHtml(t.when)}</div>
+          ${t.tip ? `<div class="tip">💡 ${escapeHtml(t.tip)}</div>` : ''}
+        </div>`;
+      });
+      html += `</div>`;
+    }
+    if (p.timeline && p.timeline.length) {
+      html += `<div class="advisor-timeline"><h3>Advisor timeline</h3>`;
+      p.timeline.forEach(item => {
+        html += `<div class="advisor-timeline-item">
+          <div><div class="phase">${escapeHtml(item.phase)}</div><div class="who">${escapeHtml(item.who)}</div></div>
+          <div class="what">${escapeHtml(item.what)}</div>
+        </div>`;
+      });
+      html += `</div>`;
+    }
+  }
+
+  // Grouped questions
+  const groups = {};
+  (DATA.advisorQs || []).forEach(q => {
+    const g = q.group || 'Other';
+    if (!groups[g]) groups[g] = [];
+    groups[g].push(q);
+  });
+  const groupOrder = ['Curriculum & registration', 'Joint degrees & specialization', 'Career planning', 'Community & etiquette', 'Other'];
+  html += `<h3 style="font-size:16px;color:#111827;margin:24px 0 12px">Questions to bring to advisors</h3>`;
+  groupOrder.forEach(g => {
+    if (!groups[g]) return;
+    html += `<div class="qgroup"><h3>${escapeHtml(g)}</h3>`;
+    groups[g].forEach(q => {
+      html += `<div class="qitem-mini">
+        <div class="topic-mini">${escapeHtml(q.topic)}</div>
+        <div class="q">${escapeHtml(q.q)}</div>
+        <div class="who">Ask: ${escapeHtml(q.who)}</div>
+      </div>`;
+    });
+    html += `</div>`;
+  });
+  c.innerHTML = html;
+}
+
+// === Resources (grouped + faculty research subsection) ===
+function renderResources() {
+  const c = document.getElementById('resources-content');
+  document.getElementById('count-resources').textContent = `${DATA.resources.length} resources`;
+  let html = '';
+  if (DATA.resourcesIntro) {
+    html += `<div class="res-intro">${DATA.resourcesIntro.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</div>`;
+  }
+
+  const order = ['Centers & Institutes', 'Initiatives & Labs', 'Publications', 'Conferences & Events', 'Programs & Fellowships', 'Tools', 'Other'];
+  const groups = {};
+  DATA.resources.forEach(r => { const cat = r.category || 'Other'; if (!groups[cat]) groups[cat] = []; groups[cat].push(r); });
+  order.forEach(cat => {
+    if (!groups[cat]) return;
+    html += `<div class="res-group"><h3>${escapeHtml(cat)}</h3><div class="reslist">`;
+    groups[cat].forEach(r => {
+      html += `<div class="res">
+        <div class="type">${escapeHtml(r.type)}</div>
+        <div class="name">${escapeHtml(r.name)}</div>
+        <div class="why">${escapeHtml(r.why)}</div>
+        <a href="${escapeAttr(r.url)}" target="_blank" rel="noopener">Open ↗</a>
+      </div>`;
+    });
+    html += `</div></div>`;
+  });
+
+  // Faculty research subsection
+  const allWorks = [];
+  DATA.faculty.forEach(f => {
+    if (f.works && f.works.length) f.works.forEach(w => allWorks.push({ ...w, author: f.name, interest: f.interest }));
+  });
+  if (allWorks.length) {
+    html += `<details class="res-research-collapse" open><summary>Faculty research, papers, books & cases (${allWorks.length})</summary><div class="body">`;
+    // Group by interest area
+    const byInterest = {};
+    allWorks.forEach(w => { const k = w.interest || 'Other'; if (!byInterest[k]) byInterest[k] = []; byInterest[k].push(w); });
+    Object.keys(byInterest).sort().forEach(int => {
+      html += `<div style="margin-top:14px"><div style="font-size:11px;font-weight:700;color:#8C1515;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">${escapeHtml(int)}</div><div class="res-research-list">`;
+      byInterest[int].forEach(w => {
+        html += `<div class="res-research-item">
+          <span class="author">${escapeHtml(w.author)}</span>
+          <span class="work-type">${escapeHtml(w.type)}</span>
+          <span class="work-title">${escapeHtml(w.title)}</span>
+          ${w.url ? `<a href="${escapeAttr(w.url)}" target="_blank" rel="noopener">Open ↗</a>` : ''}
+        </div>`;
+      });
+      html += `</div></div>`;
+    });
+    html += `</div></details>`;
+  }
+  c.innerHTML = html;
+}
+
+// === MY PLAN + ROADMAP (merged dynamic timeline) ===
 function lookupItem(key) {
   const [type, ...rest] = key.split(':');
   const id = rest.join(':');
   if (type === 'c') return DATA.courses.find(c => c.title === id);
   if (type === 'f') return DATA.faculty.find(f => f.name === id);
-  if (type === 'k') return DATA.clubs.find(k => k.name === id);
+  if (type === 'k') return DATA.clubs.find(c => c.name === id);
   return null;
 }
-function typeLabel(key) {
-  const t = key.split(':')[0];
-  return t === 'c' ? 'Course' : t === 'f' ? 'Faculty' : t === 'k' ? 'Club' : '';
+function typeLabel(key) { const t = key.split(':')[0]; return t === 'c' ? 'Course' : t === 'f' ? 'Faculty' : t === 'k' ? 'Club' : ''; }
+
+function buildRoadmapData() {
+  // For each quarter, produce: required (Y1 core), yours (selections that fit), unallocated bucket
+  const quartersData = {};
+  QUARTERS.forEach(q => quartersData[q.key] = { required: [], yours: [], suggested: [] });
+
+  // Y1 Core into "required"
+  const y1Core = DATA.y1Core || {};
+  ['Y1-Autumn', 'Y1-Winter', 'Y1-Spring'].forEach(q => {
+    (y1Core[q] || []).forEach(x => {
+      if (x && typeof x === 'object' && !x._note) quartersData[q].required.push({
+        kind: 'y1core', title: x.title, code: x.code, note: x.note
+      });
+    });
+  });
+  // Mandatory courses (auto-enrolled) — also surface as required
+  DATA.courses.forEach(c => {
+    if (c.apply && /mandatory|auto-enroll/i.test(c.apply)) {
+      (c.quarters || []).forEach(q => {
+        if (quartersData[q] && !quartersData[q].required.find(r => r.title === c.title)) {
+          quartersData[q].required.push({ kind: 'course', title: c.title, code: c.code, course: c });
+        }
+      });
+    }
+  });
+
+  // User's selections
+  const unallocated = [];
+  for (const [key, state] of selections) {
+    const item = lookupItem(key);
+    if (!item) continue;
+    if (key.startsWith('c:')) {
+      // Course — slot into its quarters
+      const qs = item.quarters || [];
+      if (qs.length === 0) {
+        unallocated.push({ key, state, item, reason: 'No quarter set' });
+      } else {
+        qs.forEach(q => {
+          if (quartersData[q]) {
+            quartersData[q].yours.push({ key, state, item, kind: 'course' });
+          }
+        });
+      }
+    } else {
+      // Faculty or Club — surface in unallocated as "anytime"
+      unallocated.push({ key, state, item, reason: 'Not time-bound (' + typeLabel(key).toLowerCase() + ')' });
+    }
+  }
+
+  return { quartersData, unallocated };
 }
-function planItemHTML(key, item) {
-  const title = item ? (item.title || item.name) : key.split(':').slice(1).join(':');
-  const interest = item?.interest;
-  const cls = interest ? clsFor(interest) : 'c-cross';
-  return `
-    <div class="plan-item">
-      <span class="plan-type">${escapeHtml(typeLabel(key))}</span>
-      <span class="plan-title">${escapeHtml(title)}</span>
-      ${interest ? `<span class="plan-pill ${cls}">${escapeHtml(interest)}</span>` : ''}
-      <span class="marker" data-key="${escapeAttr(key)}" data-state="${selections.get(key) || ''}"></span>
+
+function renderQcardItem(it) {
+  if (it.kind === 'y1core') {
+    return `<div class="qcard-item required">
+      <span style="font-weight:600">${escapeHtml(it.title)}</span>
+      ${it.code ? `<span style="font-family:'SF Mono',Menlo,monospace;font-size:11px;color:#7c2d12">${escapeHtml(it.code)}</span>` : ''}
+      ${it.note ? `<span style="font-size:11px;color:#7c2d12;font-style:italic">${escapeHtml(it.note)}</span>` : ''}
     </div>`;
+  }
+  if (it.kind === 'course' && it.course) {
+    const c = it.course;
+    return `<div class="qcard-item required">
+      <span style="font-weight:600">${escapeHtml(c.title)}</span>
+      ${c.code ? `<span style="font-family:'SF Mono',Menlo,monospace;font-size:11px">${escapeHtml(c.code)}</span>` : ''}
+      <span class="qcard-item-pill ${clsFor(c.interest)}">${escapeHtml(c.interest)}</span>
+    </div>`;
+  }
+  return '';
 }
+function renderYourItem(o) {
+  const c = o.item;
+  return `<div class="qcard-item">
+    ${markerHTML(o.key)}
+    <span style="font-weight:600">${escapeHtml(c.title)}</span>
+    ${c.code ? `<span style="font-family:'SF Mono',Menlo,monospace;font-size:11px;color:#6b7280">${escapeHtml(c.code)}</span>` : ''}
+    <span class="qcard-item-pill ${clsFor(c.interest)}">${escapeHtml(c.interest)}</span>
+    ${c.units && c.units !== '0' ? `<span style="font-size:11px;color:#6b7280">${escapeHtml(c.units)}u</span>` : ''}
+    <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;padding:1px 6px;border-radius:4px;background:${o.state === 'planned' ? '#dcfce7' : '#fef3c7'};color:${o.state === 'planned' ? '#14532d' : '#78350f'}">${o.state === 'planned' ? '✓ Planned' : '★ Interested'}</span>
+  </div>`;
+}
+
 function renderMyPlan() {
   const container = document.getElementById('my-plan-content');
   const total = selections.size;
   document.getElementById('count-myplan').textContent = `${total} item${total !== 1 ? 's' : ''}`;
+
+  const starredN = [...selections.values()].filter(v => v === 'starred').length;
+  const plannedN = [...selections.values()].filter(v => v === 'planned').length;
+
   if (total === 0) {
     container.innerHTML = `
       <div class="plan-empty">
         <p><strong>Your plan is empty.</strong></p>
-        <p>Go to Courses, Faculty, or Clubs and click the circle on a card to mark something as <span style="color:#f59e0b">★ Interested</span> or <span style="color:#16a34a">✓ Planned</span>.</p>
-      </div>`;
+        <p>Mark items in Courses, Faculty, or Clubs — they'll auto-slot into the timeline below by quarter. The 2-year roadmap fills in as you star and plan.</p>
+        <p style="margin-top:12px">For now, here's the suggested template:</p>
+      </div>` + renderRoadmapShell();
     return;
   }
-  const starred = [...selections].filter(([_, v]) => v === 'starred').map(([k]) => k);
-  const planned = [...selections].filter(([_, v]) => v === 'planned').map(([k]) => k);
+
   const summary = `
     <div class="plan-summary">
       <div class="plan-counts">
-        <div class="plan-count"><span class="num" style="color:#f59e0b">${starred.length}</span><span class="lbl">★ Interested</span></div>
-        <div class="plan-count"><span class="num" style="color:#16a34a">${planned.length}</span><span class="lbl">✓ Planned</span></div>
+        <div class="plan-count"><span class="num" style="color:#f59e0b">${starredN}</span><span class="lbl">★ Interested</span></div>
+        <div class="plan-count"><span class="num" style="color:#16a34a">${plannedN}</span><span class="lbl">✓ Planned</span></div>
         <div class="plan-count"><span class="num">${total}</span><span class="lbl">Total</span></div>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -784,34 +1168,115 @@ function renderMyPlan() {
         ${viewingShared ? '' : `<button class="btn" style="background:#fef2f2;color:#991b1b;border:1px solid #fca5a5" onclick="confirmClearPlan()">Clear all</button>`}
       </div>
     </div>`;
-  let html = summary;
-  if (planned.length) {
-    html += `<div class="plan-section"><h3 class="planned"><span class="icon">✓</span>Planned in my schedule (${planned.length})</h3><div class="plan-list">`;
-    planned.forEach(k => { html += planItemHTML(k, lookupItem(k)); });
-    html += `</div></div>`;
-  }
-  if (starred.length) {
-    html += `<div class="plan-section"><h3><span class="icon">★</span>Interested (${starred.length})</h3><div class="plan-list">`;
-    starred.forEach(k => { html += planItemHTML(k, lookupItem(k)); });
-    html += `</div></div>`;
-  }
-  container.innerHTML = html;
+
+  container.innerHTML = summary + renderRoadmapShell();
+  attachQcardToggles();
   attachMarkers(container);
+}
+
+function renderRoadmapShell() {
+  const { quartersData, unallocated } = buildRoadmapData();
+  const baseRoadmap = DATA.roadmap || [];
+  // Map base roadmap entries by quarter label to use as "suggested" if quarter is empty
+  const suggestedByLabel = {};
+  baseRoadmap.forEach(r => {
+    suggestedByLabel[r.qtr] = r;
+  });
+
+  let html = `<div class="timeline">`;
+  QUARTERS.forEach(q => {
+    const data = quartersData[q.key];
+    const isOpen = qcardOpen.has(q.key);
+    const reqCount = data.required.length;
+    const yoursCount = data.yours.length;
+    const yourUnits = data.yours.reduce((sum, o) => sum + (parseInt(o.item.units || '0') || 0), 0);
+    const cap = QUARTER_CAP_UNITS[q.key];
+    const overcap = cap && yourUnits > cap;
+
+    // Match suggested for this quarter
+    let suggestedHtml = '';
+    const matchKey = q.label.includes('Pre-arrival') ? 'Pre-arrival (Summer 2026)'
+                   : q.label === 'Y1 Autumn' ? 'Y1 Autumn 2026'
+                   : q.label === 'Y1 Winter' ? 'Y1 Winter 2027'
+                   : q.label === 'Y1 Spring' ? 'Y1 Spring 2027'
+                   : q.label === 'Summer' ? 'Summer 2027'
+                   : q.label === 'Y2 Autumn' ? 'Y2 Autumn 2027'
+                   : q.label === 'Y2 Winter' ? 'Y2 Winter 2028'
+                   : q.label === 'Y2 Spring' ? 'Y2 Spring 2028'
+                   : q.label === 'Post-graduation' ? 'Post-graduation' : null;
+    const sugg = matchKey ? suggestedByLabel[matchKey] : null;
+    if (sugg) {
+      suggestedHtml = `<div class="qcard-section suggested">
+        <h4>Claude's suggested plan for this quarter</h4>
+        <div style="font-size:13px;color:#374151;line-height:1.5">${escapeHtml(sugg.body)}</div>
+        ${sugg.notes ? `<div style="font-size:12px;color:#6b7280;font-style:italic;margin-top:4px">${escapeHtml(sugg.notes)}</div>` : ''}
+      </div>`;
+    }
+
+    html += `<div class="qcard ${isOpen ? 'open' : ''}" data-q="${q.key}">
+      <div class="qcard-header" data-q="${q.key}">
+        <div>
+          <div class="qcard-title">${escapeHtml(q.label)}</div>
+          <div class="qcard-dates">${escapeHtml(q.dates)}</div>
+        </div>
+        <div class="qcard-counts">
+          ${reqCount ? `<span class="pill-mini pill-required">${reqCount} required</span>` : ''}
+          ${yoursCount ? `<span class="pill-mini pill-yours">${yoursCount} yours</span>` : ''}
+          ${cap && yourUnits > 0 ? `<span class="pill-mini pill-cap ${overcap ? 'over' : ''}">${yourUnits}/${cap}u</span>` : ''}
+        </div>
+        <span class="qcard-arrow">▾</span>
+      </div>
+      <div class="qcard-body">
+        ${data.required.length ? `<div class="qcard-section required">
+          <h4>Required this quarter</h4>
+          <div class="qcard-item-list">${data.required.map(renderQcardItem).join('')}</div>
+        </div>` : ''}
+        ${data.yours.length ? `<div class="qcard-section yours">
+          <h4>Your selections (${data.yours.length})</h4>
+          <div class="qcard-item-list">${data.yours.map(renderYourItem).join('')}</div>
+          ${overcap ? `<div style="margin-top:8px;font-size:12px;color:#991b1b;background:#fef2f2;padding:8px 10px;border-radius:6px;border-left:3px solid #dc2626">⚠ You've planned ${yourUnits} units this quarter, above the typical ~${cap} unit load. Consider trimming.</div>` : ''}
+        </div>` : ''}
+        ${!data.yours.length && !data.required.length ? `<div class="qcard-empty">Nothing slotted for this quarter yet. Mark courses ★ or ✓ to populate.</div>` : ''}
+        ${suggestedHtml}
+      </div>
+    </div>`;
+  });
+  html += `</div>`;
+
+  // Unallocated section
+  if (unallocated.length) {
+    html += `<div class="unallocated">
+      <h3>Doesn't fit a quarter (${unallocated.length})</h3>
+      <p style="font-size:12px;color:#7c2d12;margin:0 0 8px 0">Faculty and clubs aren't time-bound, so they live here. Courses showing up here mean you didn't set quarters for them in data.json.</p>
+      <div class="item-list">${unallocated.map(o => `<div class="ua-item">
+        ${markerHTML(o.key)}
+        <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;color:#7c2d12">${escapeHtml(typeLabel(o.key))}</span>
+        <span style="flex:1;color:#1f2937">${escapeHtml(o.item.title || o.item.name)}</span>
+        ${o.item.interest ? `<span class="qcard-item-pill ${clsFor(o.item.interest)}">${escapeHtml(o.item.interest)}</span>` : ''}
+        <span style="font-size:11px;color:#7c2d12;font-style:italic">${escapeHtml(o.reason)}</span>
+      </div>`).join('')}</div>
+    </div>`;
+  }
+  return html;
+}
+
+function attachQcardToggles() {
+  document.querySelectorAll('.qcard-header').forEach(h => {
+    h.onclick = () => {
+      const k = h.dataset.q;
+      if (qcardOpen.has(k)) qcardOpen.delete(k); else qcardOpen.add(k);
+      const card = h.closest('.qcard');
+      card.classList.toggle('open');
+    };
+  });
 }
 function copyPlanAsText() {
   if (selections.size === 0) { showToast('Plan is empty.'); return; }
   const lines = ['My Stanford GSB Prep Plan', '=========================', ''];
-  const planned = [...selections].filter(([_, v]) => v === 'planned');
-  const starred = [...selections].filter(([_, v]) => v === 'starred');
-  if (planned.length) {
-    lines.push('PLANNED IN MY SCHEDULE');
-    planned.forEach(([k]) => { const it = lookupItem(k); lines.push(`  ✓ [${typeLabel(k)}] ${it ? (it.title || it.name) : k}`); });
-    lines.push('');
-  }
-  if (starred.length) {
-    lines.push('INTERESTED');
-    starred.forEach(([k]) => { const it = lookupItem(k); lines.push(`  ★ [${typeLabel(k)}] ${it ? (it.title || it.name) : k}`); });
-  }
+  const planned = [...selections].filter(([, v]) => v === 'planned');
+  const starred = [...selections].filter(([, v]) => v === 'starred');
+  if (planned.length) { lines.push('PLANNED'); planned.forEach(([k]) => { const it = lookupItem(k); lines.push(`  ✓ [${typeLabel(k)}] ${it ? (it.title || it.name) : k}`); }); lines.push(''); }
+  if (starred.length) { lines.push('INTERESTED'); starred.forEach(([k]) => { const it = lookupItem(k); lines.push(`  ★ [${typeLabel(k)}] ${it ? (it.title || it.name) : k}`); }); }
   const txt = lines.join('\n');
   navigator.clipboard.writeText(txt).then(() => showToast('Plan copied as text!'), () => prompt('Copy this:', txt));
 }
@@ -827,16 +1292,15 @@ function updateHeroPlanCount() {
   if (n > 0) { badge.textContent = n; badge.style.display = 'inline-block'; }
   else { badge.style.display = 'none'; }
 }
-function updateMyPlanSummary() { renderMyPlan(); }
 
 function rerenderEverything() {
   renderChips('chips-courses', 'courses');
   renderChips('chips-faculty', 'faculty');
   renderChips('chips-clubs', 'clubs');
+  renderScopeFilter();
   renderCourses();
   renderFaculty();
   renderClubs();
-  renderRoadmap();
   renderRegistration();
   renderAdvisor();
   renderResources();
@@ -865,7 +1329,7 @@ function boot() {
   });
 
   document.getElementById('btn-share-plan').onclick = copyShareLink;
-  document.getElementById('btn-go-my-plan').onclick = () => { document.querySelector('[data-tab="my-plan"]').click(); };
+  document.getElementById('btn-go-my-plan').onclick = () => document.querySelector('[data-tab="my-plan"]').click();
   document.getElementById('btn-save-shared').onclick = () => dismissShared(true);
   document.getElementById('btn-dismiss-shared').onclick = () => dismissShared(false);
 
