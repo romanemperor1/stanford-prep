@@ -256,7 +256,7 @@
     {
       "code": "STRAMGT 353",
       "title": "Formation of New Ventures",
-      "faculty": "Various practitioners",
+      "faculty": "Robert Siegel + practitioners (recommended by Alexis's GSB energy contact)",
       "dept": "GSB",
       "interest": "VC/Entrepreneurship",
       "when": "Y1 Spring or Y2 Fall",
@@ -1312,12 +1312,12 @@
     },
     {
       "name": "Robert Siegel",
-      "role": "GSB Lecturer · Operator, author",
-      "interest": "Tech",
-      "teaches": "Industry deep-dives, scaled companies",
-      "why": "Practitioner who runs 'The Industry' — pulls in great guests.",
+      "role": "GSB Lecturer · VC partner (Piva, XSeed) · author",
+      "interest": "VC/Entrepreneurship",
+      "teaches": "Formation of New Ventures (STRAMGT 353), Entrepreneurial Finance, Strategic Management of Technology, The Industry",
+      "why": "★ Recommended by Alexis's GSB energy contact. Practitioner-teacher with 10+ courses taught at GSB; pulls phenomenal guest speakers. 2016-17 MBA Class of 1973 Lecturer Award.",
       "url": "https://www.gsb.stanford.edu/faculty-research/faculty/robert-e-siegel",
-      "bio": "Lecturer in Management at Stanford GSB for 20+ years. Researches strategy and innovation across sectors. Authored 115+ cases and led primary research on Google, PayPal, Stripe, SoftBank. Venture Partner at Piva Capital and General Partner at XSeed Capital.",
+      "bio": "Lecturer in Management at Stanford GSB for 20+ years. Researches strategy and innovation across sectors. Authored 115+ cases (Google, PayPal, Stripe, SoftBank). Venture Partner at Piva Capital and General Partner at XSeed Capital. Teaches across entrepreneurship and tech strategy.",
       "works": [
         {
           "title": "The Systems Leader (2024)",
@@ -1328,6 +1328,22 @@
           "title": "The Brains and Brawn Company (2021)",
           "type": "book",
           "url": "https://www.amazon.com/Brains-Brawn-Company-Organizations-Physical/dp/1264257775"
+        }
+      ]
+    },
+    {
+      "name": "Scott Brady",
+      "role": "GSB Lecturer (CES) · Founding Partner, Innovation Endeavors",
+      "interest": "VC/Entrepreneurship",
+      "teaches": "Company creation, tech for construction & housing",
+      "why": "★ Recommended by Alexis's GSB energy contact. Brings real venture creation experience — three publicly traded tech co-founder; runs Innovation Endeavors (Eric Schmidt's VC firm). 2022 MSx Teaching Excellence Award.",
+      "url": "https://www.gsb.stanford.edu/faculty-research/faculty/scott-j-brady",
+      "bio": "Lecturer in Management at Stanford GSB through the Center for Entrepreneurial Studies; Founding Partner at Innovation Endeavors (Eric Schmidt-backed VC firm). Has co-founded three publicly traded technology companies and serves on boards of category-defining startups. Brings operating + investing experience directly into the classroom. Recipient of 2023 Jack McDonald Military Service Appreciation Award and 2022 MSx Teaching Excellence Award.",
+      "works": [
+        {
+          "title": "Innovation Endeavors firm site",
+          "type": "article",
+          "url": "https://www.innovationendeavors.com/team/scott-brady"
         }
       ]
     },
